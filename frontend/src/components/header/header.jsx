@@ -6,6 +6,5 @@ function Header() {
       <MainNavbar />
     </header>
   );
-}
 
 export default Header;
