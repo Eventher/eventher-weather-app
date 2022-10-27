@@ -1,10 +1,11 @@
-import React from 'react'
-import "./header.css"
+import MainNavbar from "./MainNavBar";
 
-const Header = () => {
+function Header() {
   return (
-    <div>header</div>
-  )
+    <header>
+      <MainNavbar />
+    </header>
+  );
 }
 
-export default Header
+export default Header;
