@@ -1,18 +1,35 @@
 /* eslint-disable react/prop-types */
 import React from "react";
-import "./Weather5daysCard.css";
+import "./Weather5DaysCard.css";
 
-export default function Weather5daysCard({ weather5Day, index }) {
-  const { precipitaProb, tMin, tMax, predWindDir, globalIdLocal } = weather5Day;
+export default function Weather5DaysCard({ weather5Day, index }) {
+  const { precipitaProb, tMin, tMax, predWindDir } = weather5Day;
 
   return (
-    <div>
-      <div>Dia: {index + 1}</div>
-      <h5>{precipitaProb}</h5>
-      <h5>{tMin}</h5>
-      <h5>{tMax}</h5>
-      <h5>{predWindDir}</h5>
-      <h5>{globalIdLocal}</h5>
+    <div className="weather5Days_cardWrapper">
+      <div className="weather5Days_card">
+        <div className="weather5Days_cardCol_1">
+          <div>
+            <h4>Dia: {index + 1}</h4>
+          </div>
+          <img src="" alt="Imagem" />
+        </div>
+        <div className="weather5Days_cardCol_2">
+          <pre>
+            <h2 className="tempMin">{tMin}</h2>
+          </pre>
+          <pre>
+            <h2 className="tempMax"> / {tMax}</h2>
+          </pre>
+        </div>
+        <div className="weather5Days_cardCol_3">
+          <h4>Rain Probability:</h4> <h2>{precipitaProb}%</h2>
+        </div>
+        <div className="weather5Days_cardCol_4">
+          <h5>{predWindDir}</h5>
+          <button type="button"> See more </button>
+        </div>
+      </div>
     </div>
   );
 }
