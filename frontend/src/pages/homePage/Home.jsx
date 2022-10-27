@@ -4,6 +4,7 @@ import "./home.css";
 import Footer from "../../components/footer/footer";
 import WeatherList from "../../components/WeatherList/WeatherList";
 
+export default function Home() {
 function Home() {
   return (
     <div>
@@ -13,4 +14,5 @@ function Home() {
     </div>
   );
 }
+
 export default Home;
