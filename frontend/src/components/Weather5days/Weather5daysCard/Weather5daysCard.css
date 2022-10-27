@@ -1,3 +1,100 @@
-h5 {
-    margin: 0;
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700;900&display=swap");
+
+.weather5Days_cardWrapper:nth-child(even) {
+  background-color: rgba(33, 158, 188, 0.3);
 }
+.weather5Days_card {
+  font-family: "Nunito", sans-serif;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-height: 75px;
+  margin: 5px 0;
+  box-shadow: 1px 1px 10px 1px rgba(150, 150, 150, 0.4);
+  border-radius: 5px;
+}
+
+.weather5Days_cardCol_2 {
+  font-family: "Nunito", sans-serif;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.weather5Days_cardCol_2 h2,
+pre {
+  font-weight: 9000;
+  font-size: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.tempMin {
+  color: #219ebc;
+}
+.tempMax {
+  color: #e45603;
+}
+
+.weather5Days_cardCol_3 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.weather5Days_cardCol_3 h2 {
+  margin: 0;
+  color: #fff;
+}
+.weather5Days_cardCol_3 h2 {
+  margin: 0;
+  color: #023047;
+}
+
+.weather5Days_cardCol_3 h4 {
+  color: #023047;
+  padding: 0;
+  margin: 0;
+}
+
+.weather5Days_cardCol_4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 10vw;
+}
+.seeMore {
+  width: 30px;
+  height: 30px;
+  position: inherit;
+  bottom: 25px;
+}
+button {
+  background-color: #219ebc;
+  border: none;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 50%;
+}
+
+/* .precipitaClass_0 {
+  color: #e45603;
+}
+
+.precipitaClass_1 {
+  color: #ffc800;
+}
+
+.precipitaClass_2 {
+  color: #219ebc;
+}
+
+.precipitaClass_3 {
+  color: #023047;
+} */

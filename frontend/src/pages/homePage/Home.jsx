@@ -1,24 +1,23 @@
 import React from "react";
 import WeatherToday from "../../components/WeatherToday/WeatherToday";
 import WeatherByHour from "../../components/WeatherByHour/WeatherByHour";
-import Weather5days from "../../components/Weather5days/Weather5days";
+import Weather5Days from "../../components/Weather5Days/Weather5Days";
 
 import "./home.css";
-import Footer from "../../components/footer/footer";
-import WeatherList from "../../components/WeatherList/WeatherList";
+// import Footer from "../../components/footer/footer";
+// import WeatherList from "../../components/WeatherList/WeatherList";
 
 function Home() {
   return (
     <div className="cards">
-      <input type="text" />
       <div>
         <WeatherToday />
       </div>
       <div>
-        <WeatherByHour />
+        <Weather5Days />
       </div>
       <div>
-        <Weather5days />
+        <WeatherByHour />
       </div>
     </div>
   );

@@ -2,9 +2,9 @@
 /* eslint-disable no-restricted-syntax */
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Weather5daysCard from "./Weather5daysCard/Weather5daysCard";
+import Weather5DaysCard from "./Weather5DaysCard/Weather5DaysCard";
 
-function Weather5days() {
+function Weather5Days() {
   // weather5Days: State that receives and displays the weather stats for the next five days =====#
   const [weather5Days, setWeather5Days] = useState([]);
   // =====#
@@ -92,31 +92,22 @@ function Weather5days() {
   // Return fase =====#
   return (
     <>
+      <div>
+        <h2>See weather for the next 5 days!</h2>
+      </div>
       <input type="search" value={search} onChange={(e) => handleSearch(e)} />
-      <div>The weather for the next 5 days!</div>
       <h3>{city || "Lisboa"}</h3>
       {weather5Days
         ? weather5Days.map((weather5Day, index) => (
-            <Weather5daysCard
+            <Weather5DaysCard
               weather5Day={weather5Day}
               index={index}
               key={index}
             />
           ))
         : null}
-
-      {/* {districts ? districts.map() : null} */}
-      {/* <button onClick={() => fetchWeather5Days(1010500)} type="submit">
-        Aveiro
-      </button>
-      <button onClick={() => fetchWeather5Days(1020500)} type="submit">
-        Beja
-      </button>
-      <button onClick={() => fetchWeather5Days(1030300)} type="submit">
-        Braga
-      </button> */}
     </>
   );
 }
 
-export default Weather5days;
+export default Weather5Days;
