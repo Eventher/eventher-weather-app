@@ -4,8 +4,10 @@ import WeatherByHour from "../../components/WeatherByHour/WeatherByHour";
 import Weather5days from "../../components/Weather5days/Weather5days";
 
 import "./home.css";
+import Footer from "../../components/footer/footer";
+import WeatherList from "../../components/WeatherList/WeatherList";
 
-export default function Home() {
+function Home() {
   return (
     <div className="cards">
       <input type="text" />
@@ -21,3 +23,4 @@ export default function Home() {
     </div>
   );
 }
+export default Home;
