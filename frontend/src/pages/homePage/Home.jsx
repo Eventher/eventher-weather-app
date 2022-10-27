@@ -10,15 +10,14 @@ import "./home.css";
 function Home() {
   return (
     <div className="cards">
-      <input type="text" />
       <div>
         <WeatherToday />
       </div>
       <div>
-        <WeatherByHour />
+        <Weather5Days />
       </div>
       <div>
-        <Weather5Days />
+        <WeatherByHour />
       </div>
     </div>
   );

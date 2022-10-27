@@ -92,8 +92,10 @@ function Weather5Days() {
   // Return fase =====#
   return (
     <>
+      <div>
+        <h2>See weather for the next 5 days!</h2>
+      </div>
       <input type="search" value={search} onChange={(e) => handleSearch(e)} />
-      <div>The weather for the next 5 days!</div>
       <h3>{city || "Lisboa"}</h3>
       {weather5Days
         ? weather5Days.map((weather5Day, index) => (
