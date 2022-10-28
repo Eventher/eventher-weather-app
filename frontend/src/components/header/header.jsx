@@ -1,8 +1,9 @@
-import React from "react";
-import "./header.css";
+import MainNavbar from "./MainNavBar";
 
-function Header() {
-  return <div>header</div>;
+export default function Header() {
+  return (
+    <header>
+      <MainNavbar />
+    </header>
+  );
 }
-
-export default Header;

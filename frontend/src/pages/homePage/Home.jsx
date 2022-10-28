@@ -6,8 +6,9 @@ import Weather5Days from "../../components/Weather5Days/Weather5Days";
 import "./home.css";
 // import Footer from "../../components/footer/footer";
 // import WeatherList from "../../components/WeatherList/WeatherList";
+import WeatherList from "../../components/WeatherList/WeatherList";
 
-function Home() {
+export default function Home() {
   return (
     <div className="cards">
       <div>
@@ -19,7 +20,8 @@ function Home() {
       <div>
         <WeatherByHour />
       </div>
+    <div>
+      <WeatherList />
     </div>
   );
 }
-export default Home;
