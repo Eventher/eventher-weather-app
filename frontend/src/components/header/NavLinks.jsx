@@ -3,12 +3,9 @@
 import React from "react";
 import { FaUserCircle } from "react-icons/fa";
 import { IoIosArrowDropupCircle } from "react-icons/io";
-import { Routes, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import SignLogInBar from "./SignLogInBar";
 import styles from "./Navbar.module.css";
-import Home from "../../pages/homePage/Home";
-import Suggestions from "../../pages/suggestionsPage/Suggestions";
-import Events from "../../pages/eventsPage/Events";
 
 function NavLinks(props) {
   const { openUser, setOpenUser } = props;
@@ -45,12 +42,6 @@ function NavLinks(props) {
       </ul>
 
       <div>{openUser && <SignLogInBar />}</div>
-
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/events" element={<Events />} />
-        <Route path="/suggestions" element={<Suggestions />} />
-      </Routes>
     </div>
   );
 }
