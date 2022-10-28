@@ -47,8 +47,8 @@ function NavLinks(props) {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/events" element={<Suggestions />} />
-        <Route path="/suggestions" element={<Events />} />
+        <Route path="/events" element={<Events />} />
+        <Route path="/suggestions" element={<Suggestions />} />
       </Routes>
     </div>
   );

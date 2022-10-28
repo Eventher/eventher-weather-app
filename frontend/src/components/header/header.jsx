@@ -1,10 +1,9 @@
 import MainNavbar from "./MainNavBar";
 
-function Header() {
+export default function Header() {
   return (
     <header>
       <MainNavbar />
     </header>
   );
-
-export default Header;
+}
