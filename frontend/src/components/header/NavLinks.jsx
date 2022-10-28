@@ -41,9 +41,10 @@ function NavLinks(props) {
         </li>
         <li className={styles.IconItem}>
           {openUser ? closeUserComputer : userComputer}
-          {openUser && <SignLogInBar />}
         </li>
       </ul>
+
+      <div>{openUser && <SignLogInBar />}</div>
 
       <Routes>
         <Route path="/" element={<Home />} />
