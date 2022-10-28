@@ -17,10 +17,10 @@
 
 @keyframes slideInTwo {
   0% {
-    transform: translate(30px, -80px);
+    transform: translate(30px, 0px);
   }
   100% {
-    transform: translate(30px, 20px);
+    transform: translate(30px, 100px);
   }
 }
 
@@ -125,7 +125,7 @@
     animation-name: none;
     animation-name: slideInTwo;
     animation-duration: 0.6s;
-    transform: translate(30px, 18px);
+    transform: translate(30px, 100px);
   }
 
   .ComputerNavigation {
