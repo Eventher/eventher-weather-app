@@ -5,7 +5,6 @@ const app = express();
 
 const port = process.env.APP_PORT ?? 5000;
 
-// eslint-disable-next-line import/extensions
 const eventsHandler = require("./eventsHandler");
 
 app.get("/events", eventsHandler.getEvents);
