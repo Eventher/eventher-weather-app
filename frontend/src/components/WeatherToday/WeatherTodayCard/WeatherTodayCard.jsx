@@ -5,8 +5,15 @@ import seeMore from "../../../assets/attach-outline.svg";
 
 // import {weatherIcons} from "../../../assets/icons_ipma_weather"
 
-export default function WeatherTodayCard({ weatherDay, index }) {
-  const { precipitaProb, tMin, tMax, predWindDir, idWeatherType } = weatherDay;
+export default function WeatherTodayCard({ weatherDay }) {
+  const {
+    precipitaProb,
+    tMin,
+    tMax,
+    predWindDir,
+    idWeatherType,
+    forecastDate,
+  } = weatherDay;
   // eslint-disable-next-line no-restricted-syntax
   console.log(idWeatherType);
 
@@ -15,7 +22,7 @@ export default function WeatherTodayCard({ weatherDay, index }) {
       <div className="weather5Days_card">
         <div className="weather5Days_cardCol_1">
           <div>
-            <h4>Dia: {index + 1}</h4>
+            <h4>{forecastDate}</h4>
           </div>
           <img src="" alt="Imagem" />
         </div>
