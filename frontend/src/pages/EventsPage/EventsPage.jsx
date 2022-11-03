@@ -1,6 +1,6 @@
 import EventsList from "@components/EventsList/EventsList";
 import React from "react";
-import "./eventsPage.css";
+import "./EventsPage.css";
 
 function EventsPage() {
   return (

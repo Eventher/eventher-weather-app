@@ -8,7 +8,7 @@ function EventsCards(props) {
       <h3 className="eventTitle">{tittle}</h3>
       <img className="eventImg" src={image} alt={tittle} />
       <p className="eventDesc">{description}</p>
-      {{ isOutdoor } ? (
+      {isOutdoor ? (
         <p>
           This is a <div className="bold">outdoor</div> event!
         </p>
