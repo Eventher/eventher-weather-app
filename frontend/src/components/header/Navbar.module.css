@@ -1,7 +1,7 @@
 :root {
   --white: #fefdf8;
-  --dark-blue: #023047;
-  --clear-blue: #219ebc;
+  --dark-blue: rgb(12, 98, 141);
+  --clear-blue: rgb(122, 211, 233);
   --yellow: #ffb703;
   --orange: #fb8500;
 }
@@ -34,15 +34,18 @@
   right: 0;
   width: 30%;
   margin-top: 0;
-  background: linear-gradient(
-    0deg,
-    rgba(2, 48, 71, 0.9) 0%,
-    rgba(33, 158, 188, 0.9) 100%
-  );
   animation-name: slideIn;
   animation-duration: 0.6s;
   transform: translate(0, 100px);
   z-index: 0;
+}
+
+.MainNavbar {
+  background: linear-gradient(
+    0deg,
+    rgba(122, 211, 233, 0.95) 0%,
+    rgba(12, 98, 141,  0.9) 100%
+  );
 }
 
 .SignLogInBar {
@@ -51,14 +54,15 @@
   background: var(--dark-blue);
   background: linear-gradient(
     180deg,
-    rgba(2, 48, 71, 0.9) 0%,
-    rgba(33, 158, 188, 0.9) 100%
+    rgba(12, 98, 141, 0.95) 0%,
+    rgba(122, 211, 233, 0.95) 100%
   );
 }
 
 .NavItem {
   padding: 10px 0 10px 2vw;
   font-weight: 700;
+  text-shadow: 2px 2px 4px #3b3939;
 }
 
 .NavItem a {
@@ -139,6 +143,7 @@
 
   .NavItem {
     font-size: 1.5rem;
+    text-shadow: 2px 2px 4px #3b3939;
   }
 
   .NavItem a:hover {
