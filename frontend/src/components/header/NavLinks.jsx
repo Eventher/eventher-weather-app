@@ -25,10 +25,10 @@ function NavLinks(props) {
   );
 
   return (
-    <div>
+    <nav>
       <ul className={styles.MainNavbar}>
         <li className={styles.NavItem}>
-          <Link to="/">Home</Link>
+          <Link to="/home">Home</Link>
         </li>
         <li className={styles.NavItem}>
           <Link to="/events">Events</Link>
@@ -40,9 +40,8 @@ function NavLinks(props) {
           {openUser ? closeUserComputer : userComputer}
         </li>
       </ul>
-
-      <div>{openUser && <SignLogInBar />}</div>
-    </div>
+      {openUser && <SignLogInBar />}
+    </nav>
   );
 }
 

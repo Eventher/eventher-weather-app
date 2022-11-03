@@ -9,18 +9,24 @@ import Footer from "./components/footer/Footer";
 import Home from "./pages/homePage/Home";
 import Suggestions from "./pages/suggestionsPage/Suggestions";
 import Events from "./pages/eventsPage/events";
+import SignIn from "./pages/signInPage/SignIn";
+import LogIn from "./pages/logInPage/LogIn";
+import LandingComponent from "./components/landing-page/LandingComponent";
 
 function App() {
   return (
     <div className="App">
       <Header />
-
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/events" element={<Events />} />
-        <Route path="/suggestions" element={<Suggestions />} />
-      </Routes>
-
+      <main>
+        <Routes>
+          <Route path="/" element={<LandingComponent />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/suggestions" element={<Suggestions />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/login" element={<LogIn />} />
+        </Routes>
+      </main>
       <Footer />
     </div>
   );

@@ -6,9 +6,9 @@ function ComputerNavigation(props) {
   const { openUser, setOpenUser } = props;
 
   return (
-    <nav className={styles.ComputerNavigation}>
+    <div className={styles.ComputerNavigation}>
       <NavLinks openUser={openUser} setOpenUser={setOpenUser} />
-    </nav>
+    </div>
   );
 }
 

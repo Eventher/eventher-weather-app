@@ -44,7 +44,7 @@ function MainNavBar() {
   );
 
   return (
-    <div>
+    <>
       <ComputerNavigation openUser={openUser} setOpenUser={setOpenUser} />
       <MobileNavigation
         openNav={openNav}
@@ -54,7 +54,7 @@ function MainNavBar() {
         user={user}
         closeUser={closeUser}
       />
-    </div>
+    </>
   );
 }
 
