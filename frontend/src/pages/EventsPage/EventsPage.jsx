@@ -1,6 +1,8 @@
 import EventsList from "@components/EventsList/EventsList";
 import React from "react";
-import "./EventsPage.css";
+
+// eslint-disable-next-line import/no-unresolved
+import "./eventsPage.css";
 
 function EventsPage() {
   return (
