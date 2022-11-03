@@ -4,8 +4,15 @@ import React from "react";
 import "./Weather5DaysCard.css";
 import seeMore from "../../../assets/attach-outline.svg";
 // import {weatherIcons} from "../../../assets/icons_ipma_weather"
-export default function Weather5DaysCard({ weather5Day, index }) {
-  const { precipitaProb, tMin, tMax, predWindDir, idWeatherType } = weather5Day;
+export default function Weather5DaysCard({ weather5Day }) {
+  const {
+    precipitaProb,
+    tMin,
+    tMax,
+    predWindDir,
+    idWeatherType,
+    forecastDate,
+  } = weather5Day;
   // eslint-disable-next-line no-restricted-syntax
   console.log(idWeatherType);
 
@@ -33,7 +40,7 @@ export default function Weather5DaysCard({ weather5Day, index }) {
       <div className="weather5Days_card">
         <div className="weather5Days_cardCol_1">
           <div>
-            <h4>Dia: {index + 1}</h4>
+            <h4>{forecastDate}</h4>
           </div>
           <img src="" alt="Imagem" />
         </div>

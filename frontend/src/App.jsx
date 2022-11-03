@@ -12,6 +12,7 @@ import Events from "./pages/eventsPage/events";
 import SignIn from "./pages/signInPage/SignIn";
 import LogIn from "./pages/logInPage/LogIn";
 import LandingComponent from "./components/landing-page/LandingComponent";
+import CityDetails from "./pages/CityDetails/CityDetails";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/suggestions" element={<Suggestions />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/login" element={<LogIn />} />
+          <Route path="/home/:id" element={<CityDetails />} />
         </Routes>
       </main>
       <Footer />
