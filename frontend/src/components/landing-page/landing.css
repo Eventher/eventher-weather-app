@@ -72,8 +72,10 @@
 
 .text {
   text-align: left;
+
   font-family: "Poppins", sans-serif;
   color: var(--dark-blue);
+
   padding: 2rem;
 }
 
@@ -89,6 +91,7 @@
 #Eventher {
   font-size: 3.5rem;
   font-weight: 900;
+
   color: var(--yellow);
   animation: blur 5s ease-out;
   animation-iteration-count: 1;
