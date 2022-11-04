@@ -24,11 +24,13 @@
   box-sizing: border-box;
   font-family: montserrat, sans-serif;
 }
+
 @media screen and (max-width: 750px){
     .loginForm {
         padding-top: 100px; 
     }
 }
+
 .login-form-group {
   padding: 15px;
 }
