@@ -3,7 +3,7 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import "./Weather5DaysCard.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import seeMore from "../../../assets/attach-outline.svg";
 // import {weatherIcons} from "../../../assets/icons_ipma_weather"
 export default function Weather5DaysCard({ weather5Day }) {
@@ -14,7 +14,7 @@ export default function Weather5DaysCard({ weather5Day }) {
     predWindDir,
     idWeatherType,
     forecastDate,
-    id,
+    globalIdLocal,
   } = weather5Day;
   // eslint-disable-next-line no-restricted-syntax
   console.log(idWeatherType);
@@ -40,7 +40,7 @@ export default function Weather5DaysCard({ weather5Day }) {
 
   return (
     <div className="weather5Days_cardWrapper">
-      <Link to={`/home/${id}`}>
+      <NavLink className="cityDetailsLink" to={`/home/${globalIdLocal}`}>
         <div className="weather5Days_card">
           <div className="weather5Days_cardCol_1">
             <div>
@@ -70,7 +70,7 @@ export default function Weather5DaysCard({ weather5Day }) {
             </button>
           </div>
         </div>
-      </Link>
+      </NavLink>
     </div>
   );
 }
