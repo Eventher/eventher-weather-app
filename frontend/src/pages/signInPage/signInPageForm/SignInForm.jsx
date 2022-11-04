@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from "react";
-import "./signin.css";
+import "./Signin.css";
 
 function SignInForm({ Signin, error }) {
   const [details, setDetails] = useState({
@@ -18,13 +18,16 @@ function SignInForm({ Signin, error }) {
   };
 
   return (
-    <form onSubmit={submitHandler}>
-      <div className="form-inner">
-        <h2>SignIn</h2>
+    <form className="signinForm" onSubmit={submitHandler}>
+      <div className="signin-form-inner">
+        <h2 className="signin-formH2">Sign In</h2>
         {error !== "" ? <div className="error">{error}</div> : ""}
-        <div className="form-group">
-          <label htmlFor="name">Name: </label>
+        <div className="signin-form-group">
+          <label className="signin-formLabel" htmlFor="name">
+            Name:{" "}
+          </label>
           <input
+            className="signin-formInput"
             type="text"
             name="name"
             id="name"
@@ -32,9 +35,12 @@ function SignInForm({ Signin, error }) {
             value={details.name}
           />
         </div>
-        <div className="form-group">
-          <label htmlFor="email">Email: </label>
+        <div className="signin-form-group">
+          <label className="signin-formLabel" htmlFor="email">
+            Email:{" "}
+          </label>
           <input
+            className="signin-formInput"
             type="email"
             name="email"
             id="email"
@@ -42,9 +48,12 @@ function SignInForm({ Signin, error }) {
             value={details.email}
           />
         </div>
-        <div className="form-group">
-          <label htmlFor="password">Password: </label>
+        <div className="signin-form-group">
+          <label className="signin-formLabel" htmlFor="password">
+            Password:{" "}
+          </label>
           <input
+            className="signin-formInput"
             type="password"
             name="password"
             id="password"
@@ -54,9 +63,12 @@ function SignInForm({ Signin, error }) {
             value={details.password}
           />{" "}
         </div>
-        <div className="form-group">
-          <label htmlFor="password">Repeat Password: </label>
+        <div className="signin-form-group">
+          <label className="signin-formLabel" htmlFor="password">
+            Repeat Password:{" "}
+          </label>
           <input
+            className="signin-formInput"
             type="password"
             name="password"
             id="password"
@@ -66,7 +78,7 @@ function SignInForm({ Signin, error }) {
             value={details.passwordRepeat}
           />
         </div>
-        <input type="submit" value="SignIn!" />
+        <input className="signin-formSubmit" type="submit" value="SignIn!" />
       </div>
     </form>
   );
