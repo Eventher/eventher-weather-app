@@ -3,7 +3,6 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import "./Weather5DaysCard.css";
-
 import { NavLink } from "react-router-dom";
 import { BsFillCloudRainFill, BsFillSunFill } from "react-icons/bs";
 import seeMore from "../../../assets/attach-outline.svg";
