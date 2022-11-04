@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import SignInForm from "./SignInForm";
-import "./signin.css";
+import SignInForm from "./signInPageForm/SignInForm";
+import "./signInPageForm/Signin.css";
 
 function SignIn() {
   const [newUser, setNewUser] = useState({ name: "", email: "", password: "" });
@@ -44,13 +44,13 @@ function SignIn() {
   return (
     <div>
       {newUser.email !== "" ? (
-        <div className="welcome">
-          <h2>
+        <div className="signin-welcome">
+          <h2 className="signin-formH2">
             Thanks for Signing In, <br />
-            <span>{newUser.name}</span>
+            <span className="signin-span-name">{newUser.name}</span>
           </h2>
-          <button type="button" onClick={Logout}>
-            <h5>LogOut!</h5>
+          <button className="logout-button-none" type="button" onClick={Logout}>
+            <h5 className="logout-button">LogOut!</h5>
           </button>
         </div>
       ) : (
