@@ -7,7 +7,7 @@ import { Routes, Route } from "react-router-dom";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import Home from "./pages/homePage/Home";
-import Suggestions from "./pages/suggestionsPage/Suggestions";
+import SuggestionsPage from "./pages/suggestionsPage/Suggestions";
 import Events from "./pages/eventsPage/events";
 import SignIn from "./pages/signInPage/SignIn";
 import LogIn from "./pages/logInPage/LogIn";
@@ -23,7 +23,7 @@ function App() {
           <Route path="/" element={<LandingComponent />} />
           <Route path="/home" element={<Home />} />
           <Route path="/events" element={<Events />} />
-          <Route path="/suggestions" element={<Suggestions />} />
+          <Route path="/suggestions" element={<SuggestionsPage />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/login" element={<LogIn />} />
           <Route path="/home/:id" element={<CityDetails />} />

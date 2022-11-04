@@ -1,7 +1,12 @@
 import React from "react";
+import Suggestions from "../../components/Suggestions/Suggestions";
 
-function Suggestions() {
-  return <div>Suggestions</div>;
+function SuggestionsPage() {
+  return (
+    <div>
+      <Suggestions />
+    </div>
+  );
 }
 
-export default Suggestions;
+export default SuggestionsPage;
