@@ -24,11 +24,10 @@
   box-sizing: border-box;
   font-family: montserrat, sans-serif;
 }
-
-@media screen and (max-width: 750px){
-    .loginForm {
-        padding-top: 100px; 
-    }
+@media screen and (max-width: 750px) {
+  .loginForm {
+    padding-top: 100px;
+  }
 }
 
 .login-form-group {
@@ -128,7 +127,7 @@
   font-weight: 500;
   margin-bottom: 30px;
 }
-.login-welcome .login-formH2 .login-span-name{
+.login-welcome .login-formH2 .login-span-name {
   color: rgb(2, 48, 71);
   font-size: 28px;
   font-weight: 700;
