@@ -14,10 +14,14 @@
   box-shadow: 1px 1px 10px 1px rgba(150, 150, 150, 0.4);
   border-radius: 5px;
 }
-
+.cityDetailsLink {
+  text-decoration: none;
+}
+.weather5Days_cardCol_1 {
+  color: black;
+}
 .weather5Days_cardCol_2 {
   font-family: "Nunito", sans-serif;
-
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -64,6 +68,7 @@ pre {
   justify-content: space-between;
   align-items: center;
   width: 10vw;
+  color: black;
 }
 .seeMore {
   width: 30px;

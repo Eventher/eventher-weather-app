@@ -14,9 +14,7 @@ function MainNavBar() {
   const hamburger = (
     <AiOutlineMenu
       className={styles.Hamburger}
-      onClick={() => {
-        setOpenNav(!openNav);
-      }}
+      onClick={() => setOpenNav(!openNav)}
     />
   );
 
