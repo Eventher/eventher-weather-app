@@ -1,5 +1,5 @@
-import EventsList from "@components/EventsList/EventsList";
 import React from "react";
+import EventsList from "../../components/EventsList/EventsList";
 import "./EventsPage.css";
 
 function EventsPage() {
