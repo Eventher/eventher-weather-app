@@ -4,6 +4,7 @@
 import React from "react";
 import "./Weather5DaysCard.css";
 import { Link } from "react-router-dom";
+import { BsFillCloudRainFill, BsFillSunFill } from "react-icons/bs";
 import seeMore from "../../../assets/attach-outline.svg";
 // import {weatherIcons} from "../../../assets/icons_ipma_weather"
 export default function Weather5DaysCard({ weather5Day }) {
@@ -46,7 +47,11 @@ export default function Weather5DaysCard({ weather5Day }) {
             <div>
               <h4>{forecastDate}</h4>
             </div>
-            <img src="" alt="Imagem" />
+            {precipitaProb >= 50 ? (
+              <BsFillCloudRainFill className="weather-icon rain-icon" />
+            ) : (
+              <BsFillSunFill className="weather-icon sun-icon" />
+            )}
           </div>
           <div className="weather5Days_cardCol_2">
             <pre>
