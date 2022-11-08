@@ -22,7 +22,7 @@ VALUES
     "4-hour tour of the islands of Ria Formosa",
     "https://www.getyourguide.com.br/algarve-l66/olhao-excursao-de-4-horas-pelas-ilhas-da-ria-formosa-t97776/?",
     "https://cdn.getyourguide.com/img/tour/629d052ce3d95.jpeg/145.jpg",
-    "Excursão",
+    "Excursion",
     1
   ),
   (  
@@ -31,7 +31,7 @@ VALUES
     "Slide & Splash Water Park",
     "https://www.getyourguide.pt/lagoa-algarve-l90069/lagoa-ingresso-p-parque-aquatico-slide-splash-t199966/?",
     "https://cdn.getyourguide.com/img/tour/3dd8b6397a1a8e03.jpeg/145.jpg",
-    "Excursão",
+    "Excursion",
     1
   ),
   (  
@@ -40,7 +40,7 @@ VALUES
     "Cathedral of Faro",
     "https://www.getyourguide.pt/se-de-faro-l144999/",
     "https://cdn.getyourguide.com/img/location/5e5934397f71f-wide.jpeg/99.webp",
-    "Excursão",
+    "Excursion",
     0
   ),
   (  
@@ -49,7 +49,7 @@ VALUES
     "Ciencia Viva Museum",
     "https://www.getyourguide.pt/faro-l1238/faro-bilhete-museu-centro-de-ciencias-da-vida-do-algarve-t428638/",
     "https://cdn.getyourguide.com/img/tour/eb523661be74f8bf.jpeg/145.jpg",
-    "Excursão",
+    "Excursion",
     0
   ),
   (  
@@ -58,7 +58,7 @@ VALUES
     "Hidden Canyon Tour",
     "https://www.getyourguide.pt/bali-l347/bali-excursao-ao-canion-escondido-cachoeira-e-templos-t249457/",
     "https://cdn.getyourguide.com/img/tour/5ce3ed17093ba.jpeg/145.jpg",
-    "Excursão",
+    "Excursion",
     1
   ),
   (  

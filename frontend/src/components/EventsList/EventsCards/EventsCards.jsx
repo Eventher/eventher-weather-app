@@ -1,24 +1,32 @@
 /* eslint-disable react/prop-types */
 import React from "react";
+import "./EventsCards.css";
 
 function EventsCards(props) {
   // eslint-disable-next-line react/destructuring-assignment
-  const { title, description, image, url, outdoor } = props.event;
+  const { title, description, image, url, outdoor, city } = props.event;
   return (
-    <div className="eventCard">
-      <h3 className="eventTitle">{title}</h3>
-      <img className="eventImg" src={image} alt={title} />
-      <p className="eventDesc">{description}</p>
-      {outdoor ? (
-        <p>
-          This is a <div className="bold">outdoor</div> event!
-        </p>
-      ) : (
-        <p>
-          This is a <div className="bold">indoor</div> event!
-        </p>
-      )}
-      <span className="eventLink">{url}</span>
+    <div>
+      <div className="eventCard">
+        <h2 className="eventTitle">{title}</h2>
+        <img className="eventImg" src={image} alt={title} />
+        <h4 className="eventDesc">
+          {description} activity in {city}
+        </h4>
+        {outdoor ? (
+          <p className="outOrIn">
+            This is a <span className="bold">outdoor</span> event!
+          </p>
+        ) : (
+          <p className="outOrIn">
+            This is a <span className="bold">indoor</span> event!
+          </p>
+        )}
+        <a href={url} target="_blank" className="eventLink" rel="noreferrer">
+          Click for more information...
+        </a>
+      </div>
+      <hr className="break" />
     </div>
   );
 }
