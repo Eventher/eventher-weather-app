@@ -8,7 +8,7 @@ import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import Home from "./pages/homePage/Home";
 import SuggestionsPage from "./pages/suggestionsPage/Suggestions";
-import Events from "./pages/eventsPage/events";
+import EventsList from "./components/EventsList/EventsList";
 import SignIn from "./pages/signInPage/SignIn";
 import LogIn from "./pages/logInPage/LogIn";
 import LandingComponent from "./components/landing-page/LandingComponent";
@@ -22,7 +22,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingComponent />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/events" element={<Events />} />
+          <Route path="/events" element={<EventsList />} />
           <Route path="/suggestions" element={<SuggestionsPage />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/login" element={<LogIn />} />

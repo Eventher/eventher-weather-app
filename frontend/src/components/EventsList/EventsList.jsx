@@ -4,9 +4,12 @@ import axios from "axios";
 import EventsCards from "./EventsCards/EventsCards";
 
 function EventsList() {
-  const [events, setEvents] = useState({});
+  const [events, setEvents] = useState([]);
+
   const fetchEvents = () => {
-    axios.get("").then((response) => setEvents(response.data));
+    axios
+      .get("http://localhost:5000/events")
+      .then((response) => setEvents(response.data));
   };
 
   useEffect(() => {
@@ -15,9 +18,9 @@ function EventsList() {
 
   return (
     <div>
-      {events.map(() => (
-        <EventsCards />
-      ))}
+      {events
+        ? events.map((event) => <EventsCards key={event.id} event={event} />)
+        : null}
     </div>
   );
 }

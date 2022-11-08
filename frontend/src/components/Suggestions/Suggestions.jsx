@@ -18,21 +18,24 @@ function Suggestions() {
 
   return (
     <form className="suggestions-form" onSubmit={handleSubmit(onSubmit)}>
+      <label>Name:</label>
       <input
+        placeholder="Name"
         {...register("name", { required: true })}
         aria-invalid={errors.name ? "true" : "false"}
       />
       {errors.name?.type === "required" && (
         <p role="alert"> Name is required</p>
       )}
-
+      <label>Email:</label>
       <input
+        placeholder="E-mail"
         {...register("mail", { required: "Email Address is required" })}
         aria-invalid={errors.mail ? "true" : "false"}
       />
       {errors.mail && <p role="alert">{errors.mail?.message}</p>}
 
-      <label>Activity</label>
+      <label>Activity:</label>
       <input
         placeholder="activity"
         {...register("activity", { required: "Activity is required" })}
@@ -41,7 +44,9 @@ function Suggestions() {
 
       {errors.activity && <p role="alert">{errors.activity?.message}</p>}
 
+      <label>Submit</label>
       <input
+        placeholder="Type here:"
         className="textArea"
         {...register("textArea", { required: "textArea is required" })}
         aria-invalid={errors.textArea ? "true" : "false"}
