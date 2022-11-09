@@ -15,3 +15,13 @@ app.listen(port, (err) => {
     console.error("Something bad happened");
   }
 });
+
+//* USERS FETCHING ====================
+// const usersHandler = require("./users_database/usersHandler");
+
+// ? LOGIN USER ===============
+// app.get("/users/:id", usersHandler.getUser);
+
+// ? SIGNIN USER ===============
+// app.post("/users", usersHandler.postUser);
+//* USERS FETCHING ====================
