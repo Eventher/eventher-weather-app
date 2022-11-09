@@ -18,43 +18,67 @@ function Suggestions() {
 
   return (
     <form className="suggestions-form" onSubmit={handleSubmit(onSubmit)}>
-      <label>Name:</label>
-      <input
-        placeholder="Name"
-        {...register("name", { required: true })}
-        aria-invalid={errors.name ? "true" : "false"}
-      />
-      {errors.name?.type === "required" && (
-        <p role="alert"> Name is required</p>
-      )}
-      <label>Email:</label>
-      <input
-        placeholder="E-mail"
-        {...register("mail", { required: "Email Address is required" })}
-        aria-invalid={errors.mail ? "true" : "false"}
-      />
-      {errors.mail && <p role="alert">{errors.mail?.message}</p>}
-
-      <label>Activity:</label>
-      <input
-        placeholder="activity"
-        {...register("activity", { required: "Activity is required" })}
-        aria-invalid={errors.activity ? "true" : "false"}
-      />
-
-      {errors.activity && <p role="alert">{errors.activity?.message}</p>}
-
-      <label>Submit</label>
-      <input
-        placeholder="Type here:"
-        className="textArea"
-        {...register("textArea", { required: "textArea is required" })}
-        aria-invalid={errors.textArea ? "true" : "false"}
-      />
-
-      {errors.textArea && <p role="alert">{errors.textArea?.message}</p>}
-
-      <button type="submit">Submit your suggestion</button>
+      <div className="suggestions-form-group">
+        <label className="suggestions-label">Name:</label>
+        <input
+          className="suggestions-input"
+          placeholder="Name"
+          {...register("name", { required: true })}
+          aria-invalid={errors.name ? "true" : "false"}
+        />
+        {errors.name?.type === "required" && (
+          <p className="alert" role="alert">
+            Name is required
+          </p>
+        )}
+      </div>
+      <div className="suggestions-form-group">
+        <label className="suggestions-label">Email:</label>
+        <input
+          className="suggestions-input"
+          placeholder="E-mail"
+          {...register("mail", { required: "Email Address is required" })}
+          aria-invalid={errors.mail ? "true" : "false"}
+        />
+        {errors.mail && (
+          <p className="alert" role="alert">
+            {errors.mail?.message}
+          </p>
+        )}
+      </div>
+      <div className="suggestions-form-group">
+        <label className="suggestions-label">Activity:</label>
+        <input
+          className="suggestions-input"
+          placeholder="Activity"
+          {...register("activity", { required: "Activity is required" })}
+          aria-invalid={errors.activity ? "true" : "false"}
+        />
+        {errors.activity && (
+          <p className="alert" role="alert">
+            {errors.activity?.message}
+          </p>
+        )}
+      </div>
+      <div className="suggestions-form-group">
+        <label className="suggestions-label">
+          Make a small description of the event, please
+        </label>
+        <input
+          className="text-area"
+          placeholder="Type here:"
+          {...register("textArea", { required: "A description is required" })}
+          aria-invalid={errors.textArea ? "true" : "false"}
+        />
+        {errors.textArea && (
+          <p className="alert" role="alert">
+            {errors.textArea?.message}
+          </p>
+        )}
+      </div>
+      <button className="suggestions-button" type="submit">
+        Submit your suggestion
+      </button>
     </form>
   );
 }

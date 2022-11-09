@@ -1,5 +1,86 @@
 .suggestions-form {
   display: flex;
   flex-direction: column;
-  padding-top: 120px;
+  margin: 0 6rem 3rem;
+}
+
+.suggestions-label {
+  display: block;
+  color: #666;
+  font-size: 1.8rem;
+  margin: 1rem 0;
+  transition: 0.4s;
+}
+
+.suggestions-form-group:focus-within .suggestions-label {
+  color: #219ebc;
+  filter: drop-shadow(0 0 5px rgba(2, 48, 71, 0.7));
+}
+
+.suggestions-input,
+.text-area {
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+  display: block;
+  width: 80%;
+  margin: auto;
+  padding: 10px;
+  margin-bottom: 1rem;
+  background-color: #f8f8f8;
+  text-align: center;
+  border-radius: 8px;
+  transition: 0.4s;
+  font-size: 1.2rem;
+}
+
+.suggestions-form-group:focus-within .suggestions-input,
+.suggestions-form-group:focus-within .text-area {
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+}
+
+.text-area {
+  height: 10rem;
+}
+
+.alert {
+  color: red;
+  filter: drop-shadow(0 0 6px rgba(98, 60, 60, 0.5));
+  margin-bottom: 15px;
+}
+
+.suggestions-button {
+  width: 12rem;
+  height: 4rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 0.4rem 2rem;
+  margin: 2rem auto 0;
+  background-image: linear-gradient(
+    to bottom,
+    #219ebc,
+    #219ebc,
+    #219ebc,
+    #023047
+  );
+  color: #fff;
+  text-align: center;
+}
+
+@media screen and (max-width: 750px) {
+  .suggestions-form {
+    margin: 0 2.5rem 3rem;
+  }
+
+  .suggestions-label {
+    font-size: 1.5rem;
+  }
+
+  .suggestions-input,
+  .text-area {
+    font-size: 1rem;
+    width: 100%;
+  }
 }
