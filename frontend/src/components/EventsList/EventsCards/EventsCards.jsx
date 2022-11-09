@@ -1,32 +1,36 @@
 /* eslint-disable react/prop-types */
-import React from "react";
-import "./EventsCards.css";
 
-function EventsCards(props) {
+import React, { useContext } from "react";
+import EventContext from "../../../contexts/EventContext";
+
+function EventsCards() {
   // eslint-disable-next-line react/destructuring-assignment
-  const { title, description, image, url, outdoor, city } = props.event;
+
+  const { events } = useContext(EventContext);
+
   return (
     <div>
-      <div className="eventCard">
-        <h2 className="eventTitle">{title}</h2>
-        <img className="eventImg" src={image} alt={title} />
-        <h4 className="even tDesc">
-          {description} activity in {city}
-        </h4>
-        {outdoor ? (
-          <p className="outOrIn">
-            This is a <span className="bold">outdoor</span> event!
-          </p>
-        ) : (
-          <p className="outOrIn">
-            This is a <span className="bold">indoor</span> event!
-          </p>
-        )}
-        <a href={url} target="_blank" className="eventLink" rel="noreferrer">
-          Click for more information...
-        </a>
-      </div>
-      <hr className="break" />
+      {events
+        ? events.map((event) => (
+            <div className="eventCard" key={event.id}>
+              <h3 className="eventTitle">{event.title}</h3>
+              <img className="eventImg" src={event.image} alt={event.title} />
+              <p className="eventDesc">{event.description}</p>
+              {event.outdoor ? (
+                <p>
+                  This is a <span className="bold">outdoor</span> event!
+                </p>
+              ) : (
+                <p>
+                  This is a <span className="bold">indoor</span> event!
+                </p>
+              )}
+              <a href={event.url} className="eventLink">
+                Click for more information...
+              </a>
+            </div>
+          ))
+        : null}
     </div>
   );
 }
