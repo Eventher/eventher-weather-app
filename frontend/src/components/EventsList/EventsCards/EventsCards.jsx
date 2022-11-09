@@ -1,23 +1,34 @@
 /* eslint-disable react/prop-types */
-import React from "react";
+import React, { useContext } from "react";
+import EventContext from "../../../contexts/EventContext";
 
-function EventsCards(props) {
-  const { tittle, description, image, link, isOutdoor } = props;
+function EventsCards() {
+  // eslint-disable-next-line react/destructuring-assignment
+  const { events } = useContext(EventContext);
+
   return (
-    <div className="eventCard">
-      <h3 className="eventTitle">{tittle}</h3>
-      <img className="eventImg" src={image} alt={tittle} />
-      <p className="eventDesc">{description}</p>
-      {isOutdoor ? (
-        <p>
-          This is a <div className="bold">outdoor</div> event!
-        </p>
-      ) : (
-        <p>
-          This is a <div className="bold">indoor</div> event!
-        </p>
-      )}
-      <span className="eventLink">{link}</span>
+    <div>
+      {events
+        ? events.map((event) => (
+            <div className="eventCard" key={event.id}>
+              <h3 className="eventTitle">{event.title}</h3>
+              <img className="eventImg" src={event.image} alt={event.title} />
+              <p className="eventDesc">{event.description}</p>
+              {event.outdoor ? (
+                <p>
+                  This is a <span className="bold">outdoor</span> event!
+                </p>
+              ) : (
+                <p>
+                  This is a <span className="bold">indoor</span> event!
+                </p>
+              )}
+              <a href={event.url} className="eventLink">
+                Click for more information...
+              </a>
+            </div>
+          ))
+        : null}
     </div>
   );
 }
