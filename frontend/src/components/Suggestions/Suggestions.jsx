@@ -4,8 +4,8 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from "react";
 import "./suggestions.css";
-// import { Suggestions } from '@components/suggestions/suggestions';
 import { useForm } from "react-hook-form";
+// import axios from "axios";
 
 function Suggestions() {
   const {
@@ -15,6 +15,14 @@ function Suggestions() {
   } = useForm();
   // eslint-disable-next-line no-restricted-syntax
   const onSubmit = (data) => console.log(data);
+
+  /*
+  const saveSuggestion = () => {
+    axios
+      .post("http://localhost:5000/suggestions")
+      .then((response) => console.log(response.data));
+  };
+  */
 
   return (
     <form className="suggestions-form" onSubmit={handleSubmit(onSubmit)}>
@@ -37,7 +45,7 @@ function Suggestions() {
         <input
           className="suggestions-input"
           placeholder="E-mail"
-          {...register("mail", { required: "Email Address is required" })}
+          {...register("email", { required: "Email Address is required" })}
           aria-invalid={errors.mail ? "true" : "false"}
         />
         {errors.mail && (
