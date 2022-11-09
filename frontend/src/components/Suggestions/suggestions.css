@@ -8,8 +8,9 @@
   display: block;
   color: #666;
   font-size: 1.8rem;
-  margin: 1rem 0;
+  margin: 1rem 10%;
   transition: 0.4s;
+  text-align: left;
 }
 
 .suggestions-form-group:focus-within .suggestions-label {
@@ -77,6 +78,7 @@
 
   .suggestions-label {
     font-size: 1.5rem;
+    margin: 1rem 0;
   }
 
   .suggestions-input,

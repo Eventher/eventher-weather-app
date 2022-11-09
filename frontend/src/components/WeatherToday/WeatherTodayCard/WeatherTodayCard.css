@@ -39,7 +39,6 @@
 
 .weather5Days_cardCol_2 {
   font-family: "Nunito", sans-serif;
-
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -94,4 +93,23 @@ pre {
 
 .sun-icon {
   color: var(--yellow);
+}
+
+@media screen and (max-width: 670px) {
+  .image-temp {
+    bottom: 0;
+    top: 20px;
+  }
+
+  .today-date {
+    font-size: 1.4rem;
+  }
+
+  .weather5Days_cardCol_2 h2,
+  pre {
+    font-weight: 9000;
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+  }
 }
