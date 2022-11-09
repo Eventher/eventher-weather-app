@@ -12,6 +12,12 @@ const eventsHandler = require("./eventsHandler");
 app.get("/events", eventsHandler.getEvents);
 app.get("/events/:id", eventsHandler.getEventsById);
 
+app.post("/events", eventsHandler.postEvent);
+
+app.put("/events/:id", eventsHandler.updateEvent);
+
+app.delete("/events/:id", eventsHandler.deleteEvent);
+
 app.listen(port, (err) => {
   if (err) {
     console.error("Something bad happened");
