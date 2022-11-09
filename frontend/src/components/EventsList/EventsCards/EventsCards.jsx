@@ -1,9 +1,11 @@
 /* eslint-disable react/prop-types */
+
 import React, { useContext } from "react";
 import EventContext from "../../../contexts/EventContext";
 
 function EventsCards() {
   // eslint-disable-next-line react/destructuring-assignment
+
   const { events } = useContext(EventContext);
 
   return (
