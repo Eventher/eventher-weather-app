@@ -664,3 +664,12 @@ VALUES
     "Cultural",
     0
   );
+
+CREATE TABLE `suggestions` (
+    `id` INT NOT NULL AUTO_INCREMENT,
+    `name` VARCHAR(100) NOT NULL,
+    `email` VARCHAR(255)  NOT NULL,
+    `activity` VARCHAR(255)  NOT NULL,
+    `description` TEXT NOT NULL,
+    PRIMARY KEY (`id`)
+  ) ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET = utf8;
