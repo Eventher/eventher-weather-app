@@ -10,7 +10,7 @@ function EventsCards(props) {
       <div className="eventCard">
         <h2 className="eventTitle">{title}</h2>
         <img className="eventImg" src={image} alt={title} />
-        <h4 className="eventDesc">
+        <h4 className="even tDesc">
           {description} activity in {city}
         </h4>
         {outdoor ? (
