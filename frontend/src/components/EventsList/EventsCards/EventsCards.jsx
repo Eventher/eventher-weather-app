@@ -1,9 +1,12 @@
 /* eslint-disable react/prop-types */
+
 import React, { useContext } from "react";
 import EventContext from "../../../contexts/EventContext";
+import "./EventsCards.css";
 
 function EventsCards() {
   // eslint-disable-next-line react/destructuring-assignment
+
   const { events } = useContext(EventContext);
 
   return (
@@ -23,7 +26,7 @@ function EventsCards() {
                   This is a <span className="bold">indoor</span> event!
                 </p>
               )}
-              <a href={event.url} className="eventLink">
+              <a href={event.url} className="eventLink" target="_black">
                 Click for more information...
               </a>
             </div>
