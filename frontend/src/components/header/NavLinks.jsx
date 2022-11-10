@@ -6,10 +6,11 @@ import { IoIosArrowDropupCircle } from "react-icons/io";
 import { Link } from "react-router-dom";
 import UserContext from "../../contexts/User/UserContext";
 import SignLogInBar from "./SignLogInBar";
+import NavbarContext from "../../contexts/NavbarContext";
 import styles from "./Navbar.module.css";
 
-function NavLinks(props) {
-  const { openUser, setOpenUser } = props;
+function NavLinks() {
+  const [openUser, setOpenUser] = useContext(NavbarContext);
 
   const userComputer = (
     <FaUserCircle

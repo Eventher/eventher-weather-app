@@ -1,5 +1,44 @@
-.eventTitle {
+.eventCard {
+  padding: 120px 10px 10px;
 }
+
+.eventTitle {
+  font-size: 35px;
+  margin: 20px;
+}
+
+.eventDesc {
+  font-size: 25px;
+  margin: 5px;
+}
+
+.outOrIn {
+  margin-left: 25px;
+  text-align: left;
+}
+
 .bold {
   font-weight: bold;
+}
+
+.eventImg {
+  width: 500px;
+  border-radius: 10px;
+}
+
+.break {
+  width: 90%;
+  margin: auto;
+}
+
+.eventLink {
+  font-size: 15px;
+  text-decoration: none;
+  color: rgb(34, 0, 255);
+}
+
+@media screen and (max-width: 750px) {
+  .eventCard {
+    padding-top: 0;
+  }
 }

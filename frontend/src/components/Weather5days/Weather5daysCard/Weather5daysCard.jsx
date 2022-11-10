@@ -45,7 +45,7 @@ export default function Weather5DaysCard({ weather5Day }) {
         <div className="weather5Days_card">
           <div className="weather5Days_cardCol_1">
             <div>
-              <h4>{forecastDate}</h4>
+              <h4 className="next-days">{forecastDate}</h4>
             </div>
             {precipitaProb >= 50 ? (
               <BsFillCloudRainFill className="weather-icon rain-icon" />
@@ -62,8 +62,8 @@ export default function Weather5DaysCard({ weather5Day }) {
             </pre>
           </div>
           <div className="weather5Days_cardCol_3">
-            <h4>Rain Probability:</h4>{" "}
-            <h2>
+            <h4 className="rainProb">Rain Probability:</h4>{" "}
+            <h2 className="rainProb">
               {/* className={`precipitaClass_${precipitaClassVal}`}> */}
               {precipitaProb}%
             </h2>
