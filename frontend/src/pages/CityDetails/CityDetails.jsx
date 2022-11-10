@@ -6,7 +6,8 @@ import axios from "axios";
 
 function CityDetails() {
   const { id } = useParams();
-  const [cities, setCities] = useState();
+  const [cities, setCities] = useState("");
+
   const getCities = () => {
     axios
       .get(
@@ -15,11 +16,20 @@ function CityDetails() {
       .then((res) => setCities(res.data.data))
       .catch((err) => console.log(err));
   };
-  const { name } = cities;
+
   useEffect(() => {
     getCities();
-  }, [id]);
-  return <div>{name} Details</div>;
+  }, []);
+
+  return (
+    <div>
+      <h4 className="today-date">{cities[0].forecastDate}</h4>
+      <h4 className="today-date">{cities[0].precipitaProb}%</h4>
+      <h4 className="today-date">
+        {cities[0].tMin}-{cities[0].tMax}
+      </h4>
+    </div>
+  );
 }
 
 export default CityDetails;

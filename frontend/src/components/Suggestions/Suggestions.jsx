@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-syntax */
 /* eslint-disable import/no-unresolved */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/jsx-props-no-spreading */
@@ -5,7 +6,7 @@
 import React from "react";
 import "./suggestions.css";
 import { useForm } from "react-hook-form";
-// import axios from "axios";
+import axios from "axios";
 
 function Suggestions() {
   const {
@@ -13,19 +14,21 @@ function Suggestions() {
     formState: { errors },
     handleSubmit,
   } = useForm();
-  // eslint-disable-next-line no-restricted-syntax
-  const onSubmit = (data) => console.log(data);
 
-  /*
-  const saveSuggestion = () => {
+  const saveSuggestion = (data) => {
+    console.log(typeof data);
     axios
-      .post("http://localhost:5000/suggestions")
-      .then((response) => console.log(response.data));
+      .post("http://localhost:5000/suggestions", JSON.stringify(data))
+      .then(() => {
+        console.log("Post was sucessful");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
-  */
 
   return (
-    <form className="suggestions-form" onSubmit={handleSubmit(onSubmit)}>
+    <form className="suggestions-form" onSubmit={handleSubmit(saveSuggestion)}>
       <div className="suggestions-form-group">
         <label className="suggestions-label">Name:</label>
         <input
@@ -75,12 +78,14 @@ function Suggestions() {
         <input
           className="text-area"
           placeholder="Type here:"
-          {...register("textArea", { required: "A description is required" })}
-          aria-invalid={errors.textArea ? "true" : "false"}
+          {...register("description", {
+            required: "A description is required",
+          })}
+          aria-invalid={errors.description ? "true" : "false"}
         />
-        {errors.textArea && (
+        {errors.description && (
           <p className="alert" role="alert">
-            {errors.textArea?.message}
+            {errors.description?.message}
           </p>
         )}
       </div>

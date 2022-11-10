@@ -32,6 +32,8 @@ const getSuggestionsById = (req, res) => {
 
 const postSuggestion = (req, res) => {
   const { name, email, activity, description } = req.body;
+  // eslint-disable-next-line no-restricted-syntax
+  console.log(req.body);
 
   database
     .query(
