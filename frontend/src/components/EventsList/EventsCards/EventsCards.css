@@ -1,7 +1,9 @@
 .eventCard {
-  padding: 120px 10px 10px;
+  padding: 25px;
 }
-
+.everyCard {
+  padding: 80px 0px 0px;
+}
 .eventTitle {
   font-size: 35px;
   margin: 20px;
@@ -39,6 +41,18 @@
   color: rgb(34, 0, 255);
 }
 
+.rightBtn {
+  float: right;
+  width: 50px;
+  height: 50px;
+  margin: 20px 20% 25px;
+}
+.leftBtn {
+  float: left;
+  margin: 20px 0px 25px 20%;
+  width: 50px;
+  height: 50px;
+}
 @media screen and (max-width: 750px) {
   .eventCard {
     padding-top: 0;

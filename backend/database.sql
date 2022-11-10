@@ -272,7 +272,7 @@ VALUES
     29,
     "Leiria",
     "Nazaré",
-    "https://www.getyourguide.pt/lisboa-l42/de-lisboa-excursao-de-meio-dia-a-fatima-t84132/?",
+    "https://www.getyourguide.pt/lisboa-l42/obidos-nazare-e-alcobaca-excursao-particular-de-carro-t135045/?",
     "https://cdn.getyourguide.com/img/tour/5a3b994eab3e1.jpeg/145.jpg",
     "Cultural",
     1
@@ -280,9 +280,9 @@ VALUES
   (  
     30,
     "Leiria",
-    "Nazaré",
+    "Excursão",
     "https://www.getyourguide.pt/lisboa-l42/de-lisboa-excursao-de-meio-dia-a-fatima-t84132/?",
-    "https://cdn.getyourguide.com/img/tour/5a3b994eab3e1.jpeg/145.jpg",
+    "https://cdn.getyourguide.com/img/tour/5863b6ac9894a.jpeg/98.jpg",
     "Cultural",
     1
   ),
