@@ -13,6 +13,7 @@
 .outOrIn {
   margin-left: 25px;
   text-align: left;
+  font-size: 20px;
 }
 .bold {
   font-weight: bold;
@@ -27,7 +28,10 @@
   margin: auto;
 }
 .eventLink {
-  font-size: 15px;
+  font-size: 12px;
   text-decoration: none;
   color: rgb(34, 0, 255);
+}
+@media only screen and (min-width:750px) {
+  
 }
