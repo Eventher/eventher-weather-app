@@ -1,9 +1,10 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable import/no-extraneous-dependencies */
-import React from "react";
+import React, { useContext } from "react";
 import { FaUserCircle } from "react-icons/fa";
 import { IoIosArrowDropupCircle } from "react-icons/io";
 import { Link } from "react-router-dom";
+import UserContext from "../../contexts/User/UserContext";
 import SignLogInBar from "./SignLogInBar";
 import styles from "./Navbar.module.css";
 
@@ -24,6 +25,8 @@ function NavLinks(props) {
     />
   );
 
+  const msg = useContext(UserContext);
+
   return (
     <nav>
       <ul className={styles.MainNavbar}>
@@ -39,6 +42,7 @@ function NavLinks(props) {
         <li className={styles.IconItem}>
           {openUser ? closeUserComputer : userComputer}
         </li>
+        <div>Message{msg}</div>
       </ul>
       {openUser && <SignLogInBar />}
     </nav>

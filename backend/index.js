@@ -25,11 +25,11 @@ app.listen(port, (err) => {
 });
 
 //* USERS FETCHING ====================
-// const usersHandler = require("./users_database/usersHandler");
+const usersHandler = require("./users_database/usersHandler");
 
 // ? LOGIN USER ===============
-// app.get("/users/:id", usersHandler.getUser);
+app.get("/users", usersHandler.getAllUsers);
 
 // ? SIGNIN USER ===============
-// app.post("/users", usersHandler.postUser);
+app.post("/users", usersHandler.postUser);
 //* USERS FETCHING ====================

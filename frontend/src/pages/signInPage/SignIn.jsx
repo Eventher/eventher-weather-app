@@ -6,12 +6,14 @@ function SignIn() {
   const [newUser, setNewUser] = useState({ name: "", email: "", password: "" });
   const [user, setUser] = useState({ name: "", email: "", password: "" });
   const [error, setError] = useState("");
+  // console.log(newUser);
+  // console.log(user);
+  // console.log(error);
 
   const Signin = (details) => {
     // console.log("Logged in");
-
     if (
-      newUser.name === "" &&
+      (newUser.first_name || newUser.last_name) === "" &&
       newUser.email === "" &&
       newUser.password === ""
     ) {
@@ -20,13 +22,14 @@ function SignIn() {
       //! ====================
       setNewUser({
         ...newUser,
-        name: details.name,
+        name: details.first_name.concat(details.last_name),
         email: details.email,
         password: details.password,
       });
+      // console.log(newUser.name);
       setUser({
         ...user,
-        name: details.name,
+        name: details.first_name.concat(details.last_name),
         email: details.email,
         password: details.password,
       });
@@ -37,6 +40,11 @@ function SignIn() {
       setError("User already signed in! Log In please!");
     }
   };
+
+  // useEffect(() => {
+  //   SignIn();
+  // }, []);
+
   const Logout = () => {
     // console.log("Logout");
     setNewUser({ name: "", email: "" });

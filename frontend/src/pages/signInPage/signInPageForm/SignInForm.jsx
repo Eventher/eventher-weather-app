@@ -4,7 +4,8 @@ import "./Signin.css";
 
 function SignInForm({ Signin, error }) {
   const [details, setDetails] = useState({
-    name: "",
+    first_name: "",
+    last_name: "",
     email: "",
     password: "",
     passwordRepeat: "",
@@ -14,7 +15,6 @@ function SignInForm({ Signin, error }) {
     e.preventDefault();
     Signin(details);
     // console.log(details);
-    // e.target.value = "";
   };
 
   return (
@@ -24,15 +24,32 @@ function SignInForm({ Signin, error }) {
         {error !== "" ? <div className="error">{error}</div> : ""}
         <div className="signin-form-group">
           <label className="signin-formLabel" htmlFor="name">
-            Name:{" "}
+            First Name:{" "}
           </label>
           <input
             className="signin-formInput"
             type="text"
-            name="name"
-            id="name"
-            onChange={(e) => setDetails({ ...details, name: e.target.value })}
-            value={details.name}
+            name="first_name"
+            id="first_name"
+            onChange={(e) =>
+              setDetails({ ...details, first_name: e.target.value })
+            }
+            value={details.first_name}
+          />
+        </div>
+        <div className="signin-form-group">
+          <label className="signin-formLabel" htmlFor="name">
+            Last Name:{" "}
+          </label>
+          <input
+            className="signin-formInput"
+            type="text"
+            name="last_name"
+            id="last_name"
+            onChange={(e) =>
+              setDetails({ ...details, last_name: e.target.value })
+            }
+            value={details.last_name}
           />
         </div>
         <div className="signin-form-group">

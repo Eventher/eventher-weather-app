@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import "./Login.css";
 
 function LogInForm({ Login, error }) {
-  const [details, setDetails] = useState({ name: "", email: "", password: "" });
+  const [details, setDetails] = useState({ email: "", password: "" });
 
   const submitHandler = (e) => {
     e.preventDefault();
