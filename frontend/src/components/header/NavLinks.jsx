@@ -1,14 +1,15 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable import/no-extraneous-dependencies */
-import React from "react";
+import React, { useContext } from "react";
 import { FaUserCircle } from "react-icons/fa";
 import { IoIosArrowDropupCircle } from "react-icons/io";
 import { Link } from "react-router-dom";
 import SignLogInBar from "./SignLogInBar";
+import NavbarContext from "../../contexts/NavbarContext";
 import styles from "./Navbar.module.css";
 
-function NavLinks(props) {
-  const { openUser, setOpenUser } = props;
+function NavLinks() {
+  const [openUser, setOpenUser] = useContext(NavbarContext);
 
   const userComputer = (
     <FaUserCircle

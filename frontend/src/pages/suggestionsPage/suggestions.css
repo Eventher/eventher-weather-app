@@ -1,0 +1,13 @@
+.suggestions-title {
+  font-size: 3rem;
+  color: var(--dark-blue);
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+  padding-top: 120px;
+}
+
+@media screen and (max-width: 750px) {
+  .suggestions-title {
+    font-size: 2rem;
+    padding-top: 0;
+  }
+}
