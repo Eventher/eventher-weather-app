@@ -20,6 +20,7 @@
 .eventImg {
   width: 500px;
   border-radius: 10px;
+  box-shadow: 5px 5px 20px gray;
 }
 .break {
   width: 90%;
