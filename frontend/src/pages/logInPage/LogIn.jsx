@@ -1,5 +1,5 @@
-import React, { useState, useContext } from "react";
-import userContext from "../../contexts/User/UserContext";
+import React, { useState } from "react";
+// import userContext from "../../contexts/User/UserContext";
 import LogInForm from "./logInPageForm/LogInForm";
 import "./logInPageForm/Login.css";
 
@@ -9,16 +9,15 @@ function LogIn() {
   //   email: "admin@admin.com",
   //   password: "123",
   // };
-  const [userData] = useContext(userContext);
-  console.log(userData);
+  // const [userData] = useContext(userContext);
+  // console.log(userData);
   // getUser();
 
   const [userLogin, setUserLogin] = useState({ email: "", password: "" });
-  const [error, setError] = useState("");
+  const [error] = useState("");
 
-  const Login = (details) => {
-    console.log(details);
-
+  const Login = () => {
+    // console.log(details);
     // if (
     //   details.email === userData.email &&
     //   details.password === userData.password
