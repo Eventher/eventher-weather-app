@@ -104,26 +104,30 @@ function LogIn() {
   const { users } = useContext(UserContext);
   // console.log(users);
   const [userLogin, setUserLogin] = useState();
-  const [error] = useState("");
+  const [error, setError] = useState("");
   const Login = (details) => {
     // console.log(details);
-    users
-      ?.filter((user) => details.email === user?.email)
+    const logger = users
+      ?.filter(
+        (user) =>
+          details.email === user?.email && details.password === user?.entry
+      )
       .map((user) => setUserLogin(user));
+
     // logUser != null && logUser.length > 0 ? setUserLogin(logUser) : null;
-    // if (
-    //   details.email === userData.email &&
-    //   details.password === userData.password
-    // ) {
-    //   // console.log("Logged in");
-    //   setUserLogin({
-    //     first_name: details.first_name,
-    //     email: details.email,
-    //   });
-    // } else {
-    //   // console.log("Details do not match!");
-    //   setError("Details do not match!");
-    // }
+    if (
+      details.email === logger.email &&
+      details.password === logger.password
+    ) {
+      // console.log("Logged in");
+      setUserLogin({
+        first_name: logger.first_name,
+        email: logger.email,
+      });
+    } else {
+      // console.log("Details do not match!");
+      setError("Details do not match!");
+    }
   };
   // console.log(userLogin);
   const Logout = () => {
