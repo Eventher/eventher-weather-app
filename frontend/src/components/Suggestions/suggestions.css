@@ -8,7 +8,7 @@
   display: block;
   color: #666;
   font-size: 1.8rem;
-  margin: 1rem 10%;
+  margin: 1rem 20%;
   transition: 0.4s;
   text-align: left;
 }
@@ -25,15 +25,16 @@
   border: none;
   outline: none;
   display: block;
-  width: 80%;
+  width: 60%;
   margin: auto;
-  padding: 10px;
+  padding: 10px 20px 10px;
   margin-bottom: 1rem;
   background-color: #f8f8f8;
   text-align: center;
   border-radius: 8px;
   transition: 0.4s;
   font-size: 1.2rem;
+  text-align: left;
 }
 
 .suggestions-form-group:focus-within .suggestions-input,

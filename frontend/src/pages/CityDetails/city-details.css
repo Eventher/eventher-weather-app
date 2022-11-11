@@ -1,0 +1,43 @@
+.city-details {
+  padding-top: 140px;
+  padding-bottom: 2rem;
+}
+
+.weather-city-details {
+  box-shadow: 1px 1px 10px 1px rgba(150, 150, 150, 0.4);
+  border-radius: 10px;
+  margin: 0 12rem;
+  display: flex;
+}
+
+.first-column {
+  width: 100%;
+  align-self: center;
+}
+
+.second-column {
+  width: 100%;
+  align-self: center;
+}
+
+.icon {
+  width: 50%;
+  height: auto;
+  padding-top: 1rem;
+}
+
+.weather-item {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 5rem;
+}
+
+@media screen and (max-width: 750px) {
+  .weather-city-details {
+    margin: 0 3rem;
+  }
+
+  .weather-item {
+    font-size: 1.5rem;
+  }
+}

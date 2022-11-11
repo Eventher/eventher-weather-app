@@ -3,23 +3,49 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import { BsFillCloudRainFill, BsFillSunFill } from "react-icons/bs";
+import "./city-details.css";
 
 function CityDetails() {
   const { id } = useParams();
-  const [cities, setCities] = useState();
-  const getCities = () => {
+  const [weatherCity, setWeatherCity] = useState("");
+
+  const getWeatherCity = () => {
     axios
       .get(
         `https://api.ipma.pt/open-data/forecast/meteorology/cities/daily/${id}.json`
       )
-      .then((res) => setCities(res.data.data))
+      .then((res) => setWeatherCity(res.data.data))
       .catch((err) => console.log(err));
   };
-  const { name } = cities;
+
   useEffect(() => {
-    getCities();
-  }, [id]);
-  return <div>{name} Details</div>;
+    getWeatherCity();
+  }, []);
+
+  return (
+    <div className="city-details">
+      {weatherCity ? (
+        <div className="weather-city-details">
+          <div className="first-column">
+            <h4 className="today-date">{weatherCity[0]?.forecastDate}</h4>
+            {weatherCity[0]?.precipitaProb >= 50 ? (
+              <BsFillCloudRainFill className="rain-icon icon" />
+            ) : (
+              <BsFillSunFill className="sun-icon icon" />
+            )}
+          </div>
+          <div className="second-column">
+            <h4 className="weather-item">
+              {weatherCity[0]?.tMin} - {weatherCity[0]?.tMax}
+            </h4>
+            <h4 className="weather-item">{weatherCity[0]?.precipitaProb}%</h4>
+            <h4 className="weather-item">{weatherCity[0]?.predWindDir}</h4>
+          </div>
+        </div>
+      ) : null}
+    </div>
+  );
 }
 
 export default CityDetails;
