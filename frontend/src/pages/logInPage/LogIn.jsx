@@ -88,6 +88,7 @@
 
 /* eslint-disable no-unused-expressions */
 import React, { useState, useContext } from "react";
+// eslint-disable-next-line import/no-named-as-default
 import UserContext from "../../contexts/User/UserContext";
 import LogInForm from "./logInPageForm/LogInForm";
 import "./logInPageForm/Login.css";
