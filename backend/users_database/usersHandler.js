@@ -5,7 +5,7 @@ const getAllUsers = (req, res) => {
   // const id = parseInt(req.params.id, 10);
 
   database
-    .query(`select email,entry from users`)
+    .query(`select * from users`)
     .then((users) => {
       res.status(200).send(users[0]);
     })

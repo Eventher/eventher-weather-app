@@ -4,7 +4,6 @@ import React, { useContext } from "react";
 import { FaUserCircle } from "react-icons/fa";
 import { IoIosArrowDropupCircle } from "react-icons/io";
 import { Link } from "react-router-dom";
-import UserContext from "../../contexts/User/UserContext";
 import SignLogInBar from "./SignLogInBar";
 import NavbarContext from "../../contexts/NavbarContext";
 import styles from "./Navbar.module.css";
@@ -26,8 +25,6 @@ function NavLinks() {
     />
   );
 
-  const msg = useContext(UserContext);
-
   return (
     <nav>
       <ul className={styles.MainNavbar}>
@@ -43,7 +40,6 @@ function NavLinks() {
         <li className={styles.IconItem}>
           {openUser ? closeUserComputer : userComputer}
         </li>
-        <div>Message{msg}</div>
       </ul>
       {openUser && <SignLogInBar />}
     </nav>

@@ -25,12 +25,6 @@ app.post("/suggestions", suggestionsHandler.postSuggestion);
 app.put("/suggestions/:id", suggestionsHandler.updateSuggestion);
 app.delete("/suggestions/:id", suggestionsHandler.deleteSuggestion);
 
-app.listen(port, (err) => {
-  if (err) {
-    console.error("Something bad happened");
-  }
-});
-
 //* USERS FETCHING ====================
 const usersHandler = require("./users_database/usersHandler");
 
@@ -40,3 +34,9 @@ app.get("/users", usersHandler.getAllUsers);
 // ? SIGNIN USER ===============
 app.post("/users", usersHandler.postUser);
 //* USERS FETCHING ====================
+
+app.listen(port, (err) => {
+  if (err) {
+    console.error("Something bad happened");
+  }
+});
