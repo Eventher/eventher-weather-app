@@ -15,6 +15,7 @@
   background-color: white;
   margin: 25px;
   cursor: pointer;
+  width: 80px;
 }
 .eventTitle {
   font-size: 35px;
