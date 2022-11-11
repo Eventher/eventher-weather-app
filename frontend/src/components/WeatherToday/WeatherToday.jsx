@@ -1,7 +1,9 @@
+/* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable no-restricted-syntax */
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import WeatherTodayCard from "./WeatherTodayCard/WeatherTodayCard";
 
 function WeatherToday() {
@@ -22,21 +24,22 @@ function WeatherToday() {
   const [city, setCity] = useState("Lisboa");
   // =====#
 
+  const resultDist =
+    districts &&
+    districts
+      .filter((district) =>
+        district.local
+          .toLocaleLowerCase()
+          .startsWith(search.toLocaleLowerCase())
+      )
+      .map((district) => district);
+
   // Fetching the weather to display, by the district Id (globalIdLocal) =====#
   const fetchWeatherToday = () => {
     setWeatherToday([]);
     //  =====#
 
     // Match the search value with each mapped district name (local) =====#
-    const resultDist =
-      districts &&
-      districts
-        .filter((district) =>
-          district.local
-            .toLocaleLowerCase()
-            .includes(search.toLocaleLowerCase())
-        )
-        .map((district) => district);
     setCity(resultDist[0]?.local);
     // =====#
 
@@ -88,23 +91,31 @@ function WeatherToday() {
     setSearch(e.target.value);
   };
   // =====#
-
   // Return fase =====#
   return (
-    <>
+    <div className="weather-today-wrapper">
       <div>
         <h2>See weather for today!</h2>
       </div>
       <input type="search" value={search} onChange={(e) => handleSearch(e)} />
       <h3>{city || "Lisboa"}</h3>
-      {weatherToday[0] ? (
-        <WeatherTodayCard
-          weatherDay={weatherToday[0]}
-          index={weatherToday[0]}
-          key={weatherToday[0]}
-        />
-      ) : null}
-    </>
+      <Link
+        className="today-link"
+        to={
+          search === ""
+            ? "/home/1110600"
+            : `/home/${resultDist[0]?.globalIdLocal}`
+        }
+      >
+        {weatherToday[0] ? (
+          <WeatherTodayCard
+            weatherDay={weatherToday[0]}
+            index={weatherToday[0]}
+            key={weatherToday[0]}
+          />
+        ) : null}
+      </Link>
+    </div>
   );
 }
 
