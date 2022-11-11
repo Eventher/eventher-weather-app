@@ -91,20 +91,20 @@ function WeatherToday() {
     setSearch(e.target.value);
   };
   // =====#
-
   // Return fase =====#
   return (
-    <>
+    <div className="weather-today-wrapper">
       <div>
         <h2>See weather for today!</h2>
       </div>
       <input type="search" value={search} onChange={(e) => handleSearch(e)} />
       <h3>{city || "Lisboa"}</h3>
       <Link
+        className="today-link"
         to={
-          resultDist[0]?.globalIdLocal
-            ? `/home/${resultDist[0]?.globalIdLocal}`
-            : "/home/1110600"
+          search === ""
+            ? "/home/1110600"
+            : `/home/${resultDist[0]?.globalIdLocal}`
         }
       >
         {weatherToday[0] ? (
@@ -115,7 +115,7 @@ function WeatherToday() {
           />
         ) : null}
       </Link>
-    </>
+    </div>
   );
 }
 

@@ -1,14 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700;900&display=swap");
 
-.weather5Days_cardWrapper:nth-child(even) {
-  background-color: rgba(33, 158, 188, 0.3);
+.weather-today-wrapper {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.today-link {
+  text-decoration: none;
 }
 
 .weather-today {
   font-family: "Nunito", sans-serif;
-  margin: 5px 0;
+  margin: 5px 4rem;
   box-shadow: 1px 1px 10px 1px rgba(150, 150, 150, 0.4);
-  border-radius: 5px;
+  border-radius: 10px;
   height: 300px;
 }
 
@@ -21,8 +26,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  width: 50%;
-  max-width: 500px;
+  width: 40%;
+  max-width: 400px;
   height: 300px;
   position: relative;
   bottom: 120px;
@@ -95,10 +100,13 @@ pre {
   color: var(--yellow);
 }
 
-@media screen and (max-width: 670px) {
+@media screen and (max-width: 830px) {
+  .weather-today {
+    margin: 5px 2rem;
+  }
+
   .image-temp {
-    bottom: 0;
-    top: 20px;
+    bottom: 30px;
   }
 
   .today-date {

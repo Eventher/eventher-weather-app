@@ -16,9 +16,9 @@ function Suggestions() {
   } = useForm();
 
   const saveSuggestion = (data) => {
-    console.log(typeof data);
+    console.log(data);
     axios
-      .post("http://localhost:5000/suggestions", JSON.stringify(data))
+      .post("http://localhost:5000/suggestions", data)
       .then(() => {
         console.log("Post was sucessful");
       })

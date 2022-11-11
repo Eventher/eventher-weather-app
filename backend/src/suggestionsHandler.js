@@ -1,4 +1,4 @@
-const database = require("./migrate");
+const database = require("../migrate");
 
 const getSuggestions = (req, res) => {
   database
