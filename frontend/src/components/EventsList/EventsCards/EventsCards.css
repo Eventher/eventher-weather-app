@@ -1,7 +1,21 @@
 .eventCard {
-  padding: 120px 10px 10px;
+  padding: 25px;
 }
-
+.everyCard {
+  padding: 100px 0px 0px;
+}
+.eventsFilter {
+  padding: 15px;
+  margin-top: 10px;
+  background-image: url("https://cdn-icons-png.flaticon.com/512/57/57164.png");
+  background-position: center;
+  background-size: contain;
+}
+.filter {
+  background-color: white;
+  margin: 25px;
+  cursor: pointer;
+}
 .eventTitle {
   font-size: 35px;
   margin: 20px;
@@ -15,6 +29,7 @@
 .outOrIn {
   margin-left: 25px;
   text-align: left;
+  font-size: 20px;
 }
 
 .bold {
@@ -22,8 +37,9 @@
 }
 
 .eventImg {
-  width: 500px;
+  height: 300px;
   border-radius: 10px;
+  box-shadow: 5px 5px 20px gray;
 }
 
 .break {
@@ -32,11 +48,23 @@
 }
 
 .eventLink {
-  font-size: 15px;
+  font-size: 12px;
   text-decoration: none;
   color: rgb(34, 0, 255);
 }
 
+.rightBtn {
+  float: right;
+  width: 50px;
+  height: 50px;
+  margin: 20px 20% 25px;
+}
+.leftBtn {
+  float: left;
+  margin: 20px 0px 25px 20%;
+  width: 50px;
+  height: 50px;
+}
 @media screen and (max-width: 750px) {
   .eventCard {
     padding-top: 0;

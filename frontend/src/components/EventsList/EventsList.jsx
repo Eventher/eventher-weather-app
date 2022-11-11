@@ -21,7 +21,7 @@ function EventsList() {
   return (
     <div>
       <EventContext.Provider value={{ events }}>
-        {events ? events.map((event) => <EventsCards key={event.id} />) : null}
+        <EventsCards />
       </EventContext.Provider>
     </div>
   );
