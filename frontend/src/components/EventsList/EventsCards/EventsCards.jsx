@@ -109,7 +109,7 @@ function EventsCards() {
             &lt;{" "}
           </button>
         ) : null}
-        {eventsPerPage * currentPage <= events.length ? (
+        {eventsPerPage * currentPage < events.length ? (
           <button className="rightBtn" type="button" onClick={nextPage}>
             {" "}
             &gt;{" "}
