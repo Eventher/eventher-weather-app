@@ -18,9 +18,9 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <UserContextProvider>
-        <Header />
-        <main>
+      <Header />
+      <main>
+        <UserContextProvider>
           <Routes>
             <Route path="/" element={<LandingComponent />} />
             <Route path="/home" element={<Home />} />
@@ -30,8 +30,8 @@ function App() {
             <Route path="/login" element={<LogIn />} />
             <Route path="/home/:id" element={<CityDetails />} />
           </Routes>
-        </main>
-      </UserContextProvider>
+        </UserContextProvider>
+      </main>
       <Footer />
     </div>
   );
