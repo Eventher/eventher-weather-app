@@ -1,15 +1,20 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
 .eventCard {
-  padding: 25px;
+  padding: 25px 0px;
 }
 .everyCard {
   padding: 100px 0px 0px;
 }
 .eventsFilter {
-  padding: 15px;
+  padding: 25px;
   margin-top: 10px;
-  background-image: url("https://cdn-icons-png.flaticon.com/512/57/57164.png");
+  background-image: url("https://cdn0.iconfinder.com/data/icons/basic-ui-line-7/32/line_basic_uiFilter-512.png");
   background-position: center;
   background-size: contain;
+  background-color: white;
 }
 .filter {
   background-color: white;
@@ -17,20 +22,22 @@
   cursor: pointer;
   width: 80px;
 }
+.filter:hover {
+  color: var(--yellow);
+}
 .eventTitle {
-  font-size: 35px;
-  margin: 20px;
+  font-size: 20px;
+  margin: 15px;
+  white-space: nowrap;
 }
 
 .eventDesc {
-  font-size: 25px;
+  font-size: 17px;
   margin: 5px;
 }
 
 .outOrIn {
-  margin-left: 25px;
-  text-align: left;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .bold {
@@ -38,7 +45,8 @@
 }
 
 .eventImg {
-  height: 300px;
+  height: 180px;
+  width: 300px;
   border-radius: 10px;
   box-shadow: 5px 5px 20px gray;
 }
@@ -49,7 +57,7 @@
 }
 
 .eventLink {
-  font-size: 12px;
+  font-size: 10px;
   text-decoration: none;
   color: rgb(34, 0, 255);
 }
@@ -58,7 +66,7 @@
   float: right;
   width: 50px;
   height: 50px;
-  margin: 20px 20% 25px;
+  margin: 20px 20% 25px 0px;
 }
 .leftBtn {
   float: left;
@@ -68,6 +76,12 @@
 }
 @media screen and (max-width: 750px) {
   .eventCard {
-    padding-top: 0;
+    padding-top: 10px;
+  }
+  .everyCard {
+    padding-top: 15px;
+  }
+  .grid-container {
+    display: block;
   }
 }
