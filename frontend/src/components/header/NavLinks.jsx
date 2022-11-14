@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import SignLogInBar from "./SignLogInBar";
 import NavbarContext from "../../contexts/NavbarContext";
 import styles from "./Navbar.module.css";
+import eventherLogo from "../../assets/Eventher.png";
 
 function NavLinks() {
   const [openUser, setOpenUser] = useContext(NavbarContext);
@@ -28,6 +29,7 @@ function NavLinks() {
   return (
     <nav>
       <ul className={styles.MainNavbar}>
+        <img src={eventherLogo} alt="Logo" className="logo" />
         <li className={styles.NavItem}>
           <Link to="/home">Home</Link>
         </li>
