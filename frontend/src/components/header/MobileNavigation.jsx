@@ -8,6 +8,7 @@ import NavLinks from "./NavLinks";
 import SignLogInBar from "./SignLogInBar";
 import NavbarContext from "../../contexts/NavbarContext";
 import styles from "./Navbar.module.css";
+import eventherLogo from "../../assets/Eventher.png";
 
 function MobileNavigation() {
   const [openNav, setOpenNav, openUser, setOpenUser] =
@@ -45,6 +46,9 @@ function MobileNavigation() {
 
   return (
     <nav className={styles.MobileNavigation}>
+      <div className={styles.MobileLogoContainer}>
+        <img src={eventherLogo} alt="Logo" className={styles.MobileLogo} />
+      </div>
       {openUser ? closeUser : user}
       {openUser && <SignLogInBar />}
       {openNav ? close : hamburger}
