@@ -10,7 +10,9 @@ import styles from "./Navbar.module.css";
 import eventherLogo from "../../assets/Eventher.png";
 
 function NavLinks() {
-  const [openUser, setOpenUser] = useContext(NavbarContext);
+  // eslint-disable-next-line no-unused-vars
+  const [openNav, setOpenNav, openUser, setOpenUser] =
+    useContext(NavbarContext);
 
   const userComputer = (
     <FaUserCircle
@@ -29,15 +31,25 @@ function NavLinks() {
   return (
     <nav>
       <ul className={styles.MainNavbar}>
-        <img src={eventherLogo} alt="Logo" className="logo" />
+        <div className={styles.LogoContainer}>
+          <Link to="/home" onClick={() => setOpenNav(false)}>
+            <img src={eventherLogo} alt="Logo" className={styles.Logo} />
+          </Link>
+        </div>
         <li className={styles.NavItem}>
-          <Link to="/home">Home</Link>
+          <Link to="/home" onClick={() => setOpenNav(false)}>
+            Home
+          </Link>
         </li>
         <li className={styles.NavItem}>
-          <Link to="/events">Events</Link>
+          <Link to="/events" onClick={() => setOpenNav(false)}>
+            Events
+          </Link>
         </li>
         <li className={styles.NavItem}>
-          <Link to="/suggestions">Suggestions</Link>
+          <Link to="/suggestions" onClick={() => setOpenNav(false)}>
+            Suggestions
+          </Link>
         </li>
         <li className={styles.IconItem}>
           {openUser ? closeUserComputer : userComputer}
