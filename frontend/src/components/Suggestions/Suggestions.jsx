@@ -48,12 +48,12 @@ function Suggestions() {
         <input
           className="suggestions-input"
           placeholder="E-mail"
-          {...register("email", { required: "Email Address is required" })}
-          aria-invalid={errors.mail ? "true" : "false"}
+          {...register("email", { required: "Email address is required" })}
+          aria-invalid={errors.email ? "true" : "false"}
         />
-        {errors.mail && (
+        {errors.email && (
           <p className="alert" role="alert">
-            {errors.mail?.message}
+            {errors.email?.message}
           </p>
         )}
       </div>
