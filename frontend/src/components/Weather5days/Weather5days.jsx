@@ -34,24 +34,20 @@ function Weather5Days() {
       <div>
         <h2>See weather for the next 5 days!</h2>
       </div>
-      <Link
-        className="today-link"
-        to={
-          search === ""
-            ? "/home/1110600"
-            : `/home/${resultDist[0]?.globalIdLocal}`
-        }
-      >
-        {weather5Days
-          ? weather5Days.map((weather5Day, index) => (
-              <Weather5DaysCard
-                weather5Day={weather5Day}
-                index={index}
-                key={index}
-              />
-            ))
-          : null}
-      </Link>
+      {weather5Days
+        ? weather5Days.map((weather5Day, index) => (
+            <Link
+              className="today-link"
+              to={
+                search === ""
+                  ? `/home/1110600/${weather5Day.forecastDate}`
+                  : `/home/${resultDist[0]?.globalIdLocal}/${weather5Day.forecastDate}`
+              }
+            >
+              <Weather5DaysCard weather5Day={weather5Day} key={index} />
+            </Link>
+          ))
+        : null}
     </>
   );
 }
