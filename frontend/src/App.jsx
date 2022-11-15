@@ -13,7 +13,7 @@ import EventsList from "./components/EventsList/EventsList";
 import SignIn from "./pages/signInPage/SignIn";
 import LogIn from "./pages/logInPage/LogIn";
 import LandingComponent from "./components/landing-page/LandingComponent";
-import CityDetails from "./pages/CityDetails/CityDetails";
+import CityDetails from "./components/Weather5days/CityDetails/CityDetails";
 import "./App.css";
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
             <Routes>
               <Route path="/" element={<LandingComponent />} />
               <Route path="/home" element={<Home />} />
-              <Route path="/home/:id" element={<CityDetails />} />
+              <Route path="/home/:id/:date" element={<CityDetails />} />
               <Route path="/events" element={<EventsList />} />
               <Route path="/suggestions" element={<SuggestionsPage />} />
               <Route path="/signin" element={<SignIn />} />
