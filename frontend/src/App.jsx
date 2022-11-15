@@ -4,6 +4,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { UserContextProvider } from "./contexts/User/UserContext";
+import { EventContextProvider } from "./contexts/EventContext";
 import { WeatherContextProvider } from "./contexts/WeatherContext";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
@@ -22,17 +23,19 @@ function App() {
       <Header />
       <main>
         <UserContextProvider>
-          <WeatherContextProvider>
-            <Routes>
-              <Route path="/" element={<LandingComponent />} />
-              <Route path="/home" element={<Home />} />
-              <Route path="/home/:id/:date" element={<CityDetails />} />
-              <Route path="/events" element={<EventsList />} />
-              <Route path="/suggestions" element={<SuggestionsPage />} />
-              <Route path="/signin" element={<SignIn />} />
-              <Route path="/login" element={<LogIn />} />
-            </Routes>
-          </WeatherContextProvider>
+          <EventContextProvider>
+            <WeatherContextProvider>
+              <Routes>
+                <Route path="/" element={<LandingComponent />} />
+                <Route path="/home" element={<Home />} />
+                <Route path="/home/:id/:date" element={<CityDetails />} />
+                <Route path="/events" element={<EventsList />} />
+                <Route path="/suggestions" element={<SuggestionsPage />} />
+                <Route path="/signin" element={<SignIn />} />
+                <Route path="/login" element={<LogIn />} />
+              </Routes>
+            </WeatherContextProvider>
+          </EventContextProvider>
         </UserContextProvider>
       </main>
       <Footer />
