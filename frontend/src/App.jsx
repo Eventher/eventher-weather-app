@@ -4,6 +4,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { UserContextProvider } from "./contexts/User/UserContext";
+import { EventContextProvider } from "./contexts/EventContext";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import Home from "./pages/homePage/Home";
@@ -21,15 +22,17 @@ function App() {
       <Header />
       <main>
         <UserContextProvider>
-          <Routes>
-            <Route path="/" element={<LandingComponent />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/events" element={<EventsList />} />
-            <Route path="/suggestions" element={<SuggestionsPage />} />
-            <Route path="/signin" element={<SignIn />} />
-            <Route path="/login" element={<LogIn />} />
-            <Route path="/home/:id" element={<CityDetails />} />
-          </Routes>
+          <EventContextProvider>
+            <Routes>
+              <Route path="/" element={<LandingComponent />} />
+              <Route path="/home" element={<Home />} />
+              <Route path="/events" element={<EventsList />} />
+              <Route path="/suggestions" element={<SuggestionsPage />} />
+              <Route path="/signin" element={<SignIn />} />
+              <Route path="/login" element={<LogIn />} />
+              <Route path="/home/:id" element={<CityDetails />} />
+            </Routes>
+          </EventContextProvider>
         </UserContextProvider>
       </main>
       <Footer />

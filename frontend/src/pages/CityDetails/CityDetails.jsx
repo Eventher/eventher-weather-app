@@ -1,14 +1,17 @@
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable import/no-extraneous-dependencies */
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { BsFillCloudRainFill, BsFillSunFill } from "react-icons/bs";
 import "./city-details.css";
+import EventContext from "../../contexts/EventContext";
 
 function CityDetails() {
   const { id } = useParams();
   const [weatherCity, setWeatherCity] = useState("");
+  // eslint-disable-next-line no-unused-vars
+  const { events } = useContext(EventContext);
 
   const getWeatherCity = () => {
     axios
