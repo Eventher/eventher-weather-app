@@ -2,13 +2,14 @@
 import React, { useState } from "react";
 import "./Signin.css";
 
-function SignInForm({ Signin, error }) {
+function SignInForm({ Signin, error, errorPass }) {
   const [details, setDetails] = useState({
     first_name: "",
     last_name: "",
     email: "",
-    password: "",
-    passwordRepeat: "",
+    city: "",
+    language: "",
+    entry: "",
   });
 
   const submitHandler = (e) => {
@@ -21,7 +22,8 @@ function SignInForm({ Signin, error }) {
     <form className="signinForm" onSubmit={submitHandler}>
       <div className="signin-form-inner">
         <h2 className="signin-formH2">Sign In</h2>
-        {error !== "" ? <div className="error">{error}</div> : ""}
+        {(error !== "" ? <div className="error">{error}</div> : "") ||
+          (errorPass !== "" ? <div className="error">{errorPass}</div> : "")}
         <div className="signin-form-group">
           <label className="signin-formLabel" htmlFor="name">
             First Name:{" "}
@@ -74,10 +76,8 @@ function SignInForm({ Signin, error }) {
             type="password"
             name="password"
             id="password"
-            onChange={(e) =>
-              setDetails({ ...details, password: e.target.value })
-            }
-            value={details.password}
+            onChange={(e) => setDetails({ ...details, entry: e.target.value })}
+            value={details.entry}
           />{" "}
         </div>
         <div className="signin-form-group">
@@ -93,6 +93,34 @@ function SignInForm({ Signin, error }) {
               setDetails({ ...details, passwordRepeat: e.target.value })
             }
             value={details.passwordRepeat}
+          />
+        </div>
+        <div className="signin-form-group">
+          <label className="signin-formLabel" htmlFor="city">
+            City:{" "}
+          </label>
+          <input
+            className="signin-formInput"
+            type="text"
+            name="city"
+            id="city"
+            onChange={(e) => setDetails({ ...details, city: e.target.value })}
+            value={details.city}
+          />
+        </div>
+        <div className="signin-form-group">
+          <label className="signin-formLabel" htmlFor="language">
+            Language:{" "}
+          </label>
+          <input
+            className="signin-formInput"
+            type="text"
+            name="language"
+            id="language"
+            onChange={(e) =>
+              setDetails({ ...details, language: e.target.value })
+            }
+            value={details.language}
           />
         </div>
         <input className="signin-formSubmit" type="submit" value="SignIn!" />
