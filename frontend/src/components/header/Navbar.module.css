@@ -11,7 +11,7 @@
     transform: translate(0px, -60px);
   }
   100% {
-    transform: translate(0px, 100px);
+    transform: translate(0px, 0px);
   }
 }
 
@@ -36,7 +36,6 @@
   margin-top: 0;
   animation-name: slideIn;
   animation-duration: 0.6s;
-  transform: translate(0, 100px);
   z-index: 0;
 }
 
@@ -79,7 +78,7 @@
 }
 
 .MobileNavigation {
-  width: 100%;
+  width: 100vw;
   height: 100px;
   background: linear-gradient(
     0deg,
@@ -110,6 +109,24 @@
   width: 12vw;
   height: 7vh;
   color: var(--white);
+}
+
+.LogoContainer {
+  display: none;
+}
+
+.MobileLogoContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 60%;
+  height: 100%;
+}
+
+.MobileLogo {
+  height: 45px;
+  width: auto;
+  padding-left: 10px;
 }
 
 @media only screen and (min-width: 750px) {
@@ -168,5 +185,21 @@
     padding-left: 2rem;
     color: var(--white);
     display: initial;
+  }
+
+  .LogoContainer {
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .MobileLogoContainer {
+    display: none;
+  }
+
+  .Logo {
+    height: 50px;
+    width: auto;
+    padding-left: 20px;
   }
 }

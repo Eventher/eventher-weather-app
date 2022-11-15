@@ -108,19 +108,19 @@ function EventsCards() {
             ))
           : null}
         <div />
-        {currentPage !== 1 ? (
-          <button className="leftBtn" type="button" onClick={previousPage}>
-            {" "}
-            &lt;{" "}
-          </button>
-        ) : null}
-        {eventsPerPage * currentPage < events.length ? (
-          <button className="rightBtn" type="button" onClick={nextPage}>
-            {" "}
-            &gt;{" "}
-          </button>
-        ) : null}
       </div>
+      {currentPage !== 1 ? (
+        <button className="leftBtn" type="button" onClick={previousPage}>
+          {" "}
+          &lt;{" "}
+        </button>
+      ) : null}
+      {eventsPerPage * currentPage < events.length ? (
+        <button className="rightBtn" type="button" onClick={nextPage}>
+          {" "}
+          &gt;{" "}
+        </button>
+      ) : null}
     </div>
   );
 }

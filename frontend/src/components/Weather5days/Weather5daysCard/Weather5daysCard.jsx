@@ -3,7 +3,6 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import "./Weather5DaysCard.css";
-import { NavLink } from "react-router-dom";
 import { BsFillCloudRainFill, BsFillSunFill } from "react-icons/bs";
 import seeMore from "../../../assets/attach-outline.svg";
 // import {weatherIcons} from "../../../assets/icons_ipma_weather"
@@ -15,7 +14,6 @@ export default function Weather5DaysCard({ weather5Day }) {
     predWindDir,
     idWeatherType,
     forecastDate,
-    globalIdLocal,
   } = weather5Day;
   // eslint-disable-next-line no-restricted-syntax
   console.log(idWeatherType);
@@ -41,41 +39,39 @@ export default function Weather5DaysCard({ weather5Day }) {
 
   return (
     <div className="weather5Days_cardWrapper">
-      <NavLink className="cityDetailsLink" to={`/home/${globalIdLocal}`}>
-        <div className="weather5Days_card">
-          <div className="weather5Days_cardCol_1">
-            <div>
-              <h4>{forecastDate}</h4>
-            </div>
-            {precipitaProb >= 50 ? (
-              <BsFillCloudRainFill className="weather-icon rain-icon" />
-            ) : (
-              <BsFillSunFill className="weather-icon sun-icon" />
-            )}
+      <div className="weather5Days_card">
+        <div className="weather5Days_cardCol_1">
+          <div>
+            <h4>{forecastDate}</h4>
           </div>
-          <div className="weather5Days_cardCol_2">
-            <pre>
-              <h2 className="tempMin">{tMin}</h2>
-            </pre>
-            <pre>
-              <h2 className="tempMax"> / {tMax}</h2>
-            </pre>
-          </div>
-          <div className="weather5Days_cardCol_3">
-            <h4>Rain Probability:</h4>{" "}
-            <h2>
-              {/* className={`precipitaClass_${precipitaClassVal}`}> */}
-              {precipitaProb}%
-            </h2>
-          </div>
-          <div className="weather5Days_cardCol_4">
-            <h5>{predWindDir}</h5>
-            <button type="button" href="#">
-              <img className="seeMore" src={seeMore} alt="+" />
-            </button>
-          </div>
+          {precipitaProb >= 50 ? (
+            <BsFillCloudRainFill className="weather-icon rain-icon" />
+          ) : (
+            <BsFillSunFill className="weather-icon sun-icon" />
+          )}
         </div>
-      </NavLink>
+        <div className="weather5Days_cardCol_2">
+          <pre>
+            <h2 className="tempMin">{tMin}</h2>
+          </pre>
+          <pre>
+            <h2 className="tempMax"> / {tMax}</h2>
+          </pre>
+        </div>
+        <div className="weather5Days_cardCol_3">
+          <h4>Rain Probability:</h4>{" "}
+          <h2>
+            {/* className={`precipitaClass_${precipitaClassVal}`}> */}
+            {precipitaProb}%
+          </h2>
+        </div>
+        <div className="weather5Days_cardCol_4">
+          <h5>{predWindDir}</h5>
+          <button type="button" href="#">
+            <img className="seeMore" src={seeMore} alt="+" />
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
