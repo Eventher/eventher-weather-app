@@ -20,6 +20,12 @@
 .weather5Days_cardCol_1 {
   color: black;
 }
+
+.weather-icon5 {
+  width: 55px;
+  height: auto;
+}
+
 .weather5Days_cardCol_2 {
   font-family: "Nunito", sans-serif;
   display: flex;
@@ -69,6 +75,7 @@ pre {
   width: 10vw;
   color: black;
 }
+
 button {
   background-color: #219ebc;
   border: none;
