@@ -75,9 +75,12 @@ function Suggestions() {
         <label className="suggestions-label">
           Make a small description of the event, please
         </label>
-        <input
+        <textarea
           className="text-area"
           placeholder="Type here:"
+          type="text"
+          cols="30"
+          rows="70"
           {...register("description", {
             required: "A description is required",
           })}
