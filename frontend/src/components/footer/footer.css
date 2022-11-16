@@ -24,14 +24,14 @@
   height: auto;
   padding: 1rem 2rem 0;
   color: var(--white);
-  filter: drop-shadow(0 0 4px rgba(12, 98, 141, 0.95))
+  filter: drop-shadow(0 0 4px rgba(12, 98, 141, 0.95));
 }
 
 #copyrights {
   color: var(--white);
   font-weight: 600;
   padding-top: 0.6rem;
-  filter: drop-shadow(0 0 4px rgba(12, 98, 141, 0.95))
+  filter: drop-shadow(0 0 4px rgba(12, 98, 141, 0.95));
 }
 
 .website-map {

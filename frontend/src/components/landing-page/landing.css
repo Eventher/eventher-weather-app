@@ -124,7 +124,7 @@ span:nth-child(4) {
   width: 100%;
   padding: 0 2rem;
   margin-bottom: 2rem;
-  filter: drop-shadow( 0 0 10px rgba(40, 131, 177, 0.8));
+  filter: drop-shadow(0 0 10px rgba(40, 131, 177, 0.8));
 }
 
 .links {
