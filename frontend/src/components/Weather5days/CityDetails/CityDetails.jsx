@@ -1,3 +1,4 @@
+/* eslint-disable no-bitwise */
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable import/no-extraneous-dependencies */
 import React, { useState, useEffect, useContext } from "react";
@@ -35,6 +36,14 @@ import WT27 from "../../../assets/icons_ipma_weather/w_ic_d_27anim.svg";
 import WT28 from "../../../assets/icons_ipma_weather/w_ic_d_28anim.svg";
 import WT29 from "../../../assets/icons_ipma_weather/w_ic_d_29anim.svg";
 import WT30 from "../../../assets/icons_ipma_weather/w_ic_d_30anim.svg";
+import North from "../../../assets/icons_ipma_weather/north.png";
+import NorthWest from "../../../assets/icons_ipma_weather/n_west.png";
+import West from "../../../assets/icons_ipma_weather/west.png";
+import SouthWest from "../../../assets/icons_ipma_weather/s_west.png";
+import South from "../../../assets/icons_ipma_weather/south.png";
+import SouthEast from "../../../assets/icons_ipma_weather/s_east.png";
+import East from "../../../assets/icons_ipma_weather/east.png";
+import NorthEast from "../../../assets/icons_ipma_weather/n_east.png";
 
 function CityDetails() {
   const { id, date } = useParams();
@@ -239,7 +248,48 @@ function CityDetails() {
                     {day.tMin} - {day.tMax}
                   </h4>
                   <h4 className="weather-item">{day.precipitaProb}%</h4>
-                  <h4 className="weather-item">{day.predWindDir}</h4>
+                  <h5>
+                    {day.classWindSpeed <= 3 ? <p>Light breeze</p> : null}
+                    {(day.classWindSpeed > 3) & (day.classWindSpeed <= 5) ? (
+                      <p>Moderate winds</p>
+                    ) : null}
+                    {(day.classWindSpeed > 5) & (day.classWindSpeed <= 8) ? (
+                      <p>Strong winds</p>
+                    ) : null}
+                    {(day.classWindSpeed > 8) & (day.classWindSpeed <= 10) ? (
+                      <p>Storm</p>
+                    ) : null}
+                    {(day.classWindSpeed > 10) & (day.classWindSpeed <= 11) ? (
+                      <p>Violent storm</p>
+                    ) : null}
+                    {(day.classWindSpeed > 11) & (day.classWindSpeed <= 12) ? (
+                      <p>Hurricane</p>
+                    ) : null}
+                    {day.predWindDir === "N" ? (
+                      <img src={North} alt="North" />
+                    ) : null}
+                    {day.predWindDir === "S" ? (
+                      <img src={South} alt="South" />
+                    ) : null}
+                    {day.predWindDir === "E" ? (
+                      <img src={East} alt="East" />
+                    ) : null}
+                    {day.predWindDir === "W" ? (
+                      <img src={West} alt="West" />
+                    ) : null}
+                    {day.predWindDir === "NW" ? (
+                      <img src={NorthWest} alt="North West" />
+                    ) : null}
+                    {day.predWindDir === "NE" ? (
+                      <img src={NorthEast} alt="North East" />
+                    ) : null}
+                    {day.predWindDir === "SW" ? (
+                      <img src={SouthWest} alt="South West" />
+                    ) : null}
+                    {day.predWindDir === "SE" ? (
+                      <img src={SouthEast} alt="South East" />
+                    ) : null}
+                  </h5>
                 </div>
               </div>
             ))

@@ -1,3 +1,4 @@
+/* eslint-disable no-bitwise */
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable import/no-unresolved */
 /* eslint-disable react/prop-types */
@@ -34,12 +35,21 @@ import WT27 from "../../../assets/icons_ipma_weather/w_ic_d_27anim.svg";
 import WT28 from "../../../assets/icons_ipma_weather/w_ic_d_28anim.svg";
 import WT29 from "../../../assets/icons_ipma_weather/w_ic_d_29anim.svg";
 import WT30 from "../../../assets/icons_ipma_weather/w_ic_d_30anim.svg";
+import North from "../../../assets/icons_ipma_weather/north.png";
+import NorthWest from "../../../assets/icons_ipma_weather/n_west.png";
+import West from "../../../assets/icons_ipma_weather/west.png";
+import SouthWest from "../../../assets/icons_ipma_weather/s_west.png";
+import South from "../../../assets/icons_ipma_weather/south.png";
+import SouthEast from "../../../assets/icons_ipma_weather/s_east.png";
+import East from "../../../assets/icons_ipma_weather/east.png";
+import NorthEast from "../../../assets/icons_ipma_weather/n_east.png";
 
 export default function Weather5DaysCard({ weather5Day }) {
   const {
     precipitaProb,
     tMin,
     tMax,
+    classWindSpeed,
     predWindDir,
     idWeatherType,
     forecastDate,
@@ -203,7 +213,40 @@ export default function Weather5DaysCard({ weather5Day }) {
           </h2>
         </div>
         <div className="weather5Days_cardCol_4">
-          <h5>{predWindDir}</h5>
+          <h5>
+            {classWindSpeed <= 3 ? <p>Light breeze</p> : null}
+            {(classWindSpeed > 3) & (classWindSpeed <= 5) ? (
+              <p>Moderate winds</p>
+            ) : null}
+            {(classWindSpeed > 5) & (classWindSpeed <= 8) ? (
+              <p>Strong winds</p>
+            ) : null}
+            {(classWindSpeed > 8) & (classWindSpeed <= 10) ? (
+              <p>Storm</p>
+            ) : null}
+            {(classWindSpeed > 10) & (classWindSpeed <= 11) ? (
+              <p>Violent storm</p>
+            ) : null}
+            {(classWindSpeed > 11) & (classWindSpeed <= 12) ? (
+              <p>Hurricane</p>
+            ) : null}
+            {predWindDir === "N" ? <img src={North} alt="North" /> : null}
+            {predWindDir === "S" ? <img src={South} alt="South" /> : null}
+            {predWindDir === "E" ? <img src={East} alt="East" /> : null}
+            {predWindDir === "W" ? <img src={West} alt="West" /> : null}
+            {predWindDir === "NW" ? (
+              <img src={NorthWest} alt="North West" />
+            ) : null}
+            {predWindDir === "NE" ? (
+              <img src={NorthEast} alt="North East" />
+            ) : null}
+            {predWindDir === "SW" ? (
+              <img src={SouthWest} alt="South West" />
+            ) : null}
+            {predWindDir === "SE" ? (
+              <img src={SouthEast} alt="South East" />
+            ) : null}
+          </h5>
           <button type="button" href="#">
             <img className="seeMore" src={seeMore} alt="+" />
           </button>
