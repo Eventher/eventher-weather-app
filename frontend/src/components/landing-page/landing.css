@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;500;600&family=Montserrat:wght@400;700&display=swap");
 
 * {
   padding: 0;
@@ -60,7 +60,8 @@
 
 .inside-div {
   background-color: rgba(124, 216, 247, 0.15);
-  border-radius: 50px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(40, 131, 177, 0.5);
 }
 
 .first-section,
@@ -73,7 +74,7 @@
 .text {
   text-align: left;
 
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
   color: var(--dark-blue);
 
   padding: 2rem;
@@ -123,6 +124,7 @@ span:nth-child(4) {
   width: 100%;
   padding: 0 2rem;
   margin-bottom: 2rem;
+  filter: drop-shadow( 0 0 10px rgba(40, 131, 177, 0.8));
 }
 
 .links {
@@ -174,6 +176,7 @@ span:nth-child(4) {
     padding: 0.5rem;
     width: 100%;
     text-align: justify;
+    font-weight: 500;
   }
 
   .paragraph {
