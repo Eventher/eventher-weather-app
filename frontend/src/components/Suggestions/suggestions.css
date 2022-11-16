@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;600&family=Montserrat:wght@400;700&display=swap");
+
 .suggestions-form {
   display: flex;
   flex-direction: column;
@@ -5,12 +7,14 @@
 }
 
 .suggestions-label {
+  font-family: montserrat, sans-serif;
+  font-weight: 200;
   display: block;
   color: #666;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   margin: 1rem 20%;
   transition: 0.4s;
-  text-align: left;
+  text-align: center;
 }
 
 .suggestions-form-group:focus-within .suggestions-label {
@@ -47,7 +51,7 @@
 }
 
 .alert {
-  color: red;
+  color: #f8f8f8;
   filter: drop-shadow(0 0 6px rgba(98, 60, 60, 0.5));
   margin-bottom: 15px;
 }
@@ -62,12 +66,13 @@
   margin: 2rem auto 0;
   background-image: linear-gradient(
     to bottom,
-    #219ebc,
-    #219ebc,
-    #219ebc,
-    #023047
+    rgba(199, 243, 253, 0.95),
+    rgba(199, 243, 253, 0.95),
+    rgba(199, 243, 253, 0.95),
+    rgba(90, 204, 233, 0.95)
   );
-  color: #fff;
+  color: var(--dark-blue);
+  text-shadow: 0 0 4px white;
   font-weight: 600;
   font-size: 1.2rem;
   text-align: center;
@@ -79,13 +84,14 @@
   }
 
   .suggestions-label {
-    font-size: 1.5rem;
+    font-family: montserrat, sans-serif;
+    font-size: 1.2rem;
     margin: 1rem 0;
   }
 
   .suggestions-input,
   .text-area {
-    font-size: 1rem;
+    font-size: 1.2rem;
     width: 100%;
   }
 }

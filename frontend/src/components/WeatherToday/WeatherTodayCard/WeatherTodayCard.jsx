@@ -3,7 +3,6 @@
 /* eslint-disable react/prop-types */
 import React, { useContext } from "react";
 import "./WeatherTodayCard.css";
-import seeMore from "../../../assets/attach-outline.svg";
 import WeatherContext from "../../../contexts/WeatherContext";
 import WT1 from "../../../assets/icons_ipma_weather/w_ic_d_01anim.svg";
 import WT2 from "../../../assets/icons_ipma_weather/w_ic_d_02anim.svg";
@@ -221,9 +220,6 @@ export default function WeatherTodayCard() {
                 <img src={SouthEast} alt="South East" />
               ) : null}
             </h5>
-            <button type="button">
-              <img className="seeMore" src={seeMore} alt="+" />
-            </button>
           </div>
         </div>
       </div>

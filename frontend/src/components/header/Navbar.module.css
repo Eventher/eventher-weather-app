@@ -41,9 +41,9 @@
 
 .MainNavbar {
   background: linear-gradient(
-    0deg,
-    rgba(122, 211, 233, 0.95) 0%,
-    rgba(12, 98, 141, 0.9) 100%
+    180deg,
+    rgba(90, 204, 233, 0.95) 10%,
+    rgba(199, 243, 253, 0.95) 85%
   );
 }
 
@@ -51,10 +51,11 @@
   z-index: 0;
   right: 90px;
   background: var(--dark-blue);
+  border-radius: 0 0 10px 10px;
   background: linear-gradient(
     180deg,
-    rgba(12, 98, 141, 0.95) 0%,
-    rgba(122, 211, 233, 0.95) 100%
+    rgba(90, 204, 233, 0.95) 10%,
+    rgba(199, 243, 253, 0.95) 85%
   );
 }
 
@@ -65,12 +66,16 @@
 .NavItem {
   padding: 10px 0 10px 2vw;
   font-weight: 700;
-  text-shadow: 2px 2px 4px #3b3939;
+  /* text-shadow: 2px 2px 4px #3b3939; */
+  filter: drop-shadow(0 0 4px rgba(12, 98, 141, 0.95))
+
 }
 
 .NavItem a {
   text-decoration: none;
   color: var(--white);
+  text-shadow: 2px 2px 4px rgba(14, 58, 124, 0.5);
+
 }
 
 .ComputerNavigation {
@@ -82,10 +87,12 @@
   height: 100px;
   background: linear-gradient(
     0deg,
-    var(--dark-blue) 0%,
-    var(--clear-blue) 100%
+    var(--clear-blue) 15%,
+    rgb(212, 240, 253) 55%
   );
   z-index: 1;
+  filter: drop-shadow( 0 2px 10px rgba(12, 98, 141, 0.5));
+
 }
 
 .UserIconComputer {
@@ -99,6 +106,8 @@
   width: 12vw;
   height: 6.5vh;
   color: var(--white);
+  filter: drop-shadow(0 0 4px rgba(12, 98, 141, 0.95))
+
 }
 
 .Hamburger,
@@ -109,6 +118,8 @@
   width: 12vw;
   height: 7vh;
   color: var(--white);
+  filter: drop-shadow(0 0 4px rgb(14, 78, 110))
+
 }
 
 .LogoContainer {
@@ -124,9 +135,10 @@
 }
 
 .MobileLogo {
-  height: 45px;
+  height: 50px;
   width: auto;
-  padding-left: 10px;
+  padding-left: 20px;
+  filter: drop-shadow(0 0 2px white)
 }
 
 @media only screen and (min-width: 750px) {
@@ -139,10 +151,11 @@
     transform: none !important;
     background: linear-gradient(
       0deg,
-      var(--dark-blue) 0%,
-      var(--clear-blue) 100%
+      var(--clear-blue) 15%,
+      rgb(212, 240, 253) 55%
     );
     z-index: 1;
+    box-shadow: 0 2px 10px rgba(12, 98, 141, 0.5);
   }
 
   .SignLogInBar {
@@ -152,6 +165,7 @@
     animation-name: slideInTwo;
     animation-duration: 0.6s;
     transform: translate(30px, 100px);
+    filter: drop-shadow(0 0 10px rgba(12, 98, 141, 0.5))
   }
 
   .MainNavbar + div ul.SignLogInBar {
@@ -168,7 +182,7 @@
 
   .NavItem {
     font-size: 1.5rem;
-    text-shadow: 2px 2px 4px #3b3939;
+    text-shadow: 2px 2px 4px rgba(14, 58, 124, 0.5);
   }
 
   .NavItem a {
@@ -185,6 +199,8 @@
     padding-left: 2rem;
     color: var(--white);
     display: initial;
+    filter: drop-shadow(0 0 5px rgb(12, 98, 141))
+
   }
 
   .LogoContainer {
@@ -201,5 +217,6 @@
     height: 50px;
     width: auto;
     padding-left: 20px;
+    filter: drop-shadow(0 0 2px white)
   }
 }

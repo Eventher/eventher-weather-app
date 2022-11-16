@@ -51,7 +51,7 @@
 .login-form-inner .login-form-group .login-formLabel {
   display: block;
   color: #666;
-  font-size: 15px;
+  font-size: 1.2rem;
   margin-bottom: 5px;
   transition: 0.4s;
 }
@@ -81,15 +81,16 @@
   border-radius: 8px;
   background-image: linear-gradient(
     to bottom,
-    #219ebc,
-    #219ebc,
-    #219ebc,
-    #023047
+    rgba(199, 243, 253, 0.95),
+    rgba(199, 243, 253, 0.95),
+    rgba(199, 243, 253, 0.95),
+    rgba(90, 204, 233, 0.95)
   );
   background-size: 200%;
   background-position: 0%;
   transition: 0.4s;
-  color: #fff;
+  color: var(--dark-blue);
+  text-shadow: 0 0 4px white;
   font-weight: 700;
   cursor: pointer;
 }

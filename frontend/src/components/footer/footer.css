@@ -2,8 +2,8 @@
   background: var(--dark-blue);
   background: linear-gradient(
     180deg,
-    var(--dark-blue) 0%,
-    var(--clear-blue) 100%
+    rgba(90, 204, 233, 0.95) 10%,
+    rgba(199, 243, 253, 0.95) 85%
   );
 
   width: 100%;
@@ -24,12 +24,14 @@
   height: auto;
   padding: 1rem 2rem 0;
   color: var(--white);
+  filter: drop-shadow(0 0 4px rgba(12, 98, 141, 0.95))
 }
 
 #copyrights {
   color: var(--white);
   font-weight: 600;
   padding-top: 0.6rem;
+  filter: drop-shadow(0 0 4px rgba(12, 98, 141, 0.95))
 }
 
 .website-map {
@@ -47,7 +49,7 @@
 .listItem a {
   text-decoration: none;
   color: var(--white);
-  text-shadow: 2px 2px 4px #000000;
+  text-shadow: 2px 2px 4px rgba(12, 98, 141, 0.95);
   font-weight: 600;
   font-size: 1.2rem;
 }

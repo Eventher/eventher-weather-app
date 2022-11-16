@@ -247,9 +247,6 @@ export default function Weather5DaysCard({ weather5Day }) {
               <img src={SouthEast} alt="South East" />
             ) : null}
           </h5>
-          <button type="button" href="#">
-            <img className="seeMore" src={seeMore} alt="+" />
-          </button>
         </div>
       </div>
     </div>
