@@ -162,7 +162,7 @@ VALUES
   ),
   (  
     17,
-    "Lisboa",
+    "Lisbo",
     "Bike Ride",
     "https://www.getyourguide.pt/lisboa-l42/lisboa-excursao-pelos-7-montes-de-bicicleta-eletrica-t36761/",
     "https://cdn.getyourguide.com/img/tour/5a3794596385a.jpeg/145.jpg",
