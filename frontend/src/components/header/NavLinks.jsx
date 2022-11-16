@@ -32,7 +32,7 @@ function NavLinks() {
     <nav>
       <ul className={styles.MainNavbar}>
         <div className={styles.LogoContainer}>
-          <Link to="/home" onClick={() => setOpenNav(false)}>
+          <Link to="/" onClick={() => setOpenNav(false)}>
             <img src={eventherLogo} alt="Logo" className={styles.Logo} />
           </Link>
         </div>

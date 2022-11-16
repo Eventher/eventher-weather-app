@@ -82,7 +82,6 @@ pre {
 }
 
 .weather5Days_cardCol_4 {
-  display: flex;
   justify-content: space-between;
   align-items: center;
 }

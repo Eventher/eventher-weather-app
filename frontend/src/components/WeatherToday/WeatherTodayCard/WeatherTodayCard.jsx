@@ -3,7 +3,6 @@
 import React from "react";
 import "./WeatherTodayCard.css";
 import { BsFillCloudRainFill, BsFillSunFill } from "react-icons/bs";
-import seeMore from "../../../assets/attach-outline.svg";
 
 // import {weatherIcons} from "../../../assets/icons_ipma_weather"
 
@@ -44,9 +43,6 @@ export default function WeatherTodayCard({ weatherDay }) {
           </div>
           <div className="weather5Days_cardCol_4">
             <h5>{predWindDir}</h5>
-            <button type="button">
-              <img className="seeMore" src={seeMore} alt="+" />
-            </button>
           </div>
         </div>
       </div>
