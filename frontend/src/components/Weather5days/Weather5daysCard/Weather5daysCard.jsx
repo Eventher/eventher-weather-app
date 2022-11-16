@@ -4,7 +4,6 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import "./Weather5DaysCard.css";
-import seeMore from "../../../assets/attach-outline.svg";
 import WT1 from "../../../assets/icons_ipma_weather/w_ic_d_01anim.svg";
 import WT2 from "../../../assets/icons_ipma_weather/w_ic_d_02anim.svg";
 import WT3 from "../../../assets/icons_ipma_weather/w_ic_d_03anim.svg";
