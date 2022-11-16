@@ -53,7 +53,6 @@ export default function Weather5DaysCard({ weather5Day }) {
     idWeatherType,
     forecastDate,
   } = weather5Day;
-
   // function precipitaClassValCalc() {
   //   if (precipitaProb <= 0 && precipitaProb < 25) {
   //     precipitaClassVal === 0;
@@ -68,11 +67,9 @@ export default function Weather5DaysCard({ weather5Day }) {
   //   return precipitaClassVal;
   // }
   // console.log("este aqui" + precipitaClassVal);
-
   // useEffect(() => {
   //   precipitaClassValCalc(precipitaClassVal);
   // }, []);
-
   return (
     <div className="weather5Days_cardWrapper">
       <div className="weather5Days_card">
@@ -207,7 +204,7 @@ export default function Weather5DaysCard({ weather5Day }) {
         <div className="weather5Days_cardCol_3">
           <h4>Rain Probability:</h4>{" "}
           <h2>
-            {/* className={`precipitaClass_${precipitaClassVal}`}> */}
+            {/* className={precipitaClass_${precipitaClassVal}}> */}
             {precipitaProb}%
           </h2>
         </div>
