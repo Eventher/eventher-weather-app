@@ -41,7 +41,7 @@ function WeatherToday() {
         <Link
           className="today-link"
           to={
-            search === ""
+            search === "" || resultDist[0] === undefined
               ? `/home/1110600/${weatherToday[0].forecastDate}`
               : `/home/${resultDist[0]?.globalIdLocal}/${weatherToday[0].forecastDate}`
           }

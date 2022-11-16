@@ -42,11 +42,15 @@ export function WeatherContextProvider({ children }) {
     //  =====#
 
     // Match the search value with each mapped district name (local) =====#
-    setCity(resultDist[0]?.local);
+    // eslint-disable-next-line eqeqeq, no-unused-expressions
+    search && resultDist[0] !== undefined
+      ? setCity(resultDist[0]?.local)
+      : setCity("Lisboa");
     // =====#
 
     // If there's a match, show the fetched result by district id(globalIdLocal) =====#
-    if (resultDist[0]?.globalIdLocal) {
+    // eslint-disable-next-line no-bitwise
+    if ((search !== []) & (resultDist[0] !== undefined) && search) {
       axios
         .get(
           `https://api.ipma.pt/open-data/forecast/meteorology/cities/daily/${resultDist[0]?.globalIdLocal}.json`
@@ -73,7 +77,8 @@ export function WeatherContextProvider({ children }) {
     //  =====#
 
     // If there's a match, show the fetched result by district id(globalIdLocal) =====#
-    if (resultDist[0]?.globalIdLocal) {
+    // eslint-disable-next-line no-bitwise
+    if ((search !== []) & (resultDist[0] !== undefined) && search) {
       axios
         .get(
           `https://api.ipma.pt/open-data/forecast/meteorology/cities/daily/${resultDist[0]?.globalIdLocal}.json`
@@ -82,7 +87,7 @@ export function WeatherContextProvider({ children }) {
         .catch((err) => console.log(err));
       // =====#
 
-      // If not, show Lisbon district as default =====#
+      // If not, show Lisboa district as default =====#
     } else {
       axios
         .get(

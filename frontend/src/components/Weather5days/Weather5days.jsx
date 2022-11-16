@@ -36,16 +36,18 @@ function Weather5Days() {
       </div>
       {weather5Days
         ? weather5Days.map((weather5Day, index) => (
-            <Link
-              className="today-link"
-              to={
-                search === ""
-                  ? `/home/1110600/${weather5Day.forecastDate}`
-                  : `/home/${resultDist[0]?.globalIdLocal}/${weather5Day.forecastDate}`
-              }
-            >
-              <Weather5DaysCard weather5Day={weather5Day} key={index} />
-            </Link>
+            <div className="weather5Days_cardWrapper">
+              <Link
+                className="today-link"
+                to={
+                  search === "" || resultDist[0] === undefined
+                    ? `/home/1110600/${weather5Day.forecastDate}`
+                    : `/home/${resultDist[0]?.globalIdLocal}/${weather5Day.forecastDate}`
+                }
+              >
+                <Weather5DaysCard weather5Day={weather5Day} key={index} />
+              </Link>
+            </div>
           ))
         : null}
     </>

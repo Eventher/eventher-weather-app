@@ -5,6 +5,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import "./city-details.css";
+import WeatherContext from "../../../contexts/WeatherContext";
 import EventContext from "../../../contexts/EventContext";
 import WeatherContext from "../../../contexts/WeatherContext";
 import WT1 from "../../../assets/icons_ipma_weather/w_ic_d_01anim.svg";
@@ -56,9 +57,20 @@ function CityDetails() {
   const { events } = useContext(EventContext);
   const { city } = useContext(WeatherContext);
 
+  const getWeatherCity = () => {
+    axios
+      .get(
+        `https://api.ipma.pt/open-data/forecast/meteorology/cities/daily/${id}.json`
+      )
+      .then((res) => setWeatherCity(res.data.data))
+      .catch((err) => console.log(err));
+  };
+
   const filterWeather = () => {
+    const filterToo =
+      weatherCity && weatherCity.filter((day) => day.forecastDate === date);
     switch (true) {
-      case weatherCity[0]?.precipitaProb <= 50:
+      case filterToo[0]?.precipitaProb <= 50:
         setEventsFilter(
           events.filter((event) => event.outdoor === 1 && event.city === city)
         );
@@ -72,19 +84,13 @@ function CityDetails() {
     }
   };
 
-  const getWeatherCity = () => {
-    axios
-      .get(
-        `https://api.ipma.pt/open-data/forecast/meteorology/cities/daily/${id}.json`
-      )
-      .then((res) => setWeatherCity(res.data.data))
-      .catch((err) => console.log(err));
-  };
-
   useEffect(() => {
     getWeatherCity();
-    filterWeather();
   }, []);
+
+  useEffect(() => {
+    filterWeather();
+  }, [weatherCity]);
 
   return (
     <div className="city-details">
