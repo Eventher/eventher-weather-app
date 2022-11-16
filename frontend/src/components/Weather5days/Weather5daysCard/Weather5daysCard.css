@@ -64,17 +64,10 @@ pre {
 }
 
 .weather5Days_cardCol_4 {
-  display: flex;
   justify-content: space-between;
   align-items: center;
   width: 10vw;
   color: black;
-}
-.seeMore {
-  width: 30px;
-  height: 30px;
-  position: inherit;
-  bottom: 25px;
 }
 button {
   background-color: #219ebc;
