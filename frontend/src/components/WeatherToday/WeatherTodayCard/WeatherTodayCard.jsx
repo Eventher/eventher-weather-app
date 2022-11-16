@@ -1,13 +1,13 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable react/prop-types */
-import React from "react";
+import React, { useContext } from "react";
 import "./WeatherTodayCard.css";
 import { BsFillCloudRainFill, BsFillSunFill } from "react-icons/bs";
-import seeMore from "../../../assets/attach-outline.svg";
+import WeatherContext from "../../../contexts/WeatherContext";
 
-// import {weatherIcons} from "../../../assets/icons_ipma_weather"
+export default function WeatherTodayCard() {
+  const { weatherToday } = useContext(WeatherContext);
 
-export default function WeatherTodayCard({ weatherDay }) {
   const {
     precipitaProb,
     tMin,
@@ -15,7 +15,7 @@ export default function WeatherTodayCard({ weatherDay }) {
     predWindDir,
     idWeatherType,
     forecastDate,
-  } = weatherDay;
+  } = weatherToday[0];
   // eslint-disable-next-line no-restricted-syntax
   console.log(idWeatherType);
 
@@ -44,9 +44,6 @@ export default function WeatherTodayCard({ weatherDay }) {
           </div>
           <div className="weather5Days_cardCol_4">
             <h5>{predWindDir}</h5>
-            <button type="button">
-              <img className="seeMore" src={seeMore} alt="+" />
-            </button>
           </div>
         </div>
       </div>
