@@ -5,11 +5,11 @@ import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import { BsFillCloudRainFill, BsFillSunFill } from "react-icons/bs";
 import "./city-details.css";
-import EventContext from "../../contexts/EventContext";
-import WeatherContext from "../../contexts/WeatherContext";
+import EventContext from "../../../contexts/EventContext";
+import WeatherContext from "../../../contexts/WeatherContext";
 
 function CityDetails() {
-  const { id } = useParams();
+  const { id, date } = useParams();
   const [weatherCity, setWeatherCity] = useState("");
   const [eventsFilter, setEventsFilter] = useState([]);
   const [eventsExits, setEventsExits] = useState(true);
@@ -33,6 +33,7 @@ function CityDetails() {
         setEventsExits(false);
     }
   };
+
   const getWeatherCity = () => {
     axios
       .get(
@@ -54,25 +55,29 @@ function CityDetails() {
       ) : (
         <h2 className="city-title">Lisboa</h2>
       )}
-      {weatherCity ? (
-        <div className="weather-city-details">
-          <div className="first-column">
-            <h4 className="today-date">{weatherCity[0]?.forecastDate}</h4>
-            {weatherCity[0]?.precipitaProb >= 50 ? (
-              <BsFillCloudRainFill className="rain-icon icon" />
-            ) : (
-              <BsFillSunFill className="sun-icon icon" />
-            )}
-          </div>
-          <div className="second-column">
-            <h4 className="weather-item">
-              {weatherCity[0]?.tMin} - {weatherCity[0]?.tMax}
-            </h4>
-            <h4 className="weather-item">{weatherCity[0]?.precipitaProb}%</h4>
-            <h4 className="weather-item">{weatherCity[0]?.predWindDir}</h4>
-          </div>
-        </div>
-      ) : null}
+      {weatherCity
+        ? weatherCity
+            .filter((day) => day.forecastDate === date)
+            .map((day) => (
+              <div className="weather-city-details">
+                <div className="first-column">
+                  <h4 className="today-date">{day.forecastDate}</h4>
+                  {day.precipitaProb >= 50 ? (
+                    <BsFillCloudRainFill className="rain-icon icon" />
+                  ) : (
+                    <BsFillSunFill className="sun-icon icon" />
+                  )}
+                </div>
+                <div className="second-column">
+                  <h4 className="weather-item">
+                    {day.tMin} - {day.tMax}
+                  </h4>
+                  <h4 className="weather-item">{day.precipitaProb}%</h4>
+                  <h4 className="weather-item">{day.predWindDir}</h4>
+                </div>
+              </div>
+            ))
+        : null}
       <div className="eventsFlex">
         {events && eventsFilter
           ? eventsFilter?.map((event) => (

@@ -11,11 +11,9 @@ export default function Weather5DaysCard({ weather5Day }) {
     tMin,
     tMax,
     predWindDir,
-    idWeatherType,
+    // idWeatherType,
     forecastDate,
   } = weather5Day;
-  // eslint-disable-next-line no-restricted-syntax
-  console.log(idWeatherType);
 
   // function precipitaClassValCalc() {
   //   if (precipitaProb <= 0 && precipitaProb < 25) {

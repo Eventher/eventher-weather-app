@@ -37,22 +37,22 @@ function WeatherToday() {
       </div>
       <input type="search" value={search} onChange={(e) => handleSearch(e)} />
       <h3>{city || "Lisboa"}</h3>
-      <Link
-        className="today-link"
-        to={
-          search === ""
-            ? "/home/1110600"
-            : `/home/${resultDist[0]?.globalIdLocal}`
-        }
-      >
-        {weatherToday[0] ? (
+      {weatherToday[0] ? (
+        <Link
+          className="today-link"
+          to={
+            search === ""
+              ? `/home/1110600/${weatherToday[0].forecastDate}`
+              : `/home/${resultDist[0]?.globalIdLocal}/${weatherToday[0].forecastDate}`
+          }
+        >
           <WeatherTodayCard
             weatherDay={weatherToday[0]}
             index={weatherToday[0]}
             key={weatherToday[0]}
           />
-        ) : null}
-      </Link>
+        </Link>
+      ) : null}
     </div>
   );
 }
