@@ -7,7 +7,6 @@ import axios from "axios";
 import "./city-details.css";
 import WeatherContext from "../../../contexts/WeatherContext";
 import EventContext from "../../../contexts/EventContext";
-import WeatherContext from "../../../contexts/WeatherContext";
 import WT1 from "../../../assets/icons_ipma_weather/w_ic_d_01anim.svg";
 import WT2 from "../../../assets/icons_ipma_weather/w_ic_d_02anim.svg";
 import WT3 from "../../../assets/icons_ipma_weather/w_ic_d_03anim.svg";
