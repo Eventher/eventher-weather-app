@@ -1,3 +1,4 @@
+/* eslint-disable no-bitwise */
 /* eslint-disable react/prop-types */
 
 import React, { useContext, useState, useEffect } from "react";
@@ -21,6 +22,7 @@ function EventsCards() {
   const [currentEvents, setCurrentEvents] = useState(
     events.slice(indexOfFirstEvent, indexOfLastEvent)
   );
+  const isFiltered = isFilteredToIndoor || isFilteredToOutdoor;
 
   useEffect(() => {
     setCurrentEvents(events.slice(indexOfFirstEvent, indexOfLastEvent));
@@ -52,7 +54,21 @@ function EventsCards() {
             <button
               type="button"
               onClick={() => {
+                setCurrentEvents(
+                  events.slice(indexOfFirstEvent, indexOfLastEvent)
+                );
+                setIsFilteredToOutdoor(false);
+                setIsFilteredToIndoor(false);
+              }}
+              className="filter"
+            >
+              All the Events
+            </button>
+            <button
+              type="button"
+              onClick={() => {
                 setIsFilteredToOutdoor(!isFilteredToOutdoor);
+                setCurrentPage(1);
               }}
               className="filter"
             >
@@ -63,6 +79,7 @@ function EventsCards() {
               type="button"
               onClick={() => {
                 setIsFilteredToIndoor(!isFilteredToIndoor);
+                setCurrentPage(1);
               }}
               className="filter"
             >
@@ -109,13 +126,13 @@ function EventsCards() {
           : null}
         <div />
       </div>
-      {currentPage !== 1 ? (
+      {!isFiltered & (currentPage !== 1) ? (
         <button className="leftBtn" type="button" onClick={previousPage}>
           {" "}
           &lt;{" "}
         </button>
       ) : null}
-      {eventsPerPage * currentPage < events.length ? (
+      {!isFiltered & (eventsPerPage * currentPage < events.length) ? (
         <button className="rightBtn" type="button" onClick={nextPage}>
           {" "}
           &gt;{" "}
