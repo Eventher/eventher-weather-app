@@ -52,9 +52,51 @@
 }
 
 .alert {
-  color: #f8f8f8;
+  color: #f5a486;
   filter: drop-shadow(0 0 6px rgba(98, 60, 60, 0.5));
   margin-bottom: 15px;
+}
+
+.drop-files-input {
+  position: relative;
+  width: 40%;
+  height: 250px;
+  border: 2px dashed rgba(2, 48, 71, 0.7);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(199, 243, 253, 0.95);
+  margin-bottom: 20px;
+  margin: auto;
+}
+
+.drop-files-input:hover,
+.drop-files-input.dragover {
+  opacity: 0.6;
+}
+
+.drop-files-image {
+  padding-top: 20px;
+  width: 150px;
+  height: auto;
+  color: rgb(2, 48, 71);
+}
+
+.drop-files-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgba(136, 160, 166, 0.95);
+  margin-top: 5px;
+}
+
+.drop-files-input input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  margin: auto;
 }
 
 .suggestions-button {
@@ -93,6 +135,10 @@
   .suggestions-input,
   .text-area {
     font-size: 1.2rem;
+    width: 100%;
+  }
+
+  .drop-files-input {
     width: 100%;
   }
 }

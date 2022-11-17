@@ -1,0 +1,36 @@
+.outside-suggestions {
+  padding-top: 120px;
+  margin: 0 6rem 6rem;
+}
+
+.outside-suggestions-title {
+  padding-top: 1rem;
+}
+
+.warning-text {
+  padding: 2rem 6rem 0;
+  line-height: 2.4rem;
+}
+
+.here-link {
+  font-weight: 700;
+  color: var(--dark-blue);
+  text-decoration: none;
+}
+
+.event-card-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 750px) {
+  .outside-suggestions {
+    padding-top: 20px;
+    margin: 0 2rem;
+  }
+
+  .warning-text {
+    padding: 2rem 0 0;
+  }
+}

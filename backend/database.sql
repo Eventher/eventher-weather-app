@@ -668,8 +668,12 @@ VALUES
 CREATE TABLE `suggestions` (
     `id` INT NOT NULL AUTO_INCREMENT,
     `name` VARCHAR(100) NOT NULL,
-    `email` VARCHAR(255)  NOT NULL,
-    `activity` VARCHAR(255)  NOT NULL,
+    `email` VARCHAR(255) NOT NULL,
+    `city` VARCHAR(100) NOT NULL,
+    `url` VARCHAR(255) NOT NULL,
+    `image` TEXT NOT NULL,
+    `outdoor` VARCHAR(7) NOT NULL,
+    `activity` VARCHAR(255) NOT NULL,
     `description` TEXT NOT NULL,
     PRIMARY KEY (`id`)
   ) ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET = utf8;
