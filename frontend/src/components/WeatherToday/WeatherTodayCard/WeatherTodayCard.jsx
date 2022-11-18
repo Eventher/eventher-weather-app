@@ -59,7 +59,7 @@ export default function WeatherTodayCard() {
   return (
     <div className="weather5Days_cardWrapper">
       <div className="weather-today">
-        <div className="weather5Days_cardCol_1 image-temp">
+        <div className="image-temp">
           <h4 className="today-date">{forecastDate}</h4>
           {idWeatherType === 0 && <p>No weather information available</p>}
           {idWeatherType === 1 && (
@@ -183,10 +183,11 @@ export default function WeatherTodayCard() {
             </pre>
           </div>
           <div className="weather5Days_cardCol_3">
-            <h4>Rain Probability:</h4> <h2>{precipitaProb}%</h2>
+            <h4 className="rain-prob">Rain Probability:</h4>{" "}
+            <h2>{precipitaProb}%</h2>
           </div>
           <div className="weather5Days_cardCol_4">
-            <h5>
+            <h5 className="wind-info">
               {classWindSpeed <= 3 ? <p>Light breeze</p> : null}
               {(classWindSpeed > 3) & (classWindSpeed <= 5) ? (
                 <p>Moderate winds</p>
