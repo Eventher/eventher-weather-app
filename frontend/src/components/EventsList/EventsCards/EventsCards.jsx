@@ -24,9 +24,6 @@ function EventsCards() {
   );
   const isFiltered = isFilteredToIndoor || isFilteredToOutdoor;
 
-  useEffect(() => {
-    setCurrentEvents(events.slice(indexOfFirstEvent, indexOfLastEvent));
-  }, [events, currentPage]);
   const previousPage = () => {
     setCurrentPage(currentPage - 1);
   };
@@ -39,14 +36,20 @@ function EventsCards() {
   useEffect(() => {
     setCurrentEvents(events.filter((event) => event.outdoor === 0));
   }, [isFilteredToIndoor]);
+  useEffect(() => {
+    setCurrentEvents(events.slice(indexOfFirstEvent, indexOfLastEvent));
+  }, [events, currentPage]);
 
-  const eventsFilter = () => {
-    setShowFilter(!showFilter);
-  };
   return (
     <div className="everyCard">
       <div className="filters">
-        <button type="button" className="eventsFilter" onClick={eventsFilter}>
+        <button
+          type="button"
+          className="eventsFilter"
+          onClick={() => {
+            setShowFilter(!showFilter);
+          }}
+        >
           {" "}
         </button>
         {showFilter ? (
@@ -54,11 +57,11 @@ function EventsCards() {
             <button
               type="button"
               onClick={() => {
+                setIsFilteredToOutdoor(false);
+                setIsFilteredToIndoor(false);
                 setCurrentEvents(
                   events.slice(indexOfFirstEvent, indexOfLastEvent)
                 );
-                setIsFilteredToOutdoor(false);
-                setIsFilteredToIndoor(false);
               }}
               className="filter"
             >
