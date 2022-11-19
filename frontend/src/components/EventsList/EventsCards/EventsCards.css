@@ -1,12 +1,23 @@
+.events-title {
+  font-size: 2.5rem;
+}
+
+.events-text {
+  padding-bottom: 1rem;
+  font-weight: 700;
+}
+
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+  margin-bottom: 1.5rem;
 }
 .eventCard {
   padding: 25px 0px;
 }
 .everyCard {
-  padding: 100px 0px 0px;
+  padding: 140px 0px 0px;
 }
 .eventsFilter {
   padding: 25px;
@@ -27,18 +38,19 @@
   color: var(--yellow);
 }
 .eventTitle {
-  font-size: 20px;
+  font-size: 18px;
   margin: 15px;
   white-space: nowrap;
 }
 
 .eventDesc {
-  font-size: 17px;
-  margin: 5px;
+  font-size: 20px;
+  margin: 10px;
 }
 
 .outOrIn {
-  font-size: 15px;
+  margin: 10px;
+  font-size: 17px;
 }
 
 .bold {
@@ -46,8 +58,8 @@
 }
 
 .eventImg {
-  height: 180px;
-  width: 300px;
+  height: 230px;
+  width: 350px;
   border-radius: 10px;
   box-shadow: 5px 5px 20px gray;
 }
@@ -58,9 +70,10 @@
 }
 
 .eventLink {
-  font-size: 10px;
+  font-size: 13px;
+  font-weight: 600;
   text-decoration: none;
-  color: rgb(34, 0, 255);
+  color: rgb(0, 102, 255);
 }
 
 .rightBtn {
@@ -84,6 +97,13 @@
   width: 50px;
   height: 50px;
 }
+
+@media screen and (max-width: 1000px) {
+  .grid-container {
+    grid-template-columns: auto auto;
+  }
+}
+
 @media screen and (max-width: 750px) {
   .eventCard {
     padding-top: 10px;
@@ -93,5 +113,16 @@
   }
   .grid-container {
     display: block;
+  }
+
+  .eventTitle {
+    font-size: 17px;
+    margin: 15px;
+    white-space: nowrap;
+  }
+
+  .eventImg {
+    height: 180px;
+    width: 300px;
   }
 }

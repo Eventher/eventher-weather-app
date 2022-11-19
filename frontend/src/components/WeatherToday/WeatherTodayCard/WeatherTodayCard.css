@@ -1,5 +1,42 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700;900&display=swap");
 
+.weather-title {
+  font-size: 2rem;
+  color: var(--dark-blue);
+  padding-bottom: 25px;
+  text-shadow: 3px 2px 8px rgba(37, 104, 158, 0.84);
+}
+
+.search-container {
+  display: flex;
+  padding-left: 18vw;
+}
+
+.search-bar {
+  background: url("../../../assets/lupa.png") no-repeat left center;
+  background-size: 2.7rem;
+  box-shadow: rgba(247, 247, 250, 0.25) 0px 30px 60px -12px inset,
+    rgba(247, 242, 242, 0.3) 0px 18px 36px -18px inset;
+  border: none;
+  padding: 0.6rem 0.6rem 0.6rem 3rem;
+  width: 200px;
+  border-radius: 10px;
+}
+
+.search-bar:focus {
+  outline: none;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+.city {
+  text-align: left;
+  padding: 0.4rem 0 0.8rem 18vw;
+  font-size: 2rem;
+  color: var(--dark-blue);
+  text-shadow: 0px 0px 6px rgba(11, 81, 80, 0.7);
+}
+
 .weather-today-wrapper {
   margin-top: 2rem;
   margin-bottom: 3rem;
@@ -11,7 +48,7 @@
 
 .weather-today {
   font-family: "Nunito", sans-serif;
-  margin: 0 4rem;
+  margin: 0 18vw;
   box-shadow: 1px 1px 10px 1px rgba(150, 150, 150, 0.4);
   border-radius: 10px;
   color: black;
@@ -21,7 +58,8 @@
 }
 
 .today-date {
-  font-size: 2rem;
+  padding-top: 5px;
+  font-size: 1.8rem;
 }
 
 .image-temp {
@@ -33,76 +71,59 @@
   max-width: 400px;
 }
 
-.flex-container {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: stretch;
-  width: 40%;
-  min-height: 100%;
-}
-
-.weather5Days_cardCol_2 {
-  font-family: "Nunito", sans-serif;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.weather5Days_cardCol_2 h2,
-pre {
-  font-weight: 9000;
-  font-size: 1.5rem;
-  padding: 0;
-  margin: 0;
-}
-
-.tempMin {
-  color: #219ebc;
-}
-.tempMax {
-  color: #e45603;
-}
-
-.weather5Days_cardCol_3 {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
-}
-
-.weather5Days_cardCol_3 h2 {
-  margin: 0;
-  color: #fff;
-}
-
-.weather5Days_cardCol_3 h4.rain-prob {
-  padding-top: 25px;
-}
-
-.weather5Days_cardCol_4 {
-  justify-content: space-between;
-  align-items: center;
-}
-
-h5.wind-info {
-  padding-top: 25px;
-}
-
 .weather-icon {
-  padding-top: 15px;
+  padding-top: 10px;
   width: 60%;
   height: auto;
 }
 
-.rain-icon {
-  color: var(--dark-blue);
+.flex-container {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  min-height: 100%;
 }
 
-.sun-icon {
-  color: var(--yellow);
+.weather5Days_cardCol_2 pre h2.today-temp {
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+.weather5Days_cardCol_3 h4.rain-prob {
+  padding-top: 25px;
+  font-size: 1.2rem;
+}
+
+.rain-prob-number {
+  font-size: 2rem;
+}
+
+h5.wind-info {
+  padding-top: 25px;
+  font-size: 1.2rem;
+}
+
+.wind-direction {
+  width: 70px;
+  height: auto;
 }
 
 @media screen and (max-width: 830px) {
+  .weather-title {
+    font-size: 1.6rem;
+  }
+
+  .search-container {
+    padding-left: 1.5rem;
+  }
+
+  .city {
+    padding-left: 1.5rem;
+    font-size: 1.4rem;
+  }
+
   .weather-today {
     margin: 5px 1.5rem;
   }
@@ -115,11 +136,23 @@ h5.wind-info {
     width: 75%;
   }
 
-  .weather5Days_cardCol_2 h2,
-  pre {
-    font-weight: 9000;
-    font-size: 1rem;
-    padding: 0;
-    margin: 0;
+  .weather5Days_cardCol_2 pre h2.today-temp {
+    font-size: 1.2rem;
+  }
+
+  .weather5Days_cardCol_3 h4.rain-prob {
+    font-size: 0.8rem;
+  }
+
+  .rain-prob-number {
+    font-size: 1.2rem;
+  }
+
+  h5.wind-info {
+    font-size: 0.8rem;
+  }
+
+  .wind-direction {
+    width: 45px;
   }
 }

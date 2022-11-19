@@ -42,6 +42,12 @@ function EventsCards() {
 
   return (
     <div className="everyCard">
+      <div>
+        <h1 className="weather-title events-title">Events</h1>
+        <p className="events-text">
+          Here you can see a list of all the events we suggest for you
+        </p>
+      </div>
       <div className="filters">
         <button
           type="button"

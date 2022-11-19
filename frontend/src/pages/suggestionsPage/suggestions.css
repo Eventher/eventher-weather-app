@@ -11,8 +11,7 @@
 }
 
 .outside-source {
-  position: relative;
-  left: 28vw;
+  padding-left: 50vw;
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
   text-decoration: none;
@@ -36,5 +35,9 @@
 
   .outside-source {
     left: 10vw;
+  }
+
+  .outside-source {
+    padding-left: 0;
   }
 }

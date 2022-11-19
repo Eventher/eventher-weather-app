@@ -32,7 +32,7 @@ function Weather5Days() {
   return (
     <>
       <div>
-        <h2>See weather for the next 5 days!</h2>
+        <h2 className="weather-title">See weather for the next 5 days!</h2>
       </div>
       {weather5Days
         ? weather5Days.map((weather5Day, index) => (
