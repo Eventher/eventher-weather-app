@@ -15,6 +15,7 @@ function EventsCards() {
   const [showFilter, setShowFilter] = useState(false);
   const [isFilteredToOutdoor, setIsFilteredToOutdoor] = useState(false);
   const [isFilteredToIndoor, setIsFilteredToIndoor] = useState(false);
+  const [allEvents, setAllEvents] = useState(false);
 
   /* Get current Posts */
   const indexOfLastEvent = currentPage * eventsPerPage;
@@ -23,7 +24,6 @@ function EventsCards() {
     events.slice(indexOfFirstEvent, indexOfLastEvent)
   );
   const isFiltered = isFilteredToIndoor || isFilteredToOutdoor;
-
   const previousPage = () => {
     setCurrentPage(currentPage - 1);
   };
@@ -38,8 +38,7 @@ function EventsCards() {
   }, [isFilteredToIndoor]);
   useEffect(() => {
     setCurrentEvents(events.slice(indexOfFirstEvent, indexOfLastEvent));
-  }, [events, currentPage]);
-
+  }, [events, currentPage, allEvents]);
   return (
     <div className="everyCard">
       <div className="filters">
@@ -59,9 +58,7 @@ function EventsCards() {
               onClick={() => {
                 setIsFilteredToOutdoor(false);
                 setIsFilteredToIndoor(false);
-                setCurrentEvents(
-                  events.slice(indexOfFirstEvent, indexOfLastEvent)
-                );
+                setAllEvents(!allEvents);
               }}
               className="filter"
             >
@@ -130,13 +127,27 @@ function EventsCards() {
         <div />
       </div>
       {!isFiltered & (currentPage !== 1) ? (
-        <button className="leftBtn" type="button" onClick={previousPage}>
+        <button
+          className="leftBtn"
+          type="button"
+          onClick={() => {
+            previousPage();
+            setShowFilter(false);
+          }}
+        >
           {" "}
           &lt;{" "}
         </button>
       ) : null}
       {!isFiltered & (eventsPerPage * currentPage < events.length) ? (
-        <button className="rightBtn" type="button" onClick={nextPage}>
+        <button
+          className="rightBtn"
+          type="button"
+          onClick={() => {
+            nextPage();
+            setShowFilter(false);
+          }}
+        >
           {" "}
           &gt;{" "}
         </button>
