@@ -24,6 +24,29 @@ function EventsCards() {
     events.slice(indexOfFirstEvent, indexOfLastEvent)
   );
   const isFiltered = isFilteredToIndoor || isFilteredToOutdoor;
+
+  const cities = [
+    "Aveiro",
+    "Beja",
+    "Braga",
+    "Bragança",
+    "Castelo Branco",
+    "Coimbra",
+    "Évora",
+    "Faro",
+    "Guarda",
+    "Leiria",
+    "Lisboa",
+    "Portalegre",
+    "Porto",
+    "Santarém",
+    "Setúbal",
+    "Viana do Castelo",
+    "Vila Real",
+    "Viseu",
+  ];
+  const [selectedCity, setSelectedCity] = useState("");
+
   const previousPage = () => {
     setCurrentPage(currentPage - 1);
   };
@@ -47,6 +70,20 @@ function EventsCards() {
           Here you can see a list of all the events we suggest for you
         </p>
       </div>
+      <form className="center">
+        <label htmlFor="city-select">
+          Filter by{" "}
+          <select
+            onChange={(event) => setSelectedCity(event.target.value)}
+            id="city-select"
+          >
+            <option value="">---</option>
+            {cities.map((city) => (
+              <option value={city}>{city}</option>
+            ))}
+          </select>
+        </label>
+      </form>
       <div className="filters">
         <button
           type="button"
@@ -62,6 +99,7 @@ function EventsCards() {
             <button
               type="button"
               onClick={() => {
+                setCurrentPage(1);
                 setIsFilteredToOutdoor(false);
                 setIsFilteredToIndoor(false);
                 setAllEvents(!allEvents);
@@ -74,7 +112,6 @@ function EventsCards() {
               type="button"
               onClick={() => {
                 setIsFilteredToOutdoor(!isFilteredToOutdoor);
-                setCurrentPage(1);
               }}
               className="filter"
             >
@@ -85,7 +122,6 @@ function EventsCards() {
               type="button"
               onClick={() => {
                 setIsFilteredToIndoor(!isFilteredToIndoor);
-                setCurrentPage(1);
               }}
               className="filter"
             >
@@ -96,39 +132,43 @@ function EventsCards() {
       </div>
       <div className="grid-container">
         {events
-          ? currentEvents?.map((event) => (
-              <div>
-                <div className="eventCard" key={event.id}>
-                  <h3 className="eventTitle">{event.title}</h3>
-                  <img
-                    className="eventImg"
-                    src={event.image}
-                    alt={event.title}
-                  />
-                  <p className="eventDesc">
-                    {event.description} activity in {event.city}
-                  </p>
-                  {event.outdoor ? (
-                    <p className="outOrIn">
-                      This is a <span className="bold">outdoor</span> event!
+          ? currentEvents
+              ?.filter((event) =>
+                selectedCity !== "" ? selectedCity === event.city : event
+              )
+              .map((event) => (
+                <div>
+                  <div className="eventCard" key={event.id}>
+                    <h3 className="eventTitle">{event.title}</h3>
+                    <img
+                      className="eventImg"
+                      src={event.image}
+                      alt={event.title}
+                    />
+                    <p className="eventDesc">
+                      {event.description} activity in {event.city}
                     </p>
-                  ) : (
-                    <p className="outOrIn">
-                      This is a <span className="bold">indoor</span> event!
-                    </p>
-                  )}
-                  <a
-                    href={event.url}
-                    target="_blank"
-                    className="eventLink"
-                    rel="noreferrer"
-                  >
-                    Click for more information...
-                  </a>
+                    {event.outdoor ? (
+                      <p className="outOrIn">
+                        This is a <span className="bold">outdoor</span> event!
+                      </p>
+                    ) : (
+                      <p className="outOrIn">
+                        This is a <span className="bold">indoor</span> event!
+                      </p>
+                    )}
+                    <a
+                      href={event.url}
+                      target="_blank"
+                      className="eventLink"
+                      rel="noreferrer"
+                    >
+                      Click for more information...
+                    </a>
+                  </div>
+                  <hr className="break" />
                 </div>
-                <hr className="break" />
-              </div>
-            ))
+              ))
           : null}
         <div />
       </div>
