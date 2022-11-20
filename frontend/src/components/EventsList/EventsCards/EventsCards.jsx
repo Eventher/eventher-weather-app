@@ -77,7 +77,7 @@ function EventsCards() {
             onChange={(event) => setSelectedCity(event.target.value)}
             id="city-select"
           >
-            <option value="">---</option>
+            <option value="">city</option>
             {cities.map((city) => (
               <option value={city}>{city}</option>
             ))}

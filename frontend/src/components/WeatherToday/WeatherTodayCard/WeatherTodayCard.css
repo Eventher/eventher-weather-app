@@ -15,8 +15,8 @@
 .search-bar {
   background: url("../../../assets/lupa.png") no-repeat left center;
   background-size: 2.7rem;
-  box-shadow: rgba(247, 247, 250, 0.25) 0px 30px 60px -12px inset,
-    rgba(247, 242, 242, 0.3) 0px 18px 36px -18px inset;
+  box-shadow: rgba(226, 226, 234, 0.25) 0px 30px 60px -12px inset,
+    rgba(222, 213, 213, 0.3) 0px 18px 36px -18px inset;
   border: none;
   padding: 0.6rem 0.6rem 0.6rem 3rem;
   width: 200px;
