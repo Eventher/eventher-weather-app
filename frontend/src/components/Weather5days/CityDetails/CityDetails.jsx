@@ -94,16 +94,16 @@ function CityDetails() {
   return (
     <div className="city-details">
       {city ? (
-        <h2 className="city-title">{city}</h2>
+        <h2 className="city">{city}</h2>
       ) : (
-        <h2 className="city-title">Lisboa</h2>
+        <h2 className="city">Lisboa</h2>
       )}
       {weatherCity
         ? weatherCity
             .filter((day) => day.forecastDate === date)
             .map((day) => (
               <div className="weather-city-details">
-                <div className="first-column">
+                <div className="image-temp">
                   <h4 className="today-date">{day.forecastDate}</h4>
                   {day.idWeatherType === 0 && (
                     <p>No weather information available</p>
@@ -275,57 +275,96 @@ function CityDetails() {
                     />
                   )}
                 </div>
-                <div className="second-column">
-                  <h4 className="weather-item">
-                    {day.tMin} - {day.tMax}
-                  </h4>
-                  <h4 className="weather-item">{day.precipitaProb}%</h4>
-                  <h5>
-                    {day.classWindSpeed <= 3 ? <p>Light breeze</p> : null}
-                    {(day.classWindSpeed > 3) & (day.classWindSpeed <= 5) ? (
-                      <p>Moderate winds</p>
-                    ) : null}
-                    {(day.classWindSpeed > 5) & (day.classWindSpeed <= 8) ? (
-                      <p>Strong winds</p>
-                    ) : null}
-                    {(day.classWindSpeed > 8) & (day.classWindSpeed <= 10) ? (
-                      <p>Storm</p>
-                    ) : null}
-                    {(day.classWindSpeed > 10) & (day.classWindSpeed <= 11) ? (
-                      <p>Violent storm</p>
-                    ) : null}
-                    {(day.classWindSpeed > 11) & (day.classWindSpeed <= 12) ? (
-                      <p>Hurricane</p>
-                    ) : null}
-                    {day.predWindDir === "N" ? (
-                      <img src={North} alt="North" />
-                    ) : null}
-                    {day.predWindDir === "S" ? (
-                      <img src={South} alt="South" />
-                    ) : null}
-                    {day.predWindDir === "E" ? (
-                      <img src={East} alt="East" />
-                    ) : null}
-                    {day.predWindDir === "W" ? (
-                      <img src={West} alt="West" />
-                    ) : null}
-                    {day.predWindDir === "NW" ? (
-                      <img src={NorthWest} alt="North West" />
-                    ) : null}
-                    {day.predWindDir === "NE" ? (
-                      <img src={NorthEast} alt="North East" />
-                    ) : null}
-                    {day.predWindDir === "SW" ? (
-                      <img src={SouthWest} alt="South West" />
-                    ) : null}
-                    {day.predWindDir === "SE" ? (
-                      <img src={SouthEast} alt="South East" />
-                    ) : null}
-                  </h5>
+                <div className="flex-container">
+                  <div className="weather5Days_cardCol_2">
+                    <pre>
+                      <h2 className="tempMin today-temp">{day.tMin}</h2>
+                    </pre>
+                    <pre>
+                      <h2 className="tempMax today-temp"> / {day.tMax}</h2>
+                    </pre>
+                  </div>
+                  <div className="weather5Days_cardCol_3">
+                    <h4 className="rain-prob">Rain Probability:</h4>{" "}
+                    <h2 className="rain-prob-number">{day.precipitaProb}%</h2>
+                  </div>
+                  <div className="weather5Days_cardCol_4">
+                    <h5 className="wind-info">
+                      {day.classWindSpeed <= 3 ? <p>Light breeze</p> : null}
+                      {(day.classWindSpeed > 3) & (day.classWindSpeed <= 5) ? (
+                        <p>Moderate winds</p>
+                      ) : null}
+                      {(day.classWindSpeed > 5) & (day.classWindSpeed <= 8) ? (
+                        <p>Strong winds</p>
+                      ) : null}
+                      {(day.classWindSpeed > 8) & (day.classWindSpeed <= 10) ? (
+                        <p>Storm</p>
+                      ) : null}
+                      {(day.classWindSpeed > 10) &
+                      (day.classWindSpeed <= 11) ? (
+                        <p>Violent storm</p>
+                      ) : null}
+                      {(day.classWindSpeed > 11) &
+                      (day.classWindSpeed <= 12) ? (
+                        <p>Hurricane</p>
+                      ) : null}
+                      {day.predWindDir === "N" ? (
+                        <img
+                          className="wind-direction"
+                          src={North}
+                          alt="North"
+                        />
+                      ) : null}
+                      {day.predWindDir === "S" ? (
+                        <img
+                          className="wind-direction"
+                          src={South}
+                          alt="South"
+                        />
+                      ) : null}
+                      {day.predWindDir === "E" ? (
+                        <img className="wind-direction" src={East} alt="East" />
+                      ) : null}
+                      {day.predWindDir === "W" ? (
+                        <img className="wind-direction" src={West} alt="West" />
+                      ) : null}
+                      {day.predWindDir === "NW" ? (
+                        <img
+                          className="wind-direction"
+                          src={NorthWest}
+                          alt="North West"
+                        />
+                      ) : null}
+                      {day.predWindDir === "NE" ? (
+                        <img
+                          className="wind-direction"
+                          src={NorthEast}
+                          alt="North East"
+                        />
+                      ) : null}
+                      {day.predWindDir === "SW" ? (
+                        <img
+                          className="wind-direction"
+                          src={SouthWest}
+                          alt="South West"
+                        />
+                      ) : null}
+                      {day.predWindDir === "SE" ? (
+                        <img
+                          className="wind-direction"
+                          src={SouthEast}
+                          alt="South East"
+                        />
+                      ) : null}
+                    </h5>
+                  </div>
                 </div>
               </div>
             ))
         : null}
+      <h4 className="we-suggest">
+        Accordingly to the weather today we suggest you:
+      </h4>
       <div className="eventsFlex">
         {events && eventsFilter
           ? eventsFilter?.map((event) => (

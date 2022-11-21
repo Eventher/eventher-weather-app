@@ -12,13 +12,13 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="links">
-        <a href="https://twitter.com/">
+        <a href="https://twitter.com/" target="_blank" rel="noreferrer">
           <FaTwitterSquare className="social-media" />
         </a>
-        <a href="https://www.instagram.com/">
+        <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
           <FaInstagramSquare className="social-media" />
         </a>
-        <a href="https://www.facebook.com/">
+        <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
           <FaFacebookSquare className="social-media" />
         </a>
         <p id="copyrights">&copy; 2022 Eventher</p>

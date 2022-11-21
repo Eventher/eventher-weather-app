@@ -31,14 +31,15 @@ const getSuggestionsById = (req, res) => {
 };
 
 const postSuggestion = (req, res) => {
-  const { name, email, activity, description } = req.body;
+  const { name, email, city, url, image, outdoor, activity, description } =
+    req.body;
   // eslint-disable-next-line no-restricted-syntax
   console.log(req.body);
 
   database
     .query(
-      "INSERT INTO suggestions (name, email, activity, description) VALUES (?, ?, ?, ?)",
-      [name, email, activity, description]
+      "INSERT INTO suggestions (name, email, city, url, image, outdoor, activity, description) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+      [name, email, city, url, image, outdoor, activity, description]
     )
     .then(([result]) => {
       res.location(`/suggestions/${result.insertId}`).sendStatus(201);
@@ -50,13 +51,14 @@ const postSuggestion = (req, res) => {
 };
 
 const updateSuggestion = (req, res) => {
-  const { name, email, activity, description } = req.body;
+  const { name, email, city, url, image, outdoor, activity, description } =
+    req.body;
   const id = parseInt(req.params.id, 10);
 
   database
     .query(
-      "UPDATE suggestions SET name=?, email=?, activity=?, description=? WHERE id=?",
-      [name, email, activity, description, id]
+      "UPDATE suggestions SET name=?, email=?, city=?, url=?, image=?, outdoor=?, activity=?, description=? WHERE id=?",
+      [name, email, city, url, image, outdoor, activity, description, id]
     )
     .then(([result]) => {
       if (result.affectedRows === 0) {

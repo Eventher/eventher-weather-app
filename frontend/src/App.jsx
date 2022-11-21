@@ -15,6 +15,7 @@ import SignIn from "./pages/signInPage/SignIn";
 import LogIn from "./pages/logInPage/LogIn";
 import LandingComponent from "./components/landing-page/LandingComponent";
 import CityDetails from "./components/Weather5days/CityDetails/CityDetails";
+import OutsideSuggestions from "./components/OutsideSuggestions/OutsideSuggestions";
 import "./App.css";
 
 function App() {
@@ -31,6 +32,10 @@ function App() {
                 <Route path="/home/:id/:date" element={<CityDetails />} />
                 <Route path="/events" element={<EventsList />} />
                 <Route path="/suggestions" element={<SuggestionsPage />} />
+                <Route
+                  path="/outside-source"
+                  element={<OutsideSuggestions />}
+                />
                 <Route path="/signin" element={<SignIn />} />
                 <Route path="/login" element={<LogIn />} />
               </Routes>

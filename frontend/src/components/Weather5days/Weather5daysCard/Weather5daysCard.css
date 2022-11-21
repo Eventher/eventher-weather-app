@@ -3,13 +3,14 @@
 .weather5Days_cardWrapper:nth-child(even) {
   background-color: rgba(33, 158, 188, 0.3);
 }
+
 .weather5Days_card {
   font-family: "Nunito", sans-serif;
   width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  max-height: 75px;
+  height: 90px;
   margin: 5px 0;
   box-shadow: 1px 1px 10px 1px rgba(150, 150, 150, 0.4);
   border-radius: 5px;
@@ -32,19 +33,21 @@
   justify-content: space-around;
   align-items: center;
 }
-.weather5Days_cardCol_2 h2,
-pre {
-  font-weight: 9000;
-  font-size: 1.5rem;
-  padding: 0;
-  margin: 0;
-}
 
 .tempMin {
   color: #219ebc;
 }
 .tempMax {
   color: #e45603;
+}
+
+.weather5Days_cardCol_3 h2 {
+  margin: 0;
+  color: #023047;
+}
+
+.weather5Days_cardCol_2 pre h2.today-temp5 {
+  font-size: 1.5rem;
 }
 
 .weather5Days_cardCol_3 {
@@ -54,13 +57,12 @@ pre {
   flex-direction: column;
 }
 
-.weather5Days_cardCol_3 h2 {
-  margin: 0;
-  color: #fff;
+.rain-prob5 {
+  font-size: 1.2rem;
 }
-.weather5Days_cardCol_3 h2 {
-  margin: 0;
-  color: #023047;
+
+.rain-prob5-number {
+  font-size: 1.5rem;
 }
 
 .weather5Days_cardCol_3 h4 {
@@ -76,11 +78,13 @@ pre {
   color: black;
 }
 
+.wind-direction5 {
+  width: 45px;
+}
+
 button {
   background-color: #219ebc;
   border: none;
-  width: 20px;
-  height: 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -103,3 +107,17 @@ button {
 .precipitaClass_3 {
   color: #023047;
 } */
+
+@media screen and (max-width: 750px) {
+  .weather5Days_cardCol_2 pre h2.today-temp5 {
+    font-size: 1.2rem;
+  }
+
+  .rain-prob5 {
+    font-size: 0.8rem;
+  }
+
+  .rain-prob5-number {
+    font-size: 1.2rem;
+  }
+}

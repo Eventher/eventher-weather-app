@@ -3,12 +3,35 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable import/no-extraneous-dependencies */
-import React from "react";
+import React /* { useRef } */ from "react";
 import "./suggestions.css";
 import { useForm } from "react-hook-form";
+// import { GiCloudUpload } from "react-icons/gi";
 import axios from "axios";
 
 function Suggestions() {
+  /* const wrapperRef = useRef(null);
+
+  const onDragEnter = () => wrapperRef.current.classList.add("dragover");
+
+  const onDragLeave = () => wrapperRef.current.classList.remove("dragover");
+
+  const onDrop = () => wrapperRef.current.classList.remove("dragover");
+
+  function imageUploaded() {
+    const file = document.querySelector("input[type=file]").files[0];
+
+    const reader = new FileReader();
+
+    reader.onload = function () {
+      const base64String = reader.result
+        .replace("data:", "")
+        .replace(/^.+,/, "");
+
+    };
+    reader.readAsDataURL(file);
+  } */
+
   const {
     register,
     formState: { errors },
@@ -17,6 +40,7 @@ function Suggestions() {
 
   const saveSuggestion = (data) => {
     console.log(data);
+    // imageUploaded();
     axios
       .post("http://localhost:5000/suggestions", data)
       .then(() => {
@@ -33,7 +57,7 @@ function Suggestions() {
         <label className="suggestions-label">Name:</label>
         <input
           className="suggestions-input"
-          placeholder="Name"
+          placeholder="Name or company name"
           {...register("name", { required: true })}
           aria-invalid={errors.name ? "true" : "false"}
         />
@@ -54,6 +78,89 @@ function Suggestions() {
         {errors.email && (
           <p className="alert" role="alert">
             {errors.email?.message}
+          </p>
+        )}
+      </div>
+      <div className="suggestions-form-group">
+        <label className="suggestions-label">City:</label>
+        <input
+          className="suggestions-input"
+          placeholder="City"
+          {...register("city", { required: "City is required" })}
+          aria-invalid={errors.city ? "true" : "false"}
+        />
+        {errors.city && (
+          <p className="alert" role="alert">
+            {errors.city?.message}
+          </p>
+        )}
+      </div>
+      <div className="suggestions-form-group">
+        <label className="suggestions-label">URL:</label>
+        <input
+          className="suggestions-input"
+          placeholder="URL for more information or to buy a ticket"
+          {...register("url", { required: "URL is required" })}
+          aria-invalid={errors.url ? "true" : "false"}
+        />
+        {errors.url && (
+          <p className="alert" role="alert">
+            {errors.url?.message}
+          </p>
+        )}
+      </div>
+      <div className="suggestions-form-group">
+        <label className="suggestions-label">Image:</label>
+        <input
+          className="suggestions-input"
+          placeholder="Image url"
+          {...register("image", { required: "Image is required" })}
+          aria-invalid={errors.image ? "true" : "false"}
+        />
+        {errors.image && (
+          <p className="alert" role="alert">
+            {errors.image?.message}
+          </p>
+        )}
+      </div>
+      {/* <div
+        ref={wrapperRef}
+        onDragEnter={onDragEnter}
+        onDragLeave={onDragLeave}
+        onDrop={onDrop}
+        className="suggestions-form-group drop-files-input"
+      >
+        <div>
+          <GiCloudUpload className="drop-files-image" />
+          <p className="drop-files-text">Drag and drop your image here</p>
+        </div>
+        <input
+          id="file-input"
+          type="file"
+          accept="image/x-png,image/gif,image/jpeg"
+          name="image"
+          {...register("image", { required: "Image is required" })}
+          aria-invalid={errors.image ? "true" : "false"}
+        />
+      </div>
+      {errors.image && (
+        <p className="alert" role="alert">
+          {errors.image?.message}
+        </p>
+      )} */}
+      <div className="suggestions-form-group">
+        <label className="suggestions-label">Outdoor or indoor:</label>
+        <input
+          className="suggestions-input"
+          placeholder="Outdoor or Indoor"
+          {...register("outdoor", {
+            required: "Outdoor/indoor status is required",
+          })}
+          aria-invalid={errors.outdoor ? "true" : "false"}
+        />
+        {errors.outdoor && (
+          <p className="alert" role="alert">
+            {errors.outdoor?.message}
           </p>
         )}
       </div>

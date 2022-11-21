@@ -59,7 +59,7 @@ export default function WeatherTodayCard() {
   return (
     <div className="weather5Days_cardWrapper">
       <div className="weather-today">
-        <div className="weather5Days_cardCol_1 image-temp">
+        <div className="image-temp">
           <h4 className="today-date">{forecastDate}</h4>
           {idWeatherType === 0 && <p>No weather information available</p>}
           {idWeatherType === 1 && (
@@ -176,17 +176,18 @@ export default function WeatherTodayCard() {
         <div className="flex-container">
           <div className="weather5Days_cardCol_2">
             <pre>
-              <h2 className="tempMin">{tMin}</h2>
+              <h2 className="tempMin today-temp">{tMin}</h2>
             </pre>
             <pre>
-              <h2 className="tempMax"> / {tMax}</h2>
+              <h2 className="tempMax today-temp"> / {tMax}</h2>
             </pre>
           </div>
           <div className="weather5Days_cardCol_3">
-            <h4>Rain Probability:</h4> <h2>{precipitaProb}%</h2>
+            <h4 className="rain-prob">Rain Probability:</h4>{" "}
+            <h2 className="rain-prob-number">{precipitaProb}%</h2>
           </div>
           <div className="weather5Days_cardCol_4">
-            <h5>
+            <h5 className="wind-info">
               {classWindSpeed <= 3 ? <p>Light breeze</p> : null}
               {(classWindSpeed > 3) & (classWindSpeed <= 5) ? (
                 <p>Moderate winds</p>
@@ -203,21 +204,45 @@ export default function WeatherTodayCard() {
               {(classWindSpeed > 11) & (classWindSpeed <= 12) ? (
                 <p>Hurricane</p>
               ) : null}
-              {predWindDir === "N" ? <img src={North} alt="North" /> : null}
-              {predWindDir === "S" ? <img src={South} alt="South" /> : null}
-              {predWindDir === "E" ? <img src={East} alt="East" /> : null}
-              {predWindDir === "W" ? <img src={West} alt="West" /> : null}
+              {predWindDir === "N" ? (
+                <img className="wind-direction" src={North} alt="North" />
+              ) : null}
+              {predWindDir === "S" ? (
+                <img className="wind-direction" src={South} alt="South" />
+              ) : null}
+              {predWindDir === "E" ? (
+                <img className="wind-direction" src={East} alt="East" />
+              ) : null}
+              {predWindDir === "W" ? (
+                <img className="wind-direction" src={West} alt="West" />
+              ) : null}
               {predWindDir === "NW" ? (
-                <img src={NorthWest} alt="North West" />
+                <img
+                  className="wind-direction"
+                  src={NorthWest}
+                  alt="North West"
+                />
               ) : null}
               {predWindDir === "NE" ? (
-                <img src={NorthEast} alt="North East" />
+                <img
+                  className="wind-direction"
+                  src={NorthEast}
+                  alt="North East"
+                />
               ) : null}
               {predWindDir === "SW" ? (
-                <img src={SouthWest} alt="South West" />
+                <img
+                  className="wind-direction"
+                  src={SouthWest}
+                  alt="South West"
+                />
               ) : null}
               {predWindDir === "SE" ? (
-                <img src={SouthEast} alt="South East" />
+                <img
+                  className="wind-direction"
+                  src={SouthEast}
+                  alt="South East"
+                />
               ) : null}
             </h5>
           </div>

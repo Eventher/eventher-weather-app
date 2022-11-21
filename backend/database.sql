@@ -162,7 +162,7 @@ VALUES
   ),
   (  
     17,
-    "Lisbo",
+    "Lisboa",
     "Bike Ride",
     "https://www.getyourguide.pt/lisboa-l42/lisboa-excursao-pelos-7-montes-de-bicicleta-eletrica-t36761/",
     "https://cdn.getyourguide.com/img/tour/5a3794596385a.jpeg/145.jpg",
@@ -325,18 +325,18 @@ VALUES
   (  
     35,
     "Castelo Branco",
-    "Walk in historical center",
-    "https://www.getyourguide.pt/castelo-branco-l153559/castelo-branco-passeio-a-pe-historico-na-cidade-t429156/",
-    "https://cdn.getyourguide.com/img/tour/63074a2e3c1f9.jpeg/145.jpg",
+    "Cultural center",
+    "hhttps://www.tripadvisor.com/Attraction_Review-g189142-d7221965-Reviews-Centro_de_Cultura_Contemporanea_de_Castelo_Branco-Castelo_Branco_Castelo_Branco_D.html",
+    "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/2b/ef/2b/centro-de-cultura-contemporane.jpg?w=2000&h=-1&s=1",
     "Cultural",
     0
   ),
   (  
     36,
     "Castelo Branco",
-    "Miguel Cargaleiro Foundation",
-    "https://www.tripadvisor.pt/Attraction_Review-g189142-d7805205-Reviews-Fundacao_Manuel_Cargaleiro-Castelo_Branco_Castelo_Branco_District_Central_Portuga.html",
-    "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/f5/8d/3f/sklepienie-prezbiterium.jpg?w=1000&h=-1&s=1",
+    "Trip to Belmonte and Castelo Novo",
+    "https://www.getyourguide.pt/castelo-branco-l153559/de-castelo-branco-viagem-de-um-dia-a-belmonte-e-castelo-novo-t429506/l",
+    "https://cdn.getyourguide.com/img/tour/630df3b5c1e1b.jpeg/98.jpg",
     "Cultural",
     0
   ),
@@ -424,9 +424,9 @@ VALUES
   (  
     46,
     "Viseu",
-    "Fontelo's Park",
-    "https://www.tripadvisor.pt/Attraction_Review-g189149-d9879256-Reviews-Parque_do_Fontelo-Viseu_Viseu_District_Northern_Portugal.html",
-    "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/cf/13/68/img-20161205-wa0050-largejpg.jpg?w=1600&h=-1&s=1",
+    "Wine Tasting",
+    "https://www.getyourguide.com.br/porto-portugal-l151/porto-tour-privado-de-dia-inteiro-com-degustacao-de-vinhos-no-vale-do-douro-t348826/?",
+    "https://cdn.getyourguide.com/img/tour/5e12711225adf.jpeg/145.jpg",
     "Cultural",
     1
   ),
@@ -462,7 +462,7 @@ VALUES
     "Guarda",
     "Road Cycling",
     "https://www.outdooractive.com/pt/ciclismo-de-estrada/guarda/ciclismo-de-estrada-na-guarda/221307484/",
-    "https://s1.wklcdn.com/image_59/1777391/22780789/14430373Master.jpg",
+    "https://img2.oastatic.com/img2/40066888/834x417r/subida-epica-do-colcurinho.jpg",
     "Cultural",
     1
   ),
@@ -668,8 +668,12 @@ VALUES
 CREATE TABLE `suggestions` (
     `id` INT NOT NULL AUTO_INCREMENT,
     `name` VARCHAR(100) NOT NULL,
-    `email` VARCHAR(255)  NOT NULL,
-    `activity` VARCHAR(255)  NOT NULL,
+    `email` VARCHAR(255) NOT NULL,
+    `city` VARCHAR(100) NOT NULL,
+    `url` VARCHAR(255) NOT NULL,
+    `image` TEXT NOT NULL,
+    `outdoor` VARCHAR(7) NOT NULL,
+    `activity` VARCHAR(255) NOT NULL,
     `description` TEXT NOT NULL,
     PRIMARY KEY (`id`)
   ) ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET = utf8;

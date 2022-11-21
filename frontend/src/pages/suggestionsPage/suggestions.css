@@ -1,13 +1,43 @@
+.suggestions-page {
+  padding-top: 140px;
+}
+
 .suggestions-title {
   font-size: 2rem;
   color: var(--dark-blue);
   text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
-  padding-top: 120px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.outside-source {
+  padding-left: 50vw;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  text-decoration: none;
+  color: var(--dark-blue);
+  font-weight: 800;
+  z-index: -1;
+}
+
+.outside-source:hover {
+  opacity: 0.7;
 }
 
 @media screen and (max-width: 750px) {
+  .suggestions-page {
+    padding-top: 30px;
+  }
+
   .suggestions-title {
     font-size: 2rem;
-    padding-top: 0;
+  }
+
+  .outside-source {
+    left: 10vw;
+  }
+
+  .outside-source {
+    padding-left: 0;
   }
 }
