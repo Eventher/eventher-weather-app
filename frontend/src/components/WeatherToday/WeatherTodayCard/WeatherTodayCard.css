@@ -49,6 +49,7 @@
 .weather-today {
   font-family: "Nunito", sans-serif;
   margin: 0 18vw;
+  padding: 2rem 0;
   box-shadow: 1px 1px 10px 1px rgba(150, 150, 150, 0.4);
   border-radius: 10px;
   color: black;
@@ -126,6 +127,7 @@ h5.wind-info {
 
   .weather-today {
     margin: 5px 1.5rem;
+    padding: 1rem 0.5rem 0;
   }
 
   .today-date {
