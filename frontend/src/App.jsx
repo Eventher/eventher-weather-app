@@ -20,9 +20,9 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <Header />
-      <main>
-        <UserContextProvider>
+      <UserContextProvider>
+        <Header />
+        <main>
           <EventContextProvider>
             <WeatherContextProvider>
               <Routes>
@@ -36,8 +36,8 @@ function App() {
               </Routes>
             </WeatherContextProvider>
           </EventContextProvider>
-        </UserContextProvider>
-      </main>
+        </main>
+      </UserContextProvider>
       <Footer />
     </div>
   );
