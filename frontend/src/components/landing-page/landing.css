@@ -120,7 +120,7 @@ span:nth-child(4) {
 }
 
 .images {
-  border-radius: 20%;
+  border-radius: 13%;
   width: 100%;
   padding: 0 2rem;
   margin-bottom: 2rem;
@@ -154,12 +154,12 @@ span:nth-child(4) {
 
 @media only screen and (max-width: 750px) {
   .main-div {
-    padding: 0;
+    padding: 10px;
   }
 
   .inside-div {
     border-radius: 50px;
-    margin: 15px 0;
+    margin: 15px 20px;
   }
 
   .first-section,
@@ -197,7 +197,7 @@ span:nth-child(4) {
   }
 
   .images {
-    border-radius: 15%;
+    border-radius: 10%;
     padding: 0 1rem;
   }
 

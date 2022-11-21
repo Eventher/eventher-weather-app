@@ -37,6 +37,7 @@
   animation-name: slideIn;
   animation-duration: 0.6s;
   z-index: 0;
+  border-radius: 0 0 10px 10px;
 }
 
 .MainNavbar {

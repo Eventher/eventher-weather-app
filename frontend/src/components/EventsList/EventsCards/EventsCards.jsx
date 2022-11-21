@@ -91,7 +91,6 @@ function EventsCards() {
               type="button"
               onClick={() => {
                 setIsFilteredToOutdoor(!isFilteredToOutdoor);
-                setCurrentPage(1);
                 setShowFilter(!showFilter);
               }}
               className="filter"
@@ -103,7 +102,6 @@ function EventsCards() {
               type="button"
               onClick={() => {
                 setIsFilteredToIndoor(!isFilteredToIndoor);
-                setCurrentPage(1);
                 setShowFilter(!showFilter);
               }}
               className="filter"
