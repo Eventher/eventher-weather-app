@@ -11,7 +11,7 @@ function EventsCards() {
   const { events } = useContext(EventContext);
   const [currentPage, setCurrentPage] = useState(1);
   // eslint-disable-next-line no-unused-vars
-  const [eventsPerPage, setEventsPerPage] = useState(12);
+  const [eventsPerPage, setEventsPerPage] = useState(9);
   const [showFilter, setShowFilter] = useState(false);
   const [isFilteredToOutdoor, setIsFilteredToOutdoor] = useState(false);
   const [isFilteredToIndoor, setIsFilteredToIndoor] = useState(false);
