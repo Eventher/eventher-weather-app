@@ -1,6 +1,8 @@
+/* eslint-disable no-sequences */
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable react/prop-types */
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import { AiOutlineMenu, AiOutlineCloseCircle } from "react-icons/ai";
 import { FaUserCircle } from "react-icons/fa";
 import { IoIosArrowDropupCircle } from "react-icons/io";
@@ -17,7 +19,7 @@ function MobileNavigation() {
   const hamburger = (
     <AiOutlineMenu
       className={styles.Hamburger}
-      onClick={() => setOpenNav(!openNav)}
+      onClick={() => (setOpenNav(!openNav), setOpenUser(false))}
     />
   );
 
@@ -33,7 +35,7 @@ function MobileNavigation() {
   const user = (
     <FaUserCircle
       className={styles.UserIconMobile}
-      onClick={() => setOpenUser(!openUser)}
+      onClick={() => (setOpenUser(!openUser), setOpenNav(false))}
     />
   );
 
@@ -47,7 +49,9 @@ function MobileNavigation() {
   return (
     <nav className={styles.MobileNavigation}>
       <div className={styles.MobileLogoContainer}>
-        <img src={eventherLogo} alt="Logo" className={styles.MobileLogo} />
+        <Link to="/" onClick={() => setOpenNav(false)}>
+          <img src={eventherLogo} alt="Logo" className={styles.MobileLogo} />
+        </Link>
       </div>
       {openUser ? closeUser : user}
       {openUser && <SignLogInBar />}
