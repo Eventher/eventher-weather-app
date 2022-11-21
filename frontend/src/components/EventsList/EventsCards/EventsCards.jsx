@@ -25,6 +25,7 @@ function EventsCards() {
   );
   const isFiltered = isFilteredToIndoor || isFilteredToOutdoor;
 
+  /*
   const cities = [
     "Aveiro",
     "Beja",
@@ -46,6 +47,7 @@ function EventsCards() {
     "Viseu",
   ];
   const [selectedCity, setSelectedCity] = useState("");
+  */
 
   const previousPage = () => {
     setCurrentPage(currentPage - 1);
@@ -59,9 +61,13 @@ function EventsCards() {
   useEffect(() => {
     setCurrentEvents(events.filter((event) => event.outdoor === 0));
   }, [isFilteredToIndoor]);
+  /* useEffect(() => {
+    setCurrentEvents(events.filter((event) => selectedCity === event.city));
+  }, [selectedCity]); */
   useEffect(() => {
     setCurrentEvents(events.slice(indexOfFirstEvent, indexOfLastEvent));
   }, [events, currentPage, allEvents]);
+
   return (
     <div className="everyCard">
       <div>
@@ -70,7 +76,7 @@ function EventsCards() {
           Here you can see a list of all the events we suggest for you
         </p>
       </div>
-      <form className="center">
+      {/* <form className="center">
         <label htmlFor="city-select">
           Filter by{" "}
           <select
@@ -83,7 +89,7 @@ function EventsCards() {
             ))}
           </select>
         </label>
-      </form>
+            </form> */}
       <div className="filters">
         <button
           type="button"
@@ -132,47 +138,43 @@ function EventsCards() {
       </div>
       <div className="grid-container">
         {events
-          ? currentEvents
-              ?.filter((event) =>
-                selectedCity !== "" ? selectedCity === event.city : event
-              )
-              .map((event) => (
-                <div>
-                  <div className="eventCard" key={event.id}>
-                    <h3 className="eventTitle">{event.title}</h3>
-                    <img
-                      className="eventImg"
-                      src={event.image}
-                      alt={event.title}
-                    />
-                    <p className="eventDesc">
-                      {event.description} activity in {event.city}
+          ? currentEvents?.map((event) => (
+              <div>
+                <div className="eventCard" key={event.id}>
+                  <h3 className="eventTitle">{event.title}</h3>
+                  <img
+                    className="eventImg"
+                    src={event.image}
+                    alt={event.title}
+                  />
+                  <p className="eventDesc">
+                    {event.description} activity in {event.city}
+                  </p>
+                  {event.outdoor ? (
+                    <p className="outOrIn">
+                      This is a <span className="bold">outdoor</span> event!
                     </p>
-                    {event.outdoor ? (
-                      <p className="outOrIn">
-                        This is a <span className="bold">outdoor</span> event!
-                      </p>
-                    ) : (
-                      <p className="outOrIn">
-                        This is a <span className="bold">indoor</span> event!
-                      </p>
-                    )}
-                    <a
-                      href={event.url}
-                      target="_blank"
-                      className="eventLink"
-                      rel="noreferrer"
-                    >
-                      Click for more information...
-                    </a>
-                  </div>
-                  <hr className="break" />
+                  ) : (
+                    <p className="outOrIn">
+                      This is a <span className="bold">indoor</span> event!
+                    </p>
+                  )}
+                  <a
+                    href={event.url}
+                    target="_blank"
+                    className="eventLink"
+                    rel="noreferrer"
+                  >
+                    Click for more information...
+                  </a>
                 </div>
-              ))
+                <hr className="break" />
+              </div>
+            ))
           : null}
         <div />
       </div>
-      {!isFiltered & (currentPage !== 1) ? (
+      {!isFiltered & (currentPage !== 1) /* & (selectedCity !== "") */ ? (
         <button
           className="leftBtn"
           type="button"
@@ -185,7 +187,8 @@ function EventsCards() {
           &lt;{" "}
         </button>
       ) : null}
-      {!isFiltered & (eventsPerPage * currentPage < events.length) ? (
+      {!isFiltered & (eventsPerPage * currentPage < events.length) /* &
+      (selectedCity !== "") */ ? (
         <button
           className="rightBtn"
           type="button"
