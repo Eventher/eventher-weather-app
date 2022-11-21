@@ -24,6 +24,7 @@ function EventsCards() {
     events.slice(indexOfFirstEvent, indexOfLastEvent)
   );
   const isFiltered = isFilteredToIndoor || isFilteredToOutdoor;
+
   const previousPage = () => {
     setCurrentPage(currentPage - 1);
   };
@@ -41,6 +42,26 @@ function EventsCards() {
   }, [events, currentPage, allEvents]);
   return (
     <div className="everyCard">
+      <div>
+        <h1 className="weather-title events-title">Events</h1>
+        <p className="events-text">
+          Here you can see a list of all the events we suggest for you
+        </p>
+      </div>
+      {/*  <form className="center">
+        <label htmlFor="city-select">
+          Filter by{" "}
+          <select
+            onChange={(event) => setSelectedCity(event.target.value)}
+            id="city-select"
+          >
+            <option value="">city</option>
+            {cities.map((city) => (
+              <option value={city}>{city}</option>
+            ))}
+          </select>
+        </label>
+      </form> */}
       <div className="filters">
         <button
           type="button"
@@ -56,6 +77,7 @@ function EventsCards() {
             <button
               type="button"
               onClick={() => {
+                setCurrentPage(1);
                 setIsFilteredToOutdoor(false);
                 setIsFilteredToIndoor(false);
                 setAllEvents(!allEvents);
@@ -93,7 +115,7 @@ function EventsCards() {
       </div>
       <div className="grid-container">
         {events
-          ? currentEvents?.map((event) => (
+          ? currentEvents.map((event) => (
               <div>
                 <div className="eventCard" key={event.id}>
                   <h3 className="eventTitle">{event.title}</h3>

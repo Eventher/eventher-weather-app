@@ -3,6 +3,7 @@
 .LogIn {
   display: flex;
   justify-content: center;
+  height: 90vh;
 }
 
 .error {
@@ -115,7 +116,7 @@
 
 .login-welcome .logout-button {
   margin-top: 15px;
-  margin-left: -15px;
+  width: 150px;
 }
 
 .login-welcome .logout-button-none {

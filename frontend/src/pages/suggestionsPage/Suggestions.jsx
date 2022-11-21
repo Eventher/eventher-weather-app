@@ -7,9 +7,11 @@ import "./suggestions.css";
 function SuggestionsPage() {
   return (
     <div className="suggestions-page">
-      <Link className="outside-source" to="/outside-source">
-        See other peoples suggestions here!
-      </Link>
+      <div>
+        <Link className="outside-source" to="/outside-source">
+          See other peoples suggestions here!
+        </Link>
+      </div>
       <h1 className="suggestions-title">Make your event suggestion here!</h1>
       <Suggestions />
     </div>

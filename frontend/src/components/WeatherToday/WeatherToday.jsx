@@ -33,10 +33,18 @@ function WeatherToday() {
   return (
     <div className="weather-today-wrapper">
       <div>
-        <h2>See weather for today!</h2>
+        <h2 className="weather-title">See weather for today!</h2>
       </div>
-      <input type="search" value={search} onChange={(e) => handleSearch(e)} />
-      <h3>{city || "Lisboa"}</h3>
+      <div className="search-container">
+        <input
+          className="search-bar"
+          type="search"
+          placeholder="Search your city here"
+          value={search}
+          onChange={(e) => handleSearch(e)}
+        />
+      </div>
+      <h3 className="city">{city || "Lisboa"}</h3>
       {weatherToday[0] ? (
         <Link
           className="today-link"

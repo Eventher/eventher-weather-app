@@ -34,14 +34,18 @@ function OutsideSuggestions() {
         !
       </p>
       <div className="event-card-wrapper">
-        {suggestions
-          ? suggestions.map((suggestion) => (
-              <OutsideSuggestionCard
-                key={suggestion.id}
-                suggestion={suggestion}
-              />
-            ))
-          : null}
+        {suggestions ? (
+          suggestions.map((suggestion) => (
+            <OutsideSuggestionCard
+              key={suggestion.id}
+              suggestion={suggestion}
+            />
+          ))
+        ) : (
+          <div>
+            <h5>For now there are no user suggestions here...</h5>
+          </div>
+        )}
       </div>
     </div>
   );
