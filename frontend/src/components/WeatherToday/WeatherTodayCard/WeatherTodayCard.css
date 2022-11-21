@@ -4,7 +4,7 @@
   font-size: 2rem;
   color: var(--dark-blue);
   padding-bottom: 25px;
-  text-shadow: 3px 2px 8px rgba(37, 104, 158, 0.84);
+  text-shadow: 3px 2px 25px rgba(37, 104, 158, 0.84);
 }
 
 .search-container {
@@ -34,14 +34,16 @@
   padding: 0.4rem 0 0.8rem 18vw;
   font-size: 2rem;
   color: var(--dark-blue);
-  text-shadow: 0px 0px 6px rgba(11, 81, 80, 0.7);
+  text-shadow: 0px 0px 30px rgba(11, 81, 80, 0.7);
 }
 
 .weather-today-wrapper {
   margin-top: 2rem;
   margin-bottom: 3rem;
 }
-
+.Day {
+  color: orange;
+}
 .today-link {
   text-decoration: none;
 }

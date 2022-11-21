@@ -60,7 +60,9 @@ export default function WeatherTodayCard() {
     <div className="weather5Days_cardWrapper">
       <div className="weather-today">
         <div className="image-temp">
-          <h4 className="today-date">{forecastDate}</h4>
+          <h4 className="today-date">
+            <span className="Day">Day:</span> {forecastDate}
+          </h4>
           {idWeatherType === 0 && <p>No weather information available</p>}
           {idWeatherType === 1 && (
             <img src={WT1} alt="Clear sky" className="weather-icon" />
@@ -176,10 +178,13 @@ export default function WeatherTodayCard() {
         <div className="flex-container">
           <div className="weather5Days_cardCol_2">
             <pre>
+              <h4 className="mintemp">Min.T.</h4>
               <h2 className="tempMin today-temp">{tMin}</h2>
             </pre>
+            <pre className="slash">/</pre>
             <pre>
-              <h2 className="tempMax today-temp"> / {tMax}</h2>
+              <h4 className="maxtemp">Max.T.</h4>
+              <h2 className="tempMax today-temp">{tMax}</h2>
             </pre>
           </div>
           <div className="weather5Days_cardCol_3">

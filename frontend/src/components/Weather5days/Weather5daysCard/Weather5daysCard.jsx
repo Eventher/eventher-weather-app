@@ -75,7 +75,9 @@ export default function Weather5DaysCard({ weather5Day }) {
       <div className="weather5Days_card">
         <div className="weather5Days_cardCol_1">
           <div>
-            <h4>{forecastDate}</h4>
+            <h4>
+              <span className="Day">Day:</span> {forecastDate}
+            </h4>
           </div>
           {idWeatherType === 0 && <p>No weather information available</p>}
           {idWeatherType === 1 && (
@@ -195,10 +197,13 @@ export default function Weather5DaysCard({ weather5Day }) {
         </div>
         <div className="weather5Days_cardCol_2">
           <pre>
+            <h4 className="mintemp">Min.T.</h4>
             <h2 className="tempMin today-temp5">{tMin}</h2>
           </pre>
+          <pre className="slash">/</pre>
           <pre>
-            <h2 className="tempMax today-temp5"> / {tMax}</h2>
+            <h4 className="maxtemp">Max.T.</h4>
+            <h2 className="tempMax today-temp5">{tMax}</h2>
           </pre>
         </div>
         <div className="weather5Days_cardCol_3">

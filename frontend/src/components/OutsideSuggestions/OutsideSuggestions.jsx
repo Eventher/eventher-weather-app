@@ -17,7 +17,6 @@ function OutsideSuggestions() {
   useEffect(() => {
     fetchSuggestions();
   }, []);
-
   return (
     <div className="outside-suggestions">
       <h1 className="outside-suggestions-title">
@@ -33,20 +32,20 @@ function OutsideSuggestions() {
         </Link>
         !
       </p>
-      <div className="event-card-wrapper">
-        {suggestions ? (
-          suggestions.map((suggestion) => (
+      {suggestions.length > 0 ? (
+        suggestions.map((suggestion) => (
+          <div className="event-card-wrapper">
             <OutsideSuggestionCard
               key={suggestion.id}
               suggestion={suggestion}
             />
-          ))
-        ) : (
-          <div>
-            <h5>For now there are no user suggestions here...</h5>
           </div>
-        )}
-      </div>
+        ))
+      ) : (
+        <div className="noSuggestions">
+          <h3>For now there are no user suggestions here...</h3>
+        </div>
+      )}
     </div>
   );
 }
