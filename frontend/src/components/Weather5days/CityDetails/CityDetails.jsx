@@ -104,7 +104,9 @@ function CityDetails() {
             .map((day) => (
               <div className="weather-city-details">
                 <div className="image-temp">
-                  <h4 className="today-date">{day.forecastDate}</h4>
+                  <h4 className="today-date">
+                    <span className="Day">Day:</span> {day.forecastDate}
+                  </h4>
                   {day.idWeatherType === 0 && (
                     <p>No weather information available</p>
                   )}
@@ -278,10 +280,13 @@ function CityDetails() {
                 <div className="flex-container">
                   <div className="weather5Days_cardCol_2">
                     <pre>
+                      <h4 className="mintemp">Min.T.</h4>
                       <h2 className="tempMin today-temp">{day.tMin}</h2>
                     </pre>
+                    <pre className="slash">/</pre>
                     <pre>
-                      <h2 className="tempMax today-temp"> / {day.tMax}</h2>
+                      <h4 className="maxtemp">Max.T.</h4>
+                      <h2 className="tempMax today-temp">{day.tMax}</h2>
                     </pre>
                   </div>
                   <div className="weather5Days_cardCol_3">
