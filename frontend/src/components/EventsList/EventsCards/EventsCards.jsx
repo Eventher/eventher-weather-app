@@ -11,7 +11,7 @@ function EventsCards() {
   const { events } = useContext(EventContext);
   const [currentPage, setCurrentPage] = useState(1);
   // eslint-disable-next-line no-unused-vars
-  const [eventsPerPage, setEventsPerPage] = useState(12);
+  const [eventsPerPage, setEventsPerPage] = useState(9);
   const [showFilter, setShowFilter] = useState(false);
   const [isFilteredToOutdoor, setIsFilteredToOutdoor] = useState(false);
   const [isFilteredToIndoor, setIsFilteredToIndoor] = useState(false);
@@ -48,7 +48,7 @@ function EventsCards() {
   ];
   const [selectedCity, setSelectedCity] = useState("");
   */
-
+  
   const previousPage = () => {
     setCurrentPage(currentPage - 1);
   };
@@ -76,7 +76,7 @@ function EventsCards() {
           Here you can see a list of all the events we suggest for you
         </p>
       </div>
-      {/* <form className="center">
+      {/*  <form className="center">
         <label htmlFor="city-select">
           Filter by{" "}
           <select
@@ -89,7 +89,7 @@ function EventsCards() {
             ))}
           </select>
         </label>
-            </form> */}
+      </form> */}
       <div className="filters">
         <button
           type="button"
@@ -109,6 +109,7 @@ function EventsCards() {
                 setIsFilteredToOutdoor(false);
                 setIsFilteredToIndoor(false);
                 setAllEvents(!allEvents);
+                setShowFilter(!showFilter);
               }}
               className="filter"
             >
@@ -118,6 +119,8 @@ function EventsCards() {
               type="button"
               onClick={() => {
                 setIsFilteredToOutdoor(!isFilteredToOutdoor);
+                setCurrentPage(1);
+                setShowFilter(!showFilter);
               }}
               className="filter"
             >
@@ -128,6 +131,8 @@ function EventsCards() {
               type="button"
               onClick={() => {
                 setIsFilteredToIndoor(!isFilteredToIndoor);
+                setCurrentPage(1);
+                setShowFilter(!showFilter);
               }}
               className="filter"
             >
