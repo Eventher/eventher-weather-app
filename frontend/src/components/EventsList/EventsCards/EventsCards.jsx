@@ -48,7 +48,7 @@ function EventsCards() {
   ];
   const [selectedCity, setSelectedCity] = useState("");
   */
-  
+
   const previousPage = () => {
     setCurrentPage(currentPage - 1);
   };
@@ -119,7 +119,6 @@ function EventsCards() {
               type="button"
               onClick={() => {
                 setIsFilteredToOutdoor(!isFilteredToOutdoor);
-                setCurrentPage(1);
                 setShowFilter(!showFilter);
               }}
               className="filter"
@@ -131,7 +130,6 @@ function EventsCards() {
               type="button"
               onClick={() => {
                 setIsFilteredToIndoor(!isFilteredToIndoor);
-                setCurrentPage(1);
                 setShowFilter(!showFilter);
               }}
               className="filter"
