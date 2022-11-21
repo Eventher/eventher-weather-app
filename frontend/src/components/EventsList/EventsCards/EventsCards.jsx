@@ -59,6 +59,7 @@ function EventsCards() {
                 setIsFilteredToOutdoor(false);
                 setIsFilteredToIndoor(false);
                 setAllEvents(!allEvents);
+                setShowFilter(!showFilter)
               }}
               className="filter"
             >
@@ -69,6 +70,7 @@ function EventsCards() {
               onClick={() => {
                 setIsFilteredToOutdoor(!isFilteredToOutdoor);
                 setCurrentPage(1);
+                setShowFilter(!showFilter)
               }}
               className="filter"
             >
@@ -80,6 +82,7 @@ function EventsCards() {
               onClick={() => {
                 setIsFilteredToIndoor(!isFilteredToIndoor);
                 setCurrentPage(1);
+                setShowFilter(!showFilter)
               }}
               className="filter"
             >
