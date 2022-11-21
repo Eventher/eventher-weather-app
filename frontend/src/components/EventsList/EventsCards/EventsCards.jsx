@@ -25,6 +25,30 @@ function EventsCards() {
   );
   const isFiltered = isFilteredToIndoor || isFilteredToOutdoor;
 
+  /*
+  const cities = [
+    "Aveiro",
+    "Beja",
+    "Braga",
+    "Bragança",
+    "Castelo Branco",
+    "Coimbra",
+    "Évora",
+    "Faro",
+    "Guarda",
+    "Leiria",
+    "Lisboa",
+    "Portalegre",
+    "Porto",
+    "Santarém",
+    "Setúbal",
+    "Viana do Castelo",
+    "Vila Real",
+    "Viseu",
+  ];
+  const [selectedCity, setSelectedCity] = useState("");
+  */
+
   const previousPage = () => {
     setCurrentPage(currentPage - 1);
   };
@@ -37,9 +61,13 @@ function EventsCards() {
   useEffect(() => {
     setCurrentEvents(events.filter((event) => event.outdoor === 0));
   }, [isFilteredToIndoor]);
+  /* useEffect(() => {
+    setCurrentEvents(events.filter((event) => selectedCity === event.city));
+  }, [selectedCity]); */
   useEffect(() => {
     setCurrentEvents(events.slice(indexOfFirstEvent, indexOfLastEvent));
   }, [events, currentPage, allEvents]);
+
   return (
     <div className="everyCard">
       <div>
@@ -113,7 +141,7 @@ function EventsCards() {
       </div>
       <div className="grid-container">
         {events
-          ? currentEvents.map((event) => (
+          ? currentEvents?.map((event) => (
               <div>
                 <div className="eventCard" key={event.id}>
                   <h3 className="eventTitle">{event.title}</h3>
@@ -149,7 +177,7 @@ function EventsCards() {
           : null}
         <div />
       </div>
-      {!isFiltered & (currentPage !== 1) ? (
+      {!isFiltered & (currentPage !== 1) /* & (selectedCity !== "") */ ? (
         <button
           className="leftBtn"
           type="button"
@@ -162,7 +190,8 @@ function EventsCards() {
           &lt;{" "}
         </button>
       ) : null}
-      {!isFiltered & (eventsPerPage * currentPage < events.length) ? (
+      {!isFiltered & (eventsPerPage * currentPage < events.length) /* &
+      (selectedCity !== "") */ ? (
         <button
           className="rightBtn"
           type="button"
