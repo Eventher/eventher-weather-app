@@ -23,7 +23,8 @@
 }
 
 .suggestions-input,
-.text-area {
+.text-area,
+.select {
   appearance: none;
   background: none;
   border: none;
@@ -42,7 +43,8 @@
 }
 
 .suggestions-form-group:focus-within .suggestions-input,
-.suggestions-form-group:focus-within .text-area {
+.suggestions-form-group:focus-within .text-area,
+.suggestions-form-group:focus-within .select {
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -133,7 +135,8 @@
   }
 
   .suggestions-input,
-  .text-area {
+  .text-area,
+  .select {
     font-size: 1.2rem;
     width: 100%;
   }

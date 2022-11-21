@@ -6,7 +6,6 @@
 import React, { useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import WeatherContext from "../../contexts/WeatherContext";
-import NavbarContext from "../../contexts/NavbarContext";
 import Weather5DaysCard from "./Weather5DaysCard/Weather5DaysCard";
 
 function Weather5Days() {
@@ -17,8 +16,6 @@ function Weather5Days() {
     fetchWeather5Days,
     fetchDistricts,
   } = useContext(WeatherContext);
-
-  const { setOpenNav, setOpenUser } = useContext(NavbarContext);
 
   // As the search state changes, the fetchWeather5Days function gets updated, thus, so it's result =====#
   useEffect(() => {
@@ -42,7 +39,6 @@ function Weather5Days() {
         ? weather5Days.map((weather5Day, index) => (
             <div className="weather5Days_cardWrapper">
               <Link
-                onClick={() => (setOpenNav(false), setOpenUser(false))}
                 className="today-link"
                 to={
                   search === "" || resultDist[0] === undefined
