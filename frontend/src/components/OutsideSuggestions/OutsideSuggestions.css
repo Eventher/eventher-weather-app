@@ -35,7 +35,7 @@
 }
 .noSuggestions {
   font-size: 20px;
-  padding: 50px;
+  padding: 60px;
   padding-bottom: 108px;
 }
 @media screen and (max-width: 1000px) {
@@ -62,5 +62,8 @@
   .event-card-wrapper {
     grid-template-columns: auto;
     gap: 0;
+  }
+  .noSuggestions {
+    padding-bottom: 30px;
   }
 }

@@ -42,7 +42,7 @@ function OutsideSuggestions() {
             ))
           : null}
       </div>
-      {suggestions.length < 0 ? (
+      {suggestions.length === 0 ? (
         <div className="noSuggestions">
           <h3>For now there are no user suggestions here...</h3>
         </div>
