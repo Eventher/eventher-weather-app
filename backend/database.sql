@@ -274,7 +274,7 @@ VALUES
     "Nazaré",
     "https://www.getyourguide.pt/lisboa-l42/obidos-nazare-e-alcobaca-excursao-particular-de-carro-t135045/?",
     "https://cdn.getyourguide.com/img/tour/5a3b994eab3e1.jpeg/145.jpg",
-    "SporTs",
+    "Sports",
     1
   ),
   (  
