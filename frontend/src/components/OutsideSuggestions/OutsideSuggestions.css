@@ -35,10 +35,8 @@
 }
 .noSuggestions {
   font-size: 20px;
-  padding: 30px;
-}
-.footer {
-  bottom: 0;
+  padding: 50px;
+  padding-bottom: 108px;
 }
 @media screen and (max-width: 1000px) {
   .event-card-wrapper {

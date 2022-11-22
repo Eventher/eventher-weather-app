@@ -48,7 +48,9 @@ function EventsCards() {
   ];
   const [selectedCity, setSelectedCity] = useState("");
   */
-
+  const scroll = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  };
   const previousPage = () => {
     setCurrentPage(currentPage - 1);
   };
@@ -184,6 +186,7 @@ function EventsCards() {
           onClick={() => {
             previousPage();
             setShowFilter(false);
+            scroll();
           }}
         >
           {" "}
@@ -198,6 +201,7 @@ function EventsCards() {
           onClick={() => {
             nextPage();
             setShowFilter(false);
+            scroll();
           }}
         >
           {" "}
