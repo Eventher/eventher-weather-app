@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-expressions */
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 // eslint-disable-next-line import/no-named-as-default
 import UserContext from "../../contexts/User/UserContext";
 import LogInForm from "./logInPageForm/LogInForm";
@@ -8,8 +8,8 @@ import "./logInPageForm/Login.css";
 function LogIn() {
   const { users } = useContext(UserContext);
   const [userLogin, setUserLogin] = useState();
+  const [, setUserNameNav] = useState();
   const [error, setError] = useState("");
-
   const Login = (details) => {
     const logger = users
       ?.filter(
@@ -17,7 +17,6 @@ function LogIn() {
           details.email === user?.email && details.password === user?.entry
       )
       .map((user) => setUserLogin(user));
-
     if (
       details.email === logger.email &&
       details.password === logger.password
@@ -30,6 +29,10 @@ function LogIn() {
       setError("Details do not match!");
     }
   };
+  useEffect(() => {
+    setUserNameNav(userLogin?.first_name);
+  }, [Login]);
+
   const Logout = () => {
     setUserLogin({ first_name: "", email: "" });
   };
