@@ -19,7 +19,7 @@ VALUES
   (  
     1,
     "Faro",
-    "4-hour tour of the islands of Ria Formosa",
+    "Tour in islands of Ria Formosa",
     "https://www.getyourguide.com.br/algarve-l66/olhao-excursao-de-4-horas-pelas-ilhas-da-ria-formosa-t97776/?",
     "https://cdn.getyourguide.com/img/tour/629d052ce3d95.jpeg/145.jpg",
     "Excursion",
@@ -31,7 +31,7 @@ VALUES
     "Slide & Splash Water Park",
     "https://www.getyourguide.pt/lagoa-algarve-l90069/lagoa-ingresso-p-parque-aquatico-slide-splash-t199966/?",
     "https://cdn.getyourguide.com/img/tour/3dd8b6397a1a8e03.jpeg/145.jpg",
-    "Excursion",
+    "Recreation",
     1
   ),
   (  
@@ -100,7 +100,7 @@ VALUES
   (  
     10,
     "Setúbal",
-    "Costeering Portinho da Arrábida",
+    "Coasteering Portinho da Arrábida",
     "https://www.getyourguide.pt/portinho-da-arrabida-l122090/coasteering-em-portinho-da-arrabida-t100403/",
     "https://cdn.getyourguide.com/img/tour/5dbc4d9319c7a.jpeg/145.jpg",
     "Sports",
@@ -112,7 +112,7 @@ VALUES
     "Wine Tasting",
     "https://www.getyourguide.pt/parque-natural-da-arrabida-l4948/private-van-tour-arrabida-e-degustacao-de-vinhos-t222048",
     "https://cdn.getyourguide.com/img/tour/5eb73e60e8f98.jpeg/145.jpg",
-    "Sports",
+    "Gastronomic",
     0
   ),
   (  
@@ -121,7 +121,7 @@ VALUES
     "Fish Market",
     "https://www.getyourguide.pt/setubal-l1370/lisboa-excursao-guiada-setubal-e-mercado-de-peixe-t268632/",
     "https://cdn.getyourguide.com/img/tour/5d171bc668bb2.jpeg/145.jpg",
-    "Sports",
+    "Gastronomic",
     0
   ),
   (  
@@ -136,10 +136,10 @@ VALUES
   (  
     14,
     "Évora",
-    "Wine Tasting",
+    "Trip with Wine Tasting",
     "https://www.getyourguide.pt/lisboa-l42/tour-privado-de-lisboa-a-evora-e-prova-de-vinhos-t56749",
     "https://cdn.getyourguide.com/img/tour/55fbe3ea4fc26.jpeg/145.jpg",
-    "Cultural",
+    "Excursion",
     1
   ),
   (  
@@ -165,8 +165,8 @@ VALUES
     "Lisboa",
     "Bike Ride",
     "https://www.getyourguide.pt/lisboa-l42/lisboa-excursao-pelos-7-montes-de-bicicleta-eletrica-t36761/",
-    "https://cdn.getyourguide.com/img/tour/5a3794596385a.jpeg/145.jpg",
-    "Cultural",
+    "https://cdn.getyourguide.com/img/tour/8a609bdb06f114d2.jpeg/145.jpg",
+    "Sports",
     1
   ),
   (  
@@ -175,7 +175,7 @@ VALUES
     "Cruise in Tejo",
     "https://www.getyourguide.pt/rio-tejo-l4825/lisboa-excursao-ao-por-do-sol-no-rio-tejo-com-petiscos-e-bebidas-t410791/",
     "https://cdn.getyourguide.com/img/tour/620eacb285d1d.jpeg/145.jpg",
-    "Cultural",
+    "Excursion",
     1
   ),
   (  
@@ -211,7 +211,7 @@ VALUES
     "Tour and Wine Tasting",
     "https://www.getyourguide.pt/portalegre-l127548/portalegre-tour-e-prova-de-vinhos-quinta-da-fonte-souto-t405983/",
     "https://cdn.getyourguide.com/img/tour/6156f70ab7006.jpeg/145.jpg",
-    "Cultural",
+    "Excursion",
     1
   ),
   (  
@@ -274,7 +274,7 @@ VALUES
     "Nazaré",
     "https://www.getyourguide.pt/lisboa-l42/obidos-nazare-e-alcobaca-excursao-particular-de-carro-t135045/?",
     "https://cdn.getyourguide.com/img/tour/5a3b994eab3e1.jpeg/145.jpg",
-    "Cultural",
+    "SporTs",
     1
   ),
   (  
@@ -310,7 +310,7 @@ VALUES
     "Boat Ride",
     "https://www.getyourguide.pt/castelo-branco-l153559/castelo-branco-passeio-de-barco-pelo-monumento-natural-das-portas-de-rodao-t429380/",
     "https://cdn.getyourguide.com/img/tour/630ca53bbdcd8.jpeg/145.jpg",
-    "Cultural",
+    "Excursion",
     1
   ),
   (  
@@ -337,7 +337,7 @@ VALUES
     "Trip to Belmonte and Castelo Novo",
     "https://www.getyourguide.pt/castelo-branco-l153559/de-castelo-branco-viagem-de-um-dia-a-belmonte-e-castelo-novo-t429506/l",
     "https://cdn.getyourguide.com/img/tour/630df3b5c1e1b.jpeg/98.jpg",
-    "Cultural",
+    "Excursion",
     0
   ),
   (  
@@ -346,7 +346,7 @@ VALUES
     "Kayak ride in Mondego River",
     "https://www.getyourguide.pt/coimbra-l1629/coimbra-passeio-de-caiaque-no-rio-mondego-t388950/",
     "https://cdn.getyourguide.com/img/tour/5ee3939876906.jpeg/145.jpg",
-    "Sport",
+    "Sports",
     1
   ),
   (  
@@ -382,7 +382,7 @@ VALUES
     "Boat Ride",
     "https://www.getyourguide.com.br/aveiro-l2459/passeio-de-barco-tradicional-moliceiro-t393116/?",
     "https://cdn.getyourguide.com/img/tour/5f734eaaa2637.jpeg/145.jpg",
-    "Cultural",
+    "Excursion",
     1
   ),
   (  
@@ -391,7 +391,7 @@ VALUES
     "TukTuk Ride",
     "https://www.getyourguide.com.br/aveiro-l2459/aveiro-city-tour-de-tuk-tuk-t393499/",
     "https://cdn.getyourguide.com/img/tour/5f8ed47922715.jpeg/145.jpg",
-    "Cultural",
+    "Excursion",
     1
   ),
   (  
@@ -427,7 +427,7 @@ VALUES
     "Wine Tasting",
     "https://www.getyourguide.com.br/porto-portugal-l151/porto-tour-privado-de-dia-inteiro-com-degustacao-de-vinhos-no-vale-do-douro-t348826/?",
     "https://cdn.getyourguide.com/img/tour/5e12711225adf.jpeg/145.jpg",
-    "Cultural",
+    "Gastronomic",
     1
   ),
   (  
@@ -454,7 +454,7 @@ VALUES
     "Trekking",
     "https://pt.wikiloc.com/trilhas/trekking/portugal/guarda/guarda",
     "https://s1.wklcdn.com/image_59/1777391/22780789/14430373Master.jpg",
-    "Cultural",
+    "Sports",
     1
   ),
   (  
@@ -463,7 +463,7 @@ VALUES
     "Road Cycling",
     "https://www.outdooractive.com/pt/ciclismo-de-estrada/guarda/ciclismo-de-estrada-na-guarda/221307484/",
     "https://img2.oastatic.com/img2/40066888/834x417r/subida-epica-do-colcurinho.jpg",
-    "Cultural",
+    "Sports",
     1
   ),
    (  
@@ -490,7 +490,7 @@ VALUES
     "Bolhão's Market",
     "https://www.getyourguide.com.br/mercado-do-bolhao-l5662/",
     "https://cdn.getyourguide.com/img/location/5729b340d994c.jpeg/99.webp",
-    "Cultural",
+    "Gastronomic",
     1
   ),
    (  
@@ -499,7 +499,7 @@ VALUES
     "6 Brigdes Cruise",
     "https://www.getyourguide.com.br/porto-portugal-l151/porto-cruzeiro-das-6-pontes-t183308/?",
     "https://cdn.getyourguide.com/img/tour/d21ab870938ca2ab.jpeg/145.jpg",
-    "Cultural",
+    "Excursion",
     1
   ),
   (  
@@ -508,7 +508,7 @@ VALUES
     "Calem's Wine House",
     "https://www.getyourguide.com.br/calem-l12082/ingresso-tour-guiado-e-degustacoes-nas-adegas-de-calem-t175041/?",
     "https://cdn.getyourguide.com/img/tour/5b9232e8622f3.jpeg/145.jpg",
-    "Cultural",
+    "Gastronomic",
     0
   ),
    (  
@@ -526,7 +526,7 @@ VALUES
     "Boat Ride",
     "https://www.getyourguide.pt/distrito-de-vila-real-l163891/atividades-na-agua-tc1141/",
     "https://cdn.getyourguide.com/img/tour/5afed84c91eb3.jpeg/145.jpg",
-    "Cultural",
+    "Excursion",
     1
   ),
   (  
@@ -535,13 +535,13 @@ VALUES
     "Buggy Ride",
     "https://www.tripadvisor.pt/AttractionProductReview-g1438510-d23456385-Polaris_RZR_Buggy_Private_Activity_4x4-Mondim_de_Basto_Vila_Real_District_Norther.html",
     "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0b/fc/82/14.jpg",
-    "Cultural",
+    "Sports",
     1
   ),
   (  
     59,
     "Vila Real",
-    "Matheus's Palace",
+    "Matheus Palace",
     "https://www.getyourguide.pt/distrito-de-vila-real-l163891/portugal-palacio-de-mateus-e-tour-privado-vila-real-t407451/?",
     "https://cdn.getyourguide.com/img/tour/6183eebe50c31.jpeg/145.jpg",
     "Cultural",
@@ -553,7 +553,7 @@ VALUES
     "Wine Tasting with lunch",
     "https://www.tripadvisor.pt/AttractionProductReview-g189180-d23980808-Full_Day_Douro_Tour_with_Wine_Tasting_and_Lunch-Porto_Porto_District_Northern_Port.html",
     "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0b/34/0f/c5.jpg",
-    "Cultural",
+    "Gastronomic",
     0
   ),
   (  
@@ -562,7 +562,7 @@ VALUES
     "Gêres",
     "https://www.getyourguide.pt/porto-portugal-l151/saindo-do-porto-excursao-ao-parque-geres-com-almoco-t47543/",
     "https://cdn.getyourguide.com/img/tour/5a37b488527b8.jpeg/145.jpg",
-    "Cultural",
+    "Excursion",
     1
   ),
   (  
@@ -571,7 +571,7 @@ VALUES
     "Bike Ride",
     "https://www.getyourguide.pt/braga-l32536/parque-nacional-da-peneda-geres-passeio-guiado-de-bicicleta-electrica-t201661/?",
     "https://cdn.getyourguide.com/img/tour/5c19219edc324.jpeg/145.jpg",
-    "Cultural",
+    "Sports",
     1
   ),
   (  
@@ -598,7 +598,7 @@ VALUES
     "Kayak Ride",
     "https://www.getyourguide.pt/distrito-de-viana-do-castelo-l96268/viana-do-castelo-passeio-de-caiaque-no-rio-lima-t388336/?",
     "https://cdn.getyourguide.com/img/tour/5ed8f58b112ad.jpeg/145.jpg",
-    "Cultural",
+    "Sports",
     1
   ),
   (  
@@ -658,7 +658,7 @@ VALUES
   (  
     72,
     "Bragança",
-    "Santa Maria Bragança Church",
+    "Santa Maria Church",
     "https://www.tripadvisor.pt/Attraction_Review-g189172-d10353274-Reviews-Church_of_Santa_Maria-Braganca_Braganca_District_Northern_Portugal.html",
     "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/ed/98/59/foto-desde-el-coro.jpg?w=1400&h=-1&s=1",
     "Cultural",
