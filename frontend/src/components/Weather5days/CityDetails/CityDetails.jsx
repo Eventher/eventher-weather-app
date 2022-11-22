@@ -94,9 +94,9 @@ function CityDetails() {
   return (
     <div className="city-details">
       {city ? (
-        <h2 className="city">{city}</h2>
+        <h2 className="city-title">{city}</h2>
       ) : (
-        <h2 className="city">Lisboa</h2>
+        <h2 className="city-title">Lisboa</h2>
       )}
       {weatherCity
         ? weatherCity
