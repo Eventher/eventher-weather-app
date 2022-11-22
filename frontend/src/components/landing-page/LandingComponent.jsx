@@ -4,7 +4,7 @@ import "./landing.css";
 import { Link } from "react-router-dom";
 import { TiWeatherSunny, TiWeatherDownpour } from "react-icons/ti";
 import Party from "../../assets/party.jpg";
-import Concert from "../../assets/concert.jpg";
+import Concert from "../../assets/outdoor_activity.jpg";
 
 function LandingComponent() {
   return (

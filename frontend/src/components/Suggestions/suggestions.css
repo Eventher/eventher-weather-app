@@ -11,10 +11,11 @@
   font-weight: 200;
   display: block;
   color: #666;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin: 1rem 20%;
   transition: 0.4s;
-  text-align: center;
+  text-align: justify;
+  padding-left: 25px;
 }
 
 .suggestions-form-group:focus-within .suggestions-label {
@@ -40,6 +41,14 @@
   transition: 0.4s;
   font-size: 1.2rem;
   text-align: left;
+}
+.suggestions-input::placeholder {
+  color: #666;
+  opacity: 50%;
+}
+.suggestions-form-group:focus-within .suggestions-input::placeholder {
+  color: #666;
+  opacity: 0%;
 }
 
 .suggestions-form-group:focus-within .suggestions-input,
@@ -130,8 +139,9 @@
 
   .suggestions-label {
     font-family: montserrat, sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin: 1rem 0;
+    text-align: center;
   }
 
   .suggestions-input,
