@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700;900&display=swap");
+
+.weather5Days_cardWrapper:nth-child(even) {
+  background-color: rgba(33, 158, 188, 0.3);
+}
+
+.weather5Days_card {
+  font-family: "Nunito", sans-serif;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 90px;
+  margin: 5px 0;
+  box-shadow: 1px 1px 10px 1px rgba(150, 150, 150, 0.4);
+  border-radius: 5px;
+}
+.cityDetailsLink {
+  text-decoration: none;
+}
+.weather5Days_cardCol_1 {
+  color: black;
+}
+
+.weather-icon5 {
+  width: 55px;
+  height: auto;
+}
+
+.weather5Days_cardCol_2 {
+  font-family: "Nunito", sans-serif;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.mintemp {
+  color: #219ebc;
+}
+.tempMin {
+  color: #219ebc;
+}
+.slash {
+  padding: 5px;
+  font-size: 1.5rem;
+  color: black;
+}
+.tempMax {
+  color: #e45603;
+}
+.maxtemp {
+  color: #e45603;
+}
+
+.weather5Days_cardCol_3 h2 {
+  margin: 0;
+  color: #023047;
+}
+
+.weather5Days_cardCol_2 pre h2.today-temp5 {
+  font-size: 1.5rem;
+}
+
+.weather5Days_cardCol_3 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.rain-prob5 {
+  font-size: 1.2rem;
+}
+
+.rain-prob5-number {
+  font-size: 1.5rem;
+}
+
+.weather5Days_cardCol_3 h4 {
+  color: #023047;
+  padding: 0;
+  margin: 0;
+}
+
+.weather5Days_cardCol_4 {
+  justify-content: space-between;
+  align-items: center;
+  width: 10vw;
+  color: black;
+}
+
+.wind-direction5 {
+  width: 45px;
+}
+
+button {
+  background-color: #219ebc;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 50%;
+}
+
+/* .precipitaClass_0 {
+  color: #e45603;
+}
+
+.precipitaClass_1 {
+  color: #ffc800;
+}
+
+.precipitaClass_2 {
+  color: #219ebc;
+}
+
+.precipitaClass_3 {
+  color: #023047;
+} */
+
+@media screen and (max-width: 750px) {
+  .weather5Days_cardCol_2 pre h2.today-temp5 {
+    font-size: 1.2rem;
+  }
+
+  .rain-prob5 {
+    font-size: 0.8rem;
+  }
+
+  .rain-prob5-number {
+    font-size: 1.2rem;
+  }
+}

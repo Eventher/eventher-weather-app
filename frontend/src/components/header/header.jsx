@@ -1,10 +1,11 @@
-import React from 'react'
-import "./header.css"
+/* eslint-disable import/no-extraneous-dependencies */
+import React from "react";
+import MainNavbar from "./MainNavBar";
 
-const Header = () => {
+export default function Header() {
   return (
-    <div>header</div>
-  )
+    <header>
+      <MainNavbar />
+    </header>
+  );
 }
-
-export default Header

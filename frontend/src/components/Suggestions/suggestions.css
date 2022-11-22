@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;600&family=Montserrat:wght@400;700&display=swap");
+
+.suggestions-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 6rem 3rem;
+}
+
+.suggestions-label {
+  font-family: montserrat, sans-serif;
+  font-weight: 200;
+  display: block;
+  color: #666;
+  font-size: 1.4rem;
+  margin: 1rem 20%;
+  transition: 0.4s;
+  text-align: justify;
+  padding-left: 25px;
+}
+
+.suggestions-form-group:focus-within .suggestions-label {
+  color: #219ebc;
+  filter: drop-shadow(0 0 5px rgba(2, 48, 71, 0.7));
+}
+
+.suggestions-input,
+.text-area,
+.select {
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+  display: block;
+  width: 60%;
+  margin: auto;
+  padding: 10px 20px 10px;
+  margin-bottom: 1rem;
+  background-color: #f8f8f8;
+  text-align: center;
+  border-radius: 8px;
+  transition: 0.4s;
+  font-size: 1.2rem;
+  text-align: left;
+}
+.suggestions-input::placeholder {
+  font-family: montserrat, sans-serif;
+  color: #666;
+  opacity: 50%;
+}
+.suggestions-form-group:focus-within .suggestions-input::placeholder {
+  color: #666;
+  opacity: 0%;
+}
+
+.suggestions-form-group:focus-within .suggestions-input,
+.suggestions-form-group:focus-within .text-area,
+.suggestions-form-group:focus-within .select {
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+}
+
+.text-area {
+  height: 10rem;
+  resize: none;
+}
+.text-area::placeholder {
+  font-family: montserrat, sans-serif;
+  color: #666;
+  opacity: 55%;
+}
+.suggestions-form-group:focus-within .text-area::placeholder{
+  opacity: 0%;
+}
+
+.alert {
+  color: #f5a486;
+  filter: drop-shadow(0 0 6px rgba(98, 60, 60, 0.5));
+  margin-bottom: 15px;
+}
+
+.drop-files-input {
+  position: relative;
+  width: 40%;
+  height: 250px;
+  border: 2px dashed rgba(2, 48, 71, 0.7);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(199, 243, 253, 0.95);
+  margin-bottom: 20px;
+  margin: auto;
+}
+
+.drop-files-input:hover,
+.drop-files-input.dragover {
+  opacity: 0.6;
+}
+
+.drop-files-image {
+  padding-top: 20px;
+  width: 150px;
+  height: auto;
+  color: rgb(2, 48, 71);
+}
+
+.drop-files-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgba(136, 160, 166, 0.95);
+  margin-top: 5px;
+}
+
+.drop-files-input input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  margin: auto;
+}
+
+.suggestions-button {
+  width: 12rem;
+  height: 4rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 0.4rem 2rem;
+  margin: 2rem auto 0;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(199, 243, 253, 0.95),
+    rgba(199, 243, 253, 0.95),
+    rgba(199, 243, 253, 0.95),
+    rgba(90, 204, 233, 0.95)
+  );
+  color: var(--dark-blue);
+  text-shadow: 0 0 4px white;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 750px) {
+  .suggestions-form {
+    margin: 0 2.5rem 3rem;
+  }
+
+  .suggestions-label {
+    font-family: montserrat, sans-serif;
+    font-size: 1.4rem;
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+  .suggestions-input,
+  .text-area,
+  .select {
+    font-size: 1.2rem;
+    width: 100%;
+  }
+
+  .drop-files-input {
+    width: 100%;
+  }
+}
