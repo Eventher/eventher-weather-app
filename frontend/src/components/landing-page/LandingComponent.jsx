@@ -7,6 +7,9 @@ import Party from "../../assets/party.jpg";
 import Concert from "../../assets/outdoor_activity.jpg";
 
 function LandingComponent() {
+  const scroll = () => {
+    window.scrollTo({ top: 0, left: 0 });
+  };
   return (
     <div className="main-div">
       <div className="inside-div">
@@ -35,15 +38,15 @@ function LandingComponent() {
           <div className="right">
             <p className="text paragraph">
               If you want a more personalized experience,{" "}
-              <Link className="links" to="/signin">
+              <Link className="links" onClick={scroll} to="/signin">
                 register now
               </Link>
               ! If you have registered before, you can{" "}
-              <Link className="links" to="/login">
+              <Link className="links" onClick={scroll} to="/login">
                 log in
               </Link>{" "}
               or just carry on to the{" "}
-              <Link className="links" to="/home">
+              <Link className="links" onClick={scroll} to="/home">
                 home page
               </Link>
               .

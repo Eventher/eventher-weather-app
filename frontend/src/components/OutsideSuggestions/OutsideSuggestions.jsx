@@ -32,20 +32,21 @@ function OutsideSuggestions() {
         </Link>
         !
       </p>
-      {suggestions.length > 0 ? (
-        suggestions.map((suggestion) => (
-          <div className="event-card-wrapper">
-            <OutsideSuggestionCard
-              key={suggestion.id}
-              suggestion={suggestion}
-            />
-          </div>
-        ))
-      ) : (
+      <div className="event-card-wrapper">
+        {suggestions.length > 0
+          ? suggestions.map((suggestion) => (
+              <OutsideSuggestionCard
+                key={suggestion.id}
+                suggestion={suggestion}
+              />
+            ))
+          : null}
+      </div>
+      {suggestions.length === 0 ? (
         <div className="noSuggestions">
           <h3>For now there are no user suggestions here...</h3>
         </div>
-      )}
+      ) : null}
     </div>
   );
 }
