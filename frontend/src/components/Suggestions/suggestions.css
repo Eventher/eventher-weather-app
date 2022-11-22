@@ -43,6 +43,7 @@
   text-align: left;
 }
 .suggestions-input::placeholder {
+  font-family: montserrat, sans-serif;
   color: #666;
   opacity: 50%;
 }
@@ -60,6 +61,14 @@
 .text-area {
   height: 10rem;
   resize: none;
+}
+.text-area::placeholder {
+  font-family: montserrat, sans-serif;
+  color: #666;
+  opacity: 55%;
+}
+.suggestions-form-group:focus-within .text-area::placeholder{
+  opacity: 0%;
 }
 
 .alert {
