@@ -33,11 +33,21 @@
   justify-content: space-around;
   align-items: center;
 }
-
+.mintemp {
+  color: #219ebc;
+}
 .tempMin {
   color: #219ebc;
 }
+.slash {
+  padding: 5px;
+  font-size: 1.5rem;
+  color: black;
+}
 .tempMax {
+  color: #e45603;
+}
+.maxtemp {
   color: #e45603;
 }
 

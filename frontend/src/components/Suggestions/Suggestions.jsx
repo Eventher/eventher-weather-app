@@ -1,15 +1,39 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable import/no-unresolved */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable import/no-extraneous-dependencies */
-import React /* { useRef } */ from "react";
+import React, { useState /* { useRef } */ } from "react";
 import "./suggestions.css";
 import { useForm } from "react-hook-form";
 // import { GiCloudUpload } from "react-icons/gi";
 import axios from "axios";
 
 function Suggestions() {
+  const cities = [
+    "Aveiro",
+    "Beja",
+    "Braga",
+    "Bragança",
+    "Castelo Branco",
+    "Coimbra",
+    "Évora",
+    "Faro",
+    "Guarda",
+    "Leiria",
+    "Lisboa",
+    "Portalegre",
+    "Porto",
+    "Santarém",
+    "Setúbal",
+    "Viana do Castelo",
+    "Vila Real",
+    "Viseu",
+  ];
+
+  const [selectedCity, setSelectedCity] = useState("");
+
   /* const wrapperRef = useRef(null);
 
   const onDragEnter = () => wrapperRef.current.classList.add("dragover");
@@ -83,12 +107,20 @@ function Suggestions() {
       </div>
       <div className="suggestions-form-group">
         <label className="suggestions-label">City:</label>
-        <input
-          className="suggestions-input"
-          placeholder="City"
+        <select
+          onChange={(event) => setSelectedCity(event.target.value)}
+          className="suggestions-input select"
+          id="city-select"
           {...register("city", { required: "City is required" })}
           aria-invalid={errors.city ? "true" : "false"}
-        />
+        >
+          <option value="">----------</option>
+          {cities.map((city) => (
+            <option className="options" value={city}>
+              {city}
+            </option>
+          ))}
+        </select>
         {errors.city && (
           <p className="alert" role="alert">
             {errors.city?.message}
@@ -150,14 +182,24 @@ function Suggestions() {
       )} */}
       <div className="suggestions-form-group">
         <label className="suggestions-label">Outdoor or indoor:</label>
-        <input
-          className="suggestions-input"
-          placeholder="Outdoor or Indoor"
+        <select
+          className="suggestions-input select"
+          id="city-select"
           {...register("outdoor", {
             required: "Outdoor/indoor status is required",
           })}
           aria-invalid={errors.outdoor ? "true" : "false"}
-        />
+        >
+          <option className="options" value="">
+            ----------
+          </option>
+          <option className="options" value="outdoor">
+            Outdoor
+          </option>
+          <option className="options" value="indoor">
+            Indoor
+          </option>
+        </select>
         {errors.outdoor && (
           <p className="alert" role="alert">
             {errors.outdoor?.message}

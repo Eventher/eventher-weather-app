@@ -1,3 +1,4 @@
+/* eslint-disable no-sequences */
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable import/no-unresolved */
 /* eslint-disable react/no-array-index-key */

@@ -1,5 +1,7 @@
 .footer {
   background: var(--dark-blue);
+  bottom: -42px;
+  position: relative;
   background: linear-gradient(
     180deg,
     rgba(90, 204, 233, 0.95) 10%,

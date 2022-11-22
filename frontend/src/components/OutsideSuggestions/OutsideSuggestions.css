@@ -33,7 +33,13 @@
   align-items: center;
   justify-content: center;
 }
-
+.noSuggestions {
+  font-size: 20px;
+  padding: 30px;
+}
+.footer {
+  bottom: 0;
+}
 @media screen and (max-width: 1000px) {
   .event-card-wrapper {
     grid-template-columns: auto auto;
